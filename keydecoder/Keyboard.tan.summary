@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.964 ns
+From           : clkin
+To             : Keyboard:u0|clk1
+From Clock     : --
+To Clock       : fclk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.192 ns
+From           : KeyboardDecoder:u5|lwasdPressed[2]
+To             : wasd[2]
+From Clock     : fclk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -4.651 ns
+From           : datain
+To             : Keyboard:u0|data
+From Clock     : --
+To Clock       : fclk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'fclk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 319.18 MHz ( period = 3.133 ns )
+From           : Keyboard:u0|state.stop
+To             : Keyboard:u0|state.delay
+From Clock     : fclk
+To Clock       : fclk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'fclk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Keyboard:u0|code[3]
+To             : Keyboard:u0|scancode[3]
+From Clock     : fclk
+To Clock       : fclk
+Failed Paths   : 8
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 8
+
+--------------------------------------------------------------------------------------
+
