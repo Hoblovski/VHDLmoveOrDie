@@ -450,41 +450,41 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~2 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|Add3~1 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 20
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|Add3~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  MoveController:u2|l_X[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|x[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~2	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~3	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|Add3~1	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~2	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 6688
+		lut_mask                       = aa55
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~4 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|Add3~3 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 21
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~4	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~5	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|Add3~3	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~4	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -492,20 +492,20 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~6 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|Add3~5 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 22
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~6	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~7	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|Add3~5	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~6	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -513,20 +513,20 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~8 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|Add3~7 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 23
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~8	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~9	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|Add3~7	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~8	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -534,20 +534,20 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~10 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|Add3~9 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 24
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~10	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~11	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|Add3~9	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~10	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -555,324 +555,30 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~12 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|Add3~11 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 25
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~12	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~13	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|Add3~11	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~12	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
 		lut_mask                       = 9617
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~2 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 26
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|Add1~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  MoveController:u2|l_Y[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~2	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~3	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 6688
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~4 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 27
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~4	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~5	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 9617
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~6 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 28
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~6	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~7	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 698e
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~8 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 29
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~8	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~9	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 9617
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~10 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 30
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~10	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~11	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 698e
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~12 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 31
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~12	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~13	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 9617
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~14 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 32
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~14	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~15	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 698e
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~14 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 33
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~14	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~15	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 698e
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~16 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 34
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~16	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~17	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 9617
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~18 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 35
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add1~17	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~18	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~19	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 698e
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~16 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 36
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~16	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~17	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 9617
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~18 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 37
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  MoveController:u2|Add3~17	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~18	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~19	LIT INDEX 0 FANOUTS 1
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 698e
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~20 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 38
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_X[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: [CIN]	  MoveController:u2|Add3~19	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~20	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add3~21	LIT INDEX 0 FANOUTS 0
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 6969
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~20 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 39
-	Atom Type: cycloneii_lcell_comb (WYSIWYG)
-
-	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|l_Y[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: [CIN]	  MoveController:u2|Add1~19	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~20	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	MoveController:u2|Add1~21	LIT INDEX 0 FANOUTS 0
-
-	PARAMETER LIST:
-		sum_lutc_input                 = cin
-		lut_mask                       = 6969
 
 
 - ATOM ------------------------
 	ATOM_NAME: ClkDivider:u0|l_reCnt[17] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 40
+	Atom Id: 26
 	Atom Type: cycloneii_lcell_ff (WYSIWYG)
 
 	power up = low
@@ -890,6 +596,300 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~1 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 27
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~1	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~2	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = aa55
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~3 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 28
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~3	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~4	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9617
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~5 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 29
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~5	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~6	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 698e
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~7 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 30
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~7	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~8	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9617
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~9 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 31
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~9	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~10	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 698e
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~11 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 32
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~11	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~12	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9617
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add3~13 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 33
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add3~13	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~14	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 698e
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~13 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 34
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~13	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~14	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 698e
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~15 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 35
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~15	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~16	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9617
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~17 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 36
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add6~16	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~17	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~18	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 698e
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add3~15 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 37
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add3~15	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~16	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9617
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add3~17 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 38
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  ClientLogic:u2|Add3~16	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add3~17	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~18	LIT INDEX 0 FANOUTS 1
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 698e
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add3~19 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 39
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|x[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: [CIN]	  ClientLogic:u2|Add3~18	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add3~19	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add3~20	LIT INDEX 0 FANOUTS 0
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9696
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|Add6~19 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 40
+	Atom Type: cycloneii_lcell_comb (WYSIWYG)
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|y[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: [CIN]	  ClientLogic:u2|Add6~18	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|Add6~19	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	ClientLogic:u2|Add6~20	LIT INDEX 0 FANOUTS 0
+
+	PARAMETER LIST:
+		sum_lutc_input                 = cin
+		lut_mask                       = 9696
 
 
 - ATOM ------------------------
@@ -2056,7 +2056,7 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  VGA640480:u3|CLK_25MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  VGA640480:u3|l_vgaX~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  VGA640480:u3|l_vgaX~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -2070,7 +2070,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[5] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[5] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 105
 	Atom Type: cycloneii_lcell_ff
@@ -2079,21 +2079,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[5]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[5]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[5] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[5] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 106
 	Atom Type: cycloneii_lcell_ff
@@ -2102,14 +2102,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[5]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[5]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2124,8 +2124,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaY[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaX[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_X[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~1	LIT INDEX 0 FANOUTS 1
@@ -2183,7 +2183,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[1] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[1] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 110
 	Atom Type: cycloneii_lcell_ff
@@ -2192,21 +2192,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[1]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[1]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[4] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[4] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 111
 	Atom Type: cycloneii_lcell_ff
@@ -2215,14 +2215,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[4]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[4]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2237,8 +2237,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaY[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaY[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_Y[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_y[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~2	LIT INDEX 0 FANOUTS 1
@@ -2273,7 +2273,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[6] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[6] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 114
 	Atom Type: cycloneii_lcell_ff
@@ -2282,21 +2282,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[6]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[6]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[8] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[8] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 115
 	Atom Type: cycloneii_lcell_ff
@@ -2305,14 +2305,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~18	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[8]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[8]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2327,8 +2327,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaY[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaX[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_X[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~3	LIT INDEX 0 FANOUTS 1
@@ -2340,7 +2340,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[8] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[8] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 117
 	Atom Type: cycloneii_lcell_ff
@@ -2349,21 +2349,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~18	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[8]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[8]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[9] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[9] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 118
 	Atom Type: cycloneii_lcell_ff
@@ -2372,14 +2372,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|l_X[9]~20	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[9]	LIT INDEX 0 FANOUTS 2 REGED INV
+		0: [REGOUT]	ClientLogic:u2|pos_x[9]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2392,10 +2392,10 @@ Chip Device Options:
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  VGA640480:u3|l_vgaX[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  MoveController:u2|l_X[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  VGA640480:u3|l_vgaX[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_X[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  VGA640480:u3|l_vgaX[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  VGA640480:u3|l_vgaX[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[8]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_x[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~4	LIT INDEX 0 FANOUTS 1
@@ -2403,7 +2403,7 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0990
+		lut_mask                       = 8241
 
 
 - ATOM ------------------------
@@ -2451,7 +2451,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[3] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[3] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 122
 	Atom Type: cycloneii_lcell_ff
@@ -2460,21 +2460,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[3]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[3]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[7] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[7] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 123
 	Atom Type: cycloneii_lcell_ff
@@ -2483,14 +2483,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~16	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[7]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[7]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2505,8 +2505,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaX[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaX[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_X[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_X[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_x[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~6	LIT INDEX 0 FANOUTS 1
@@ -2564,7 +2564,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[0] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[0] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 127
 	Atom Type: cycloneii_lcell_ff
@@ -2573,21 +2573,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|pos_x[0]~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[0]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[0]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[1] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[1] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 128
 	Atom Type: cycloneii_lcell_ff
@@ -2596,14 +2596,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[1]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[1]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2618,8 +2618,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaX[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaX[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_X[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_X[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_x[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~7	LIT INDEX 0 FANOUTS 1
@@ -2640,14 +2640,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  VGA640480:u3|CLK_25MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  VGA640480:u3|l_vgaY~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  VGA640480:u3|l_vgaY~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: [ENA]	  VGA640480:u3|Equal0~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	VGA640480:u3|l_vgaY[2]	LIT INDEX 0 FANOUTS 4 REGED POS
+		0: [REGOUT]	VGA640480:u3|l_vgaY[2]	LIT INDEX 0 FANOUTS 5 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2663,21 +2663,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  VGA640480:u3|CLK_25MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  VGA640480:u3|l_vgaY~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  VGA640480:u3|l_vgaY~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: [ENA]	  VGA640480:u3|Equal0~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	VGA640480:u3|l_vgaY[0]	LIT INDEX 0 FANOUTS 3 REGED POS
+		0: [REGOUT]	VGA640480:u3|l_vgaY[0]	LIT INDEX 0 FANOUTS 4 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[0] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[0] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 132
 	Atom Type: cycloneii_lcell_ff
@@ -2686,21 +2686,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|pos_y[0]~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[0]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[0]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[2] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[2] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 133
 	Atom Type: cycloneii_lcell_ff
@@ -2709,14 +2709,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[2]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[2]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2731,8 +2731,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaY[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaY[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_Y[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_y[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~8	LIT INDEX 0 FANOUTS 1
@@ -2760,14 +2760,14 @@ Chip Device Options:
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	VGA640480:u3|l_vgaX[4]	LIT INDEX 0 FANOUTS 4 REGED POS
+		0: [REGOUT]	VGA640480:u3|l_vgaX[4]	LIT INDEX 0 FANOUTS 5 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[4] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[4] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 136
 	Atom Type: cycloneii_lcell_ff
@@ -2776,21 +2776,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[4]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[4]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[6] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[6] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 137
 	Atom Type: cycloneii_lcell_ff
@@ -2799,14 +2799,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[6]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[6]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2821,8 +2821,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaY[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaX[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_X[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~9	LIT INDEX 0 FANOUTS 1
@@ -2864,7 +2864,7 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  VGA640480:u3|CLK_25MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  VGA640480:u3|l_vgaY~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  VGA640480:u3|l_vgaY~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -2878,7 +2878,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[3] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[3] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 141
 	Atom Type: cycloneii_lcell_ff
@@ -2887,21 +2887,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[3]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[3]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[9] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[9] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 142
 	Atom Type: cycloneii_lcell_ff
@@ -2910,14 +2910,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|l_Y[9]~20	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[9]	LIT INDEX 0 FANOUTS 2 REGED INV
+		0: [REGOUT]	ClientLogic:u2|pos_y[9]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -2930,10 +2930,10 @@ Chip Device Options:
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  VGA640480:u3|l_vgaY[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  MoveController:u2|l_Y[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  VGA640480:u3|l_vgaY[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  VGA640480:u3|l_vgaY[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  VGA640480:u3|l_vgaY[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_y[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[9]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~11	LIT INDEX 0 FANOUTS 1
@@ -2941,7 +2941,7 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0990
+		lut_mask                       = 8241
 
 
 - ATOM ------------------------
@@ -2961,14 +2961,14 @@ Chip Device Options:
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	VGA640480:u3|l_vgaX[2]	LIT INDEX 0 FANOUTS 3 REGED POS
+		0: [REGOUT]	VGA640480:u3|l_vgaX[2]	LIT INDEX 0 FANOUTS 4 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[2] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[2] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 145
 	Atom Type: cycloneii_lcell_ff
@@ -2977,21 +2977,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add3~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_X[2]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_x[2]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[7] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[7] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 146
 	Atom Type: cycloneii_lcell_ff
@@ -3000,14 +3000,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  MoveController:u2|Add1~16	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	MoveController:u2|l_Y[7]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	ClientLogic:u2|pos_y[7]	LIT INDEX 0 FANOUTS 1 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -3022,8 +3022,8 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  VGA640480:u3|l_vgaY[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  VGA640480:u3|l_vgaX[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  MoveController:u2|l_X[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  MoveController:u2|l_Y[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  ClientLogic:u2|pos_x[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|pos_y[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|process_6~12	LIT INDEX 0 FANOUTS 1
@@ -3068,7 +3068,7 @@ Chip Device Options:
 		3: [DATAD]	  VGA640480:u3|l_vgaX[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|Equal0~0	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	VGA640480:u3|Equal0~0	LIT INDEX 0 FANOUTS 2
 		1: NONE
 
 	PARAMETER LIST:
@@ -3089,7 +3089,7 @@ Chip Device Options:
 		3: [DATAD]	  VGA640480:u3|l_vgaX[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|Equal0~1	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	VGA640480:u3|Equal0~1	LIT INDEX 0 FANOUTS 2
 		1: NONE
 
 	PARAMETER LIST:
@@ -3110,7 +3110,7 @@ Chip Device Options:
 		3: [DATAD]	  VGA640480:u3|l_vgaX[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|Equal0~2	LIT INDEX 0 FANOUTS 13
+		0: [COMBOUT]	VGA640480:u3|Equal0~2	LIT INDEX 0 FANOUTS 12
 		1: NONE
 
 	PARAMETER LIST:
@@ -3173,7 +3173,7 @@ Chip Device Options:
 		3: [DATAD]	  VGA640480:u3|l_vgaY[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|Equal1~0	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	VGA640480:u3|Equal1~0	LIT INDEX 0 FANOUTS 2
 		1: NONE
 
 	PARAMETER LIST:
@@ -3194,7 +3194,7 @@ Chip Device Options:
 		3: [DATAD]	  VGA640480:u3|l_vgaY[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|Equal1~1	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	VGA640480:u3|Equal1~1	LIT INDEX 0 FANOUTS 2
 		1: NONE
 
 	PARAMETER LIST:
@@ -3215,7 +3215,7 @@ Chip Device Options:
 		3: [DATAD]	  VGA640480:u3|l_vgaY[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|Equal1~2	LIT INDEX 0 FANOUTS 4
+		0: [COMBOUT]	VGA640480:u3|Equal1~2	LIT INDEX 0 FANOUTS 3
 		1: NONE
 
 	PARAMETER LIST:
@@ -3358,13 +3358,396 @@ Chip Device Options:
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  VGA640480:u3|Add0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
+		0: [DATAA]	  VGA640480:u3|l_vgaX[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  VGA640480:u3|l_vgaX[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
-		3: [DATAD]	  VGA640480:u3|Equal0~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: NO ITERM
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	VGA640480:u3|l_vgaX~12	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 7777
+
+
+- ATOM ------------------------
+	ATOM_NAME: VGA640480:u3|l_vgaX~13 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 164
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  VGA640480:u3|Add0~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  VGA640480:u3|Equal0~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  VGA640480:u3|Equal0~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  VGA640480:u3|l_vgaX~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	VGA640480:u3|l_vgaX~13	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = aa2a
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 165
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[5]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClkDivider:u0|l_clkout -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 166
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClkDivider:u0|l_clkout~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClkDivider:u0|l_clkout	LIT INDEX 0 FANOUTS 43 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 167
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[5]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[1] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 168
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[1]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[4] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 169
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[4]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[6] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 170
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[6]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[8] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 171
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~17	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[8]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[8] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 172
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~17	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[8]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[9] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 173
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~19	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[9]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[3] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 174
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[3]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[7] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 175
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[7]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[0] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 176
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|x[0]~132	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[0]	LIT INDEX 0 FANOUTS 3 REGED INV
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[1] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 177
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[1]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: VGA640480:u3|l_vgaY~11 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 178
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  VGA640480:u3|l_vgaY[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  VGA640480:u3|l_vgaY[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	VGA640480:u3|l_vgaY~11	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = dddd
+
+
+- ATOM ------------------------
+	ATOM_NAME: VGA640480:u3|l_vgaY~12 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 179
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  VGA640480:u3|Add1~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  VGA640480:u3|Equal1~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  VGA640480:u3|Equal1~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  VGA640480:u3|l_vgaY~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	VGA640480:u3|l_vgaY~12	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = aa2a
+
+
+- ATOM ------------------------
+	ATOM_NAME: VGA640480:u3|l_vgaY~13 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 180
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  VGA640480:u3|Add1~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VGA640480:u3|Equal1~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	VGA640480:u3|l_vgaY~13	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -3373,9 +3756,258 @@ Chip Device Options:
 
 
 - ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[0] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 181
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|y[0]~160	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[0]	LIT INDEX 0 FANOUTS 3 REGED INV
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[2] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 182
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[2]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[4] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 183
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[4]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[6] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 184
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[6]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: VGA640480:u3|l_vgaY~14 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 185
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  VGA640480:u3|Add1~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: [DATAD]	  VGA640480:u3|Equal1~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	VGA640480:u3|l_vgaY~14	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 00aa
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[3] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 186
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[3]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[9] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 187
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~19	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[9]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[2] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 188
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add3~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|x[2]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|y[7] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 189
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|Add6~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|y[7]	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|state.fall -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 191
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|state.fall~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	ClientLogic:u2|state.fall	LIT INDEX 0 FANOUTS 11 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: ClkDivider:u0|l_clkout~0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 192
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: NO ITERM
+		1: NO ITERM
+		2: [DATAC]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClkDivider:u0|l_reCnt[17]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClkDivider:u0|l_clkout~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 0ff0
+
+
+- ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 164
+	Atom Id: 193
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -3396,16 +4028,37 @@ Chip Device Options:
 
 
 - ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|x[0]~132 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 194
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|Add3~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: [DATAD]	  ClientLogic:u2|x[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|x[0]~132	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 7744
+
+
+- ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 165
+	Atom Id: 195
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  !(WASDDecoder:u1|Keyboard:u0|loe)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -3419,190 +4072,81 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add3~1 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|y[0]~160 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 166
+	Atom Id: 196
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|Add6~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
+		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|y[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add3~1	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|y[0]~160	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = eeee
+		lut_mask                       = f704
 
 
 - ATOM ------------------------
-	ATOM_NAME: ClkDivider:u0|l_clkout -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|state.stand -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 167
+	Atom Id: 197
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  ClkDivider:u0|l_clkout~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [CLK]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  ClientLogic:u2|state.stand~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	ClkDivider:u0|l_clkout	LIT INDEX 0 FANOUTS 21 REGED POS
+		0: [REGOUT]	ClientLogic:u2|state.stand	LIT INDEX 0 FANOUTS 2 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|state.fall~1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 168
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  !(WASDDecoder:u1|Keyboard:u0|loe)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0 FANOUTS 11 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 169
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  !(WASDDecoder:u1|Keyboard:u0|loe)	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1]~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1]	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: MoveController:u2|Add1~1 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 170
+	Atom Id: 198
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|Add1~1	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = eeee
-
-
-- ATOM ------------------------
-	ATOM_NAME: VGA640480:u3|l_vgaY~11 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 171
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  VGA640480:u3|Add1~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|state.fall	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: NO ITERM
 		2: NO ITERM
-		3: [DATAD]	  VGA640480:u3|Equal1~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  ClientLogic:u2|state.stand	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|l_vgaY~11	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|state.fall~1	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 00aa
-
-
-- ATOM ------------------------
-	ATOM_NAME: VGA640480:u3|l_vgaY~12 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 172
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  VGA640480:u3|Add1~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VGA640480:u3|Equal1~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|l_vgaY~12	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 00aa
-
-
-- ATOM ------------------------
-	ATOM_NAME: VGA640480:u3|l_vgaY~13 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 173
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  VGA640480:u3|Add1~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: NO ITERM
-		3: [DATAD]	  VGA640480:u3|Equal1~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	VGA640480:u3|l_vgaY~13	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 00aa
+		lut_mask                       = aaff
 
 
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 175
+	Atom Id: 199
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0	LIT INDEX 0 FANOUTS 1
@@ -3616,28 +4160,28 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 176
+	Atom Id: 200
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1	LIT INDEX 0 FANOUTS 2
+		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0080
+		lut_mask                       = 0008
 
 
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|state -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 177
+	Atom Id: 201
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -3651,7 +4195,7 @@ Chip Device Options:
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0 FANOUTS 5 REGED INV
+		0: [REGOUT]	WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0 FANOUTS 3 REGED INV
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -3660,12 +4204,12 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]~4 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 178
+	Atom Id: 202
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		3: [DATAD]	  WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
@@ -3675,13 +4219,13 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 8aba
+		lut_mask                       = 2aea
 
 
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|loe -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 179
+	Atom Id: 203
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -3695,7 +4239,7 @@ Chip Device Options:
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0 FANOUTS 13 REGED POS
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0 FANOUTS 11 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -3704,56 +4248,56 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 180
+	Atom Id: 204
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: NO ITERM
-		1: NO ITERM
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0	LIT INDEX 0 FANOUTS 2
+		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 000f
+		lut_mask                       = 0002
 
 
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 181
+	Atom Id: 205
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: NO ITERM
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1	LIT INDEX 0 FANOUTS 2
+		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 000a
+		lut_mask                       = 0008
 
 
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 182
+	Atom Id: 206
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5	LIT INDEX 0 FANOUTS 1
@@ -3761,146 +4305,89 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0080
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~6 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 183
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~6	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 4ecc
-
-
-- ATOM ------------------------
-	ATOM_NAME: ClkDivider:u0|l_clkout~0 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 184
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: NO ITERM
-		1: NO ITERM
-		2: [DATAC]	  ClkDivider:u0|l_clkout	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  ClkDivider:u0|l_reCnt[17]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	ClkDivider:u0|l_clkout~0	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0ff0
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~7 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 185
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~7	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
 		lut_mask                       = 2aea
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux6~2 -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[4] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 186
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux6~2	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0080
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux7~0 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 187
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux7~0	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 0088
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1]~8 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 188
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux6~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux7~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1]~8	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 2aea
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[0] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 189
+	Atom Id: 207
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[0]~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[4]~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[4]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 208
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[5]~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[1] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 209
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[1]~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[1]	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[0] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 210
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[0]~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -3916,14 +4403,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[3] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 190
+	Atom Id: 211
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[3]~9	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[3]~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -3937,23 +4424,23 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[4] -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 191
+	Atom Id: 212
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[4]~10	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[2]~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[4]	LIT INDEX 0 FANOUTS 3 REGED POS
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0 FANOUTS 3 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -3962,14 +4449,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[7] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 192
+	Atom Id: 213
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[7]~11	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[7]~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -3985,14 +4472,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[6] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 193
+	Atom Id: 214
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[6]~12	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[6]~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -4006,85 +4493,16 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[5] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 194
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[5]~13	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[2] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 195
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[2]~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[1] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 196
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|code[1]~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|code[1]	LIT INDEX 0 FANOUTS 3 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|state~1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 197
+	Atom Id: 215
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|state~1	LIT INDEX 0 FANOUTS 1
@@ -4096,16 +4514,37 @@ Chip Device Options:
 
 
 - ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|Mux6~2 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 216
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|Mux6~2	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 000a
+
+
+- ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|KeyboardDecoder:u1|state~2 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 198
+	Atom Id: 217
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: [DATAA]	  WASDDecoder:u1|KeyboardDecoder:u1|state	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  WASDDecoder:u1|KeyboardDecoder:u1|state~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|KeyboardDecoder:u1|Mux6~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|scancode[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|KeyboardDecoder:u1|state~2	LIT INDEX 0 FANOUTS 1
@@ -4119,7 +4558,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.finish -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 199
+	Atom Id: 218
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4142,7 +4581,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|data -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 200
+	Atom Id: 219
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4156,30 +4595,7 @@ Chip Device Options:
 		5: NO ITERM
 		6: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0 FANOUTS 12 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d0 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 201
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|Selector2~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d0	LIT INDEX 0 FANOUTS 3 REGED POS
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0 FANOUTS 13 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -4188,7 +4604,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|clk2 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 202
+	Atom Id: 220
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4211,7 +4627,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|clk1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 203
+	Atom Id: 221
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4234,7 +4650,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|clk -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 204
+	Atom Id: 222
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4253,74 +4669,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[0]~8 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 205
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|state.d0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[0]~8	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = accc
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d3 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 206
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d3	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[3]~9 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 207
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[3]~9	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = accc
-
-
-- ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d4 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 208
+	Atom Id: 223
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4341,9 +4692,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[4]~10 -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[4]~8 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 209
+	Atom Id: 224
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4353,95 +4704,7 @@ Chip Device Options:
 		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[4]~10	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = accc
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d7 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 210
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d7	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[7]~11 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 211
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[7]~11	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = accc
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d6 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 212
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d6	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[6]~12 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 213
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[6]~12	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[4]~8	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -4452,7 +4715,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d5 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 214
+	Atom Id: 225
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4473,63 +4736,19 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[5]~13 -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[5]~9 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 215
+	Atom Id: 226
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|state.d5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[5]~13	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = accc
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d2 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 216
-	Atom Type: cycloneii_lcell_ff
-
-	power up = low
-
-	INPUTS (Driven By):
-		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: NO ITERM
-		3: NO ITERM
-		4: NO ITERM
-		5: NO ITERM
-		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-	OUTPUTS (Int. Connections):
-		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d2	LIT INDEX 0 FANOUTS 2 REGED POS
-
-	PARAMETER LIST:
-		EMPTY!!
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[2]~14 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 217
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[2]~14	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[5]~9	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -4540,7 +4759,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 218
+	Atom Id: 227
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4561,9 +4780,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[1]~15 -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[1]~10 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 219
+	Atom Id: 228
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4573,7 +4792,227 @@ Chip Device Options:
 		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[1]~15	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[1]~10	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = accc
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d0 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 229
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|Selector2~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d0	LIT INDEX 0 FANOUTS 3 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[0]~11 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 230
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[0]~11	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = accc
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d3 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 231
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d3	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[3]~12 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 232
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[3]~12	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = accc
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d2 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 233
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d2	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[2]~13 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 234
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[2]~13	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = accc
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d7 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 235
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d7	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[7]~14 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 236
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d7	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[7]~14	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = accc
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.d6 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 237
+	Atom Type: cycloneii_lcell_ff
+
+	power up = low
+
+	INPUTS (Driven By):
+		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|state.d5	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+		5: NO ITERM
+		6: [ENA]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+	OUTPUTS (Int. Connections):
+		0: [REGOUT]	WASDDecoder:u1|Keyboard:u0|state.d6	LIT INDEX 0 FANOUTS 2 REGED POS
+
+	PARAMETER LIST:
+		EMPTY!!
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|code[6]~15 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 238
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|state.d6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|code[6]~15	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -4584,7 +5023,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.stop -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 220
+	Atom Id: 239
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4607,7 +5046,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector12~11 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 221
+	Atom Id: 240
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4628,7 +5067,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.start -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 223
+	Atom Id: 243
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4651,7 +5090,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector2~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 224
+	Atom Id: 244
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4672,14 +5111,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|process_0~1 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 226
+	Atom Id: 245
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|code[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|code[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|code[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|process_0~1	LIT INDEX 0 FANOUTS 1
@@ -4693,14 +5132,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|process_0~2 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 227
+	Atom Id: 246
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|code[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|code[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|code[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|code[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|code[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|code[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|process_0~2	LIT INDEX 0 FANOUTS 1
@@ -4714,7 +5153,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|process_0~3 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 228
+	Atom Id: 247
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4735,7 +5174,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.parity -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 229
+	Atom Id: 248
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
@@ -4758,7 +5197,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector11~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 230
+	Atom Id: 249
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4779,14 +5218,14 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|state.delay -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 231
+	Atom Id: 250
 	Atom Type: cycloneii_lcell_ff
 
 	power up = low
 
 	INPUTS (Driven By):
 		0: [CLK]	  CLK_100MHz	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|Selector0~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  WASDDecoder:u1|Keyboard:u0|Selector0~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
@@ -4802,7 +5241,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector1~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 232
+	Atom Id: 251
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4821,16 +5260,58 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector0~2 -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector0~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 233
+	Atom Id: 252
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|state.start	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|state.finish	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|state.stop	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: NO ITERM
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|Selector0~0	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = aaea
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector0~1 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 253
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|state.parity	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|state.start	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|data	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|process_0~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|Selector0~1	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = c0ea
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector0~2 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 254
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|clk1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|Selector0~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|clk2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|Selector0~0	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|Selector0~2	LIT INDEX 0 FANOUTS 1
@@ -4838,55 +5319,13 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = d8d8
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector0~3 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 234
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|Selector0~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|state.parity	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|process_0~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|Selector0~3	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = 5515
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|Selector0~4 -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 235
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: [DATAA]	  WASDDecoder:u1|Keyboard:u0|clk2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|clk1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|state.finish	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|Selector0~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|Selector0~4	LIT INDEX 0 FANOUTS 1
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = f2f0
+		lut_mask                       = 00bf
 
 
 - ATOM ------------------------
 	ATOM_NAME: VGA640480:u3|CLK_25MHz~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 236
+	Atom Id: 255
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4905,19 +5344,19 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_X[9]~20 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_x[0]~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 237
+	Atom Id: 256
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|Add3~20	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|x[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: NO ITERM
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|l_X[9]~20	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|pos_x[0]~0	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -4926,19 +5365,19 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: MoveController:u2|l_Y[9]~20 -- NON-UNIQUE
+	ATOM_NAME: ClientLogic:u2|pos_y[0]~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 238
+	Atom Id: 257
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  MoveController:u2|Add1~20	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  ClientLogic:u2|y[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: NO ITERM
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	MoveController:u2|l_Y[9]~20	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	ClientLogic:u2|pos_y[0]~0	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -4949,7 +5388,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: VGA640480:u3|l_CLK_50MHz~0 -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 239
+	Atom Id: 258
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4968,9 +5407,93 @@ Chip Device Options:
 
 
 - ATOM ------------------------
+	ATOM_NAME: ClientLogic:u2|state.stand~1 -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 259
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: [DATAA]	  ClientLogic:u2|state.stand	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: NO ITERM
+		2: NO ITERM
+		3: NO ITERM
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	ClientLogic:u2|state.stand~1	LIT INDEX 0 FANOUTS 1
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = 5555
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[4] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 260
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: NO ITERM
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0 FANOUTS 4
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = ccf0
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[5] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 261
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: NO ITERM
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0 FANOUTS 4
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = ccf0
+
+
+- ATOM ------------------------
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[1] -- NON-UNIQUE
+	Atom Hier Name: 
+	Atom Id: 262
+	Atom Type: cycloneii_lcell_comb
+
+	INPUTS (Driven By):
+		0: NO ITERM
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: NO ITERM
+	OUTPUTS (Int. Connections):
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0 FANOUTS 4
+		1: NONE
+
+	PARAMETER LIST:
+		sum_lutc_input                 = datac
+		lut_mask                       = ccf0
+
+
+- ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 240
+	Atom Id: 263
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -4980,7 +5503,7 @@ Chip Device Options:
 		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0 FANOUTS 6
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[0]	LIT INDEX 0 FANOUTS 4
 		1: NONE
 
 	PARAMETER LIST:
@@ -4991,7 +5514,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[3] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 241
+	Atom Id: 264
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -5010,19 +5533,19 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[4] -- NON-UNIQUE
+	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 242
+	Atom Id: 265
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: NO ITERM
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[4]	LIT INDEX 0 FANOUTS 5
+		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0 FANOUTS 4
 		1: NONE
 
 	PARAMETER LIST:
@@ -5033,7 +5556,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[7] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 243
+	Atom Id: 266
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -5054,7 +5577,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[6] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 244
+	Atom Id: 267
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -5073,72 +5596,9 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[5] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 245
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: NO ITERM
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[5]	LIT INDEX 0 FANOUTS 4
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = ccf0
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[2] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 246
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: NO ITERM
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[2]	LIT INDEX 0 FANOUTS 4
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = ccf0
-
-
-- ATOM ------------------------
-	ATOM_NAME: WASDDecoder:u1|Keyboard:u0|scancode[1] -- NON-UNIQUE
-	Atom Hier Name: 
-	Atom Id: 247
-	Atom Type: cycloneii_lcell_comb
-
-	INPUTS (Driven By):
-		0: NO ITERM
-		1: [DATAB]	  WASDDecoder:u1|Keyboard:u0|code[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  WASDDecoder:u1|Keyboard:u0|loe	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: NO ITERM
-	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	WASDDecoder:u1|Keyboard:u0|scancode[1]	LIT INDEX 0 FANOUTS 5
-		1: NONE
-
-	PARAMETER LIST:
-		sum_lutc_input                 = datac
-		lut_mask                       = ccf0
-
-
-- ATOM ------------------------
 	ATOM_NAME: vga_HSYNC -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 250
+	Atom Id: 270
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5193,7 +5653,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_VSYNC -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 251
+	Atom Id: 271
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5248,7 +5708,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_r[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 252
+	Atom Id: 272
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5303,7 +5763,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_r[1] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 253
+	Atom Id: 273
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5358,7 +5818,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_r[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 254
+	Atom Id: 274
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5413,7 +5873,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_g[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 255
+	Atom Id: 275
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5468,7 +5928,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_g[1] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 256
+	Atom Id: 276
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5523,7 +5983,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_g[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 257
+	Atom Id: 277
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5578,7 +6038,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_b[0] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 258
+	Atom Id: 278
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5633,7 +6093,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_b[1] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 259
+	Atom Id: 279
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5688,7 +6148,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: vga_b[2] -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 260
+	Atom Id: 280
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5743,7 +6203,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: CLK_100MHz -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 261
+	Atom Id: 281
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5798,7 +6258,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ps2_datain -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 262
+	Atom Id: 282
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5853,7 +6313,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ps2_clk -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 263
+	Atom Id: 283
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5908,7 +6368,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~QUARTUS_CREATED_GND~I -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 264
+	Atom Id: 284
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
@@ -5928,7 +6388,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~ASDO~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 265
+	Atom Id: 285
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -5983,7 +6443,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~nCSO~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 266
+	Atom Id: 286
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):
@@ -6038,7 +6498,7 @@ Chip Device Options:
 - ATOM ------------------------
 	ATOM_NAME: ~LVDS195p/nCEO~ -- NON-UNIQUE
 	Atom Hier Name: 
-	Atom Id: 267
+	Atom Id: 287
 	Atom Type: cycloneii_io
 
 	INPUTS (Driven By):

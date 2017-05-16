@@ -69,6 +69,7 @@ set_location_assignment PIN_R3 -to vga_r[1]
 set_location_assignment PIN_R2 -to vga_r[0]
 set_location_assignment PIN_U4 -to vga_VSYNC
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name VHDL_FILE ../src/Logic/ClientLogic.vhd
 set_global_assignment -name VHDL_FILE ../src/vga/moveController.vhd
 set_global_assignment -name VHDL_FILE ../src/utils/clkdivider.vhd
 set_global_assignment -name VHDL_FILE ../src/vga/vga640480.vhd

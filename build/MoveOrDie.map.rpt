@@ -1,6 +1,6 @@
 Analysis & Synthesis report for MoveOrDie
-Tue May 16 16:43:39 2017
-Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+Tue May 16 22:16:45 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
 ---------------------
@@ -12,13 +12,17 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Parameter Settings for User Entity Instance: ClkDivider:u0
- 13. Analysis & Synthesis Messages
+  7. State Machine - |MoveOrDie|ClientLogic:u2|state
+  8. State Machine - |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: ClkDivider:u0
+ 16. Port Connectivity Checks: "ClientLogic:u2"
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +48,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 16 16:43:39 2017    ;
-; Quartus II 64-Bit Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Analysis & Synthesis Status        ; Successful - Tue May 16 22:16:45 2017    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name                      ; MoveOrDie                                ;
 ; Top-level Entity Name              ; MoveOrDie                                ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 152                                      ;
+; Total logic elements               ; 170                                      ;
 ;     Total combinational functions  ; 138                                      ;
-;     Dedicated logic registers      ; 96                                       ;
-; Total registers                    ; 96                                       ;
+;     Dedicated logic registers      ; 116                                      ;
+; Total registers                    ; 116                                      ;
 ; Total pins                         ; 14                                       ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
@@ -141,13 +145,13 @@ applicable agreement for further details.
 +---------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+
 ; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ;
 +---------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+
-; ../src/vga/moveController.vhd         ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/vga/moveController.vhd         ;
-; ../src/utils/clkdivider.vhd           ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/utils/clkdivider.vhd           ;
-; ../src/vga/vga640480.vhd              ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/vga/vga640480.vhd              ;
-; ../src/top/moveordie.vhd              ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/top/moveordie.vhd              ;
-; ../src/keydecoder/keyboard.vhd        ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/keydecoder/keyboard.vhd        ;
-; ../src/keydecoder/keyboarddecoder.vhd ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/keydecoder/keyboarddecoder.vhd ;
-; ../src/keydecoder/wasddecoder.vhd     ; yes             ; User VHDL File  ; C:/Users/Hob Den/Documents/VHDLFiles/moveordie/src/keydecoder/wasddecoder.vhd     ;
+; ../src/Logic/ClientLogic.vhd          ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/Logic/ClientLogic.vhd          ;
+; ../src/utils/clkdivider.vhd           ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/utils/clkdivider.vhd           ;
+; ../src/vga/vga640480.vhd              ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/vga/vga640480.vhd              ;
+; ../src/top/moveordie.vhd              ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/top/moveordie.vhd              ;
+; ../src/keydecoder/keyboard.vhd        ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/keydecoder/keyboard.vhd        ;
+; ../src/keydecoder/keyboarddecoder.vhd ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/keydecoder/keyboarddecoder.vhd ;
+; ../src/keydecoder/wasddecoder.vhd     ; yes             ; User VHDL File  ; C:/Users/Keavil/Documents/GitHub/VHDLmoveOrDie/src/keydecoder/wasddecoder.vhd     ;
 +---------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+
 
 
@@ -156,27 +160,27 @@ applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 152        ;
+; Estimated Total logic elements              ; 170        ;
 ;                                             ;            ;
 ; Total combinational functions               ; 138        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 49         ;
-;     -- 3 input functions                    ; 33         ;
-;     -- <=2 input functions                  ; 56         ;
+;     -- 4 input functions                    ; 51         ;
+;     -- 3 input functions                    ; 30         ;
+;     -- <=2 input functions                  ; 57         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
 ;     -- normal mode                          ; 85         ;
 ;     -- arithmetic mode                      ; 53         ;
 ;                                             ;            ;
-; Total registers                             ; 96         ;
-;     -- Dedicated logic registers            ; 96         ;
+; Total registers                             ; 116        ;
+;     -- Dedicated logic registers            ; 116        ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 14         ;
 ; Maximum fan-out node                        ; CLK_100MHz ;
 ; Maximum fan-out                             ; 45         ;
-; Total fan-out                               ; 639        ;
-; Average fan-out                             ; 2.58       ;
+; Total fan-out                               ; 679        ;
+; Average fan-out                             ; 2.53       ;
 +---------------------------------------------+------------+
 
 
@@ -185,15 +189,28 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
-; |MoveOrDie                 ; 138 (0)           ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |MoveOrDie                                   ; work         ;
+; |MoveOrDie                 ; 138 (0)           ; 116 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |MoveOrDie                                   ; work         ;
+;    |ClientLogic:u2|        ; 26 (26)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|ClientLogic:u2                    ; work         ;
 ;    |ClkDivider:u0|         ; 19 (19)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|ClkDivider:u0                     ; work         ;
-;    |MoveController:u2|     ; 24 (24)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|MoveController:u2                 ; work         ;
-;    |VGA640480:u3|          ; 55 (55)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|VGA640480:u3                      ; work         ;
-;    |WASDDecoder:u1|        ; 40 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|WASDDecoder:u1                    ; work         ;
+;    |VGA640480:u3|          ; 57 (57)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|VGA640480:u3                      ; work         ;
+;    |WASDDecoder:u1|        ; 36 (0)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|WASDDecoder:u1                    ; work         ;
 ;       |Keyboard:u0|        ; 27 (27)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0        ; work         ;
-;       |KeyboardDecoder:u1| ; 13 (13)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1 ; work         ;
+;       |KeyboardDecoder:u1| ; 9 (9)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1 ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |MoveOrDie|ClientLogic:u2|state                  ;
++-------------+------------+------------+------------+-------------+
+; Name        ; state.fall ; state.jump ; state.move ; state.stand ;
++-------------+------------+------------+------------+-------------+
+; state.stand ; 0          ; 0          ; 0          ; 0           ;
+; state.move  ; 0          ; 0          ; 1          ; 1           ;
+; state.jump  ; 0          ; 1          ; 0          ; 1           ;
+; state.fall  ; 1          ; 0          ; 0          ; 1           ;
++-------------+------------+------------+------------+-------------+
 
 
 Encoding Type:  One-Hot
@@ -236,16 +253,33 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                      ;
-+---------------------------------------+---------------------------------+
-; Register name                         ; Reason for Removal              ;
-+---------------------------------------+---------------------------------+
-; VGA640480:u3|l_b[0..2]                ; Merged with VGA640480:u3|l_r[2] ;
-; VGA640480:u3|l_g[0..2]                ; Merged with VGA640480:u3|l_r[2] ;
-; VGA640480:u3|l_r[0..1]                ; Merged with VGA640480:u3|l_r[2] ;
-; Total Number of Removed Registers = 8 ;                                 ;
-+---------------------------------------+---------------------------------+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++---------------------------------------------+-------------------------------------------+
+; Register name                               ; Reason for Removal                        ;
++---------------------------------------------+-------------------------------------------+
+; VGA640480:u3|l_b[0..2]                      ; Merged with VGA640480:u3|l_r[2]           ;
+; VGA640480:u3|l_g[0..2]                      ; Merged with VGA640480:u3|l_r[2]           ;
+; VGA640480:u3|l_r[0..1]                      ; Merged with VGA640480:u3|l_r[2]           ;
+; ClientLogic:u2|jump_remain[0..2,4..5,8..31] ; Stuck at GND due to stuck port data_in    ;
+; ClientLogic:u2|y[10..30]                    ; Stuck at GND due to stuck port data_in    ;
+; ClientLogic:u2|jump_remain[6..7]            ; Merged with ClientLogic:u2|jump_remain[3] ;
+; ClientLogic:u2|state.move                   ; Lost fanout                               ;
+; ClientLogic:u2|state.jump                   ; Stuck at GND due to stuck port data_in    ;
+; ClientLogic:u2|x[10..31]                    ; Lost fanout                               ;
+; ClientLogic:u2|y[31]                        ; Lost fanout                               ;
+; Total Number of Removed Registers = 85      ;                                           ;
++---------------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                    ;
++---------------------------+---------------------------+----------------------------------------+
+; Register name             ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------------+---------------------------+----------------------------------------+
+; ClientLogic:u2|state.jump ; Stuck at GND              ; ClientLogic:u2|x[31]                   ;
+;                           ; due to stuck port data_in ;                                        ;
++---------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -253,7 +287,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 96    ;
+; Total registers                              ; 116   ;
 ; Number of registers using Synchronous Clear  ; 18    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -268,11 +302,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; MoveController:u2|l_X[9]                ; 2       ;
-; MoveController:u2|l_Y[9]                ; 2       ;
-; WASDDecoder:u1|KeyboardDecoder:u1|state ; 5       ;
+; ClientLogic:u2|x[0]                     ; 3       ;
+; ClientLogic:u2|y[0]                     ; 3       ;
+; WASDDecoder:u1|KeyboardDecoder:u1|state ; 3       ;
 ; Total number of inverted registers = 3  ;         ;
 +-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MoveOrDie|ClientLogic:u2|jump_remain[20] ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |MoveOrDie|ClientLogic:u2|x[11]           ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |MoveOrDie|ClientLogic:u2|x[3]            ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |MoveOrDie|ClientLogic:u2|y[20]           ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |MoveOrDie|ClientLogic:u2|y[9]            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |MoveOrDie|ClientLogic:u2|state~23        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -285,14 +333,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ClientLogic:u2"                                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; position ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; life     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; alive    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Tue May 16 16:43:38 2017
+    Info: Processing started: Tue May 16 22:16:44 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MoveOrDie -c MoveOrDie
+Info: Found 2 design units, including 1 entities, in source file ../src/Logic/ClientLogic.vhd
+    Info: Found design unit 1: ClientLogic-Logic
+    Info: Found entity 1: ClientLogic
 Info: Found 2 design units, including 1 entities, in source file ../src/vga/moveController.vhd
     Info: Found design unit 1: MoveController-behave
     Info: Found entity 1: MoveController
@@ -321,6 +383,13 @@ Info: Found 2 design units, including 1 entities, in source file ../src/keydecod
     Info: Found design unit 1: WASDDecoder-behave
     Info: Found entity 1: WASDDecoder
 Info: Elaborating entity "MoveOrDie" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at moveordie.vhd(80): used implicit default value for signal "swp_rst" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at moveordie.vhd(81): used implicit default value for signal "swp_begin_x" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at moveordie.vhd(81): used implicit default value for signal "swp_begin_y" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at moveordie.vhd(82): used implicit default value for signal "swp_map_get" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at moveordie.vhd(83): object "swp_position_require" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at moveordie.vhd(84): object "swp_life" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at moveordie.vhd(85): object "swp_alive" assigned a value but never read
 Info: Elaborating entity "ClkDivider" for hierarchy "ClkDivider:u0"
 Info: Elaborating entity "WASDDecoder" for hierarchy "WASDDecoder:u1"
 Info: Elaborating entity "Keyboard" for hierarchy "WASDDecoder:u1|Keyboard:u0"
@@ -333,15 +402,40 @@ Info (10041): Inferred latch for "scancode[5]" at keyboard.vhd(31)
 Info (10041): Inferred latch for "scancode[6]" at keyboard.vhd(31)
 Info (10041): Inferred latch for "scancode[7]" at keyboard.vhd(31)
 Info: Elaborating entity "KeyboardDecoder" for hierarchy "WASDDecoder:u1|KeyboardDecoder:u1"
-Info: Elaborating entity "MoveController" for hierarchy "MoveController:u2"
+Info: Elaborating entity "ClientLogic" for hierarchy "ClientLogic:u2"
 Info: Elaborating entity "VGA640480" for hierarchy "VGA640480:u3"
-Info: Implemented 166 device resources after synthesis - the final resource count might be different
+Info: 24 registers lost all their fanouts during netlist optimizations. The first 24 are displayed below.
+    Info: Register "ClientLogic:u2|state.move" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|x[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "ClientLogic:u2|y[31]" lost all its fanouts during netlist optimizations.
+Info: Implemented 184 device resources after synthesis - the final resource count might be different
     Info: Implemented 3 input pins
     Info: Implemented 11 output pins
-    Info: Implemented 152 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 344 megabytes
-    Info: Processing ended: Tue May 16 16:43:39 2017
+    Info: Implemented 170 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 267 megabytes
+    Info: Processing ended: Tue May 16 22:16:45 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
