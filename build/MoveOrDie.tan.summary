@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.954 ns
+From           : ps2_datain
+To             : WASDDecoder:u1|Keyboard:u0|data
+From Clock     : --
+To Clock       : CLK_100MHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 19.553 ns
+From           : VGA640480:u3|l_vgaY[8]
+To             : vga_b[1]
+From Clock     : CLK_100MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -6.590 ns
+From           : ps2_clk
+To             : WASDDecoder:u1|Keyboard:u0|clk1
+From Clock     : --
+To Clock       : CLK_100MHz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK_100MHz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 113.15 MHz ( period = 8.838 ns )
+From           : WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]
+To             : MoveController:u2|l_X[9]
+From Clock     : CLK_100MHz
+To Clock       : CLK_100MHz
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLK_100MHz'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : WASDDecoder:u1|Keyboard:u0|code[0]
+To             : WASDDecoder:u1|Keyboard:u0|scancode[0]
+From Clock     : CLK_100MHz
+To Clock       : CLK_100MHz
+Failed Paths   : 8
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 8
+
+--------------------------------------------------------------------------------------
+

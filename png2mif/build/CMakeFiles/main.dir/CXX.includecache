@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././lodepng.h
+string.h
+-
+vector
+-
+string
+-
+lodepng.h
+.././lodepng.h
+iostream
+-
+lodepng.h
+.././lodepng.h
+
+C:/Users/Hob Den/Documents/CppFiles/cg/loadpng/main.cpp
+lodepng.h
+-
+cstdio
+-
+

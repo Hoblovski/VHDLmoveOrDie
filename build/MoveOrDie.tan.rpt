@@ -1,0 +1,584 @@
+Classic Timing Analyzer report for MoveOrDie
+Tue May 16 16:43:55 2017
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK_100MHz'
+  7. Clock Hold: 'CLK_100MHz'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+---------------------------------------------------+----------------------------------------+------------+------------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                              ; To                                     ; From Clock ; To Clock   ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+---------------------------------------------------+----------------------------------------+------------+------------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 6.954 ns                         ; ps2_datain                                        ; WASDDecoder:u1|Keyboard:u0|data        ; --         ; CLK_100MHz ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 19.553 ns                        ; VGA640480:u3|l_vgaY[8]                            ; vga_b[1]                               ; CLK_100MHz ; --         ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; -6.590 ns                        ; ps2_clk                                           ; WASDDecoder:u1|Keyboard:u0|clk1        ; --         ; CLK_100MHz ; 0            ;
+; Clock Setup: 'CLK_100MHz'    ; N/A                                      ; None          ; 113.15 MHz ( period = 8.838 ns ) ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[9]               ; CLK_100MHz ; CLK_100MHz ; 0            ;
+; Clock Hold: 'CLK_100MHz'     ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; WASDDecoder:u1|Keyboard:u0|code[0]                ; WASDDecoder:u1|Keyboard:u0|scancode[0] ; CLK_100MHz ; CLK_100MHz ; 8            ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                   ;                                        ;            ;            ; 8            ;
++------------------------------+------------------------------------------+---------------+----------------------------------+---------------------------------------------------+----------------------------------------+------------+------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C70F672C8       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK_100MHz      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK_100MHz'                                                                                                                                                                                                                                                                                           ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                              ; To                                                ; From Clock ; To Clock   ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 113.15 MHz ( period = 8.838 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 4.070 ns                ;
+; N/A                                     ; 122.25 MHz ( period = 8.180 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.741 ns                ;
+; N/A                                     ; 123.85 MHz ( period = 8.074 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.688 ns                ;
+; N/A                                     ; 124.16 MHz ( period = 8.054 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.678 ns                ;
+; N/A                                     ; 132.24 MHz ( period = 7.562 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[8]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.432 ns                ;
+; N/A                                     ; 135.32 MHz ( period = 7.390 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[7]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.346 ns                ;
+; N/A                                     ; 138.54 MHz ( period = 7.218 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[6]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.260 ns                ;
+; N/A                                     ; 145.43 MHz ( period = 6.876 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[8]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.089 ns                ;
+; N/A                                     ; 146.24 MHz ( period = 6.838 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[5]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.070 ns                ;
+; N/A                                     ; 147.54 MHz ( period = 6.778 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[8]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.040 ns                ;
+; N/A                                     ; 147.71 MHz ( period = 6.770 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[8]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.036 ns                ;
+; N/A                                     ; 150.02 MHz ( period = 6.666 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[4]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.984 ns                ;
+; N/A                                     ; 151.38 MHz ( period = 6.606 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[7]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.954 ns                ;
+; N/A                                     ; 153.94 MHz ( period = 6.496 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[7]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.899 ns                ;
+; N/A                                     ; 153.99 MHz ( period = 6.494 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[3]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.898 ns                ;
+; N/A                                     ; 155.42 MHz ( period = 6.434 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[6]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.868 ns                ;
+; N/A                                     ; 156.49 MHz ( period = 6.390 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[7]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 158.13 MHz ( period = 6.324 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[6]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.813 ns                ;
+; N/A                                     ; 158.18 MHz ( period = 6.322 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[2]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.812 ns                ;
+; N/A                                     ; 160.82 MHz ( period = 6.218 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[6]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.760 ns                ;
+; N/A                                     ; 162.55 MHz ( period = 6.152 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[5]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.727 ns                ;
+; N/A                                     ; 162.60 MHz ( period = 6.150 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[1]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.726 ns                ;
+; N/A                                     ; 165.18 MHz ( period = 6.054 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[5]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.678 ns                ;
+; N/A                                     ; 165.40 MHz ( period = 6.046 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[5]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.674 ns                ;
+; N/A                                     ; 167.22 MHz ( period = 5.980 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[4]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.641 ns                ;
+; N/A                                     ; 170.01 MHz ( period = 5.882 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[4]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.592 ns                ;
+; N/A                                     ; 170.24 MHz ( period = 5.874 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[4]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.588 ns                ;
+; N/A                                     ; 172.18 MHz ( period = 5.808 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[3]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.555 ns                ;
+; N/A                                     ; 175.13 MHz ( period = 5.710 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[3]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.506 ns                ;
+; N/A                                     ; 175.38 MHz ( period = 5.702 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[3]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.502 ns                ;
+; N/A                                     ; 177.43 MHz ( period = 5.636 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[2]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.469 ns                ;
+; N/A                                     ; 180.57 MHz ( period = 5.538 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[2]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.420 ns                ;
+; N/A                                     ; 180.83 MHz ( period = 5.530 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[2]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.416 ns                ;
+; N/A                                     ; 183.02 MHz ( period = 5.464 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[1]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.383 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[1]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 186.64 MHz ( period = 5.358 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[1]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.330 ns                ;
+; N/A                                     ; 192.53 MHz ( period = 5.194 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; MoveController:u2|l_X[0]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 2.248 ns                ;
+; N/A                                     ; 221.83 MHz ( period = 4.508 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; MoveController:u2|l_Y[0]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 1.905 ns                ;
+; N/A                                     ; 226.76 MHz ( period = 4.410 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; MoveController:u2|l_X[0]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 1.856 ns                ;
+; N/A                                     ; 227.17 MHz ( period = 4.402 ns )                    ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; MoveController:u2|l_Y[0]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 1.852 ns                ;
+; N/A                                     ; 228.47 MHz ( period = 4.377 ns )                    ; VGA640480:u3|l_vgaY[0]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 4.113 ns                ;
+; N/A                                     ; 236.52 MHz ( period = 4.228 ns )                    ; VGA640480:u3|l_vgaY[2]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.964 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.874 ns                ;
+; N/A                                     ; 243.55 MHz ( period = 4.106 ns )                    ; VGA640480:u3|l_vgaY[6]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.843 ns                ;
+; N/A                                     ; 249.31 MHz ( period = 4.011 ns )                    ; WASDDecoder:u1|Keyboard:u0|state.start            ; WASDDecoder:u1|Keyboard:u0|state.delay            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.747 ns                ;
+; N/A                                     ; 251.26 MHz ( period = 3.980 ns )                    ; VGA640480:u3|l_vgaY[0]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.716 ns                ;
+; N/A                                     ; 252.84 MHz ( period = 3.955 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.689 ns                ;
+; N/A                                     ; 254.45 MHz ( period = 3.930 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.664 ns                ;
+; N/A                                     ; 257.14 MHz ( period = 3.889 ns )                    ; VGA640480:u3|l_vgaY[0]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.625 ns                ;
+; N/A                                     ; 257.14 MHz ( period = 3.889 ns )                    ; MoveController:u2|l_Y[1]                          ; MoveController:u2|l_Y[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.625 ns                ;
+; N/A                                     ; 258.46 MHz ( period = 3.869 ns )                    ; MoveController:u2|l_Y[0]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 4.058 ns                ;
+; N/A                                     ; 258.87 MHz ( period = 3.863 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 258.87 MHz ( period = 3.863 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 258.87 MHz ( period = 3.863 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 258.87 MHz ( period = 3.863 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 258.87 MHz ( period = 3.863 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 258.87 MHz ( period = 3.863 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 259.61 MHz ( period = 3.852 ns )                    ; VGA640480:u3|l_vgaX[1]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.586 ns                ;
+; N/A                                     ; 259.88 MHz ( period = 3.848 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.584 ns                ;
+; N/A                                     ; 259.88 MHz ( period = 3.848 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.584 ns                ;
+; N/A                                     ; 259.88 MHz ( period = 3.848 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.584 ns                ;
+; N/A                                     ; 259.88 MHz ( period = 3.848 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.584 ns                ;
+; N/A                                     ; 262.40 MHz ( period = 3.811 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[7]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.648 ns                ;
+; N/A                                     ; 262.40 MHz ( period = 3.811 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.547 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.540 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.540 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.540 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.540 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.540 ns                ;
+; N/A                                     ; 262.67 MHz ( period = 3.807 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.540 ns                ;
+; N/A                                     ; 263.02 MHz ( period = 3.802 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 263.02 MHz ( period = 3.802 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 263.02 MHz ( period = 3.802 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 263.02 MHz ( period = 3.802 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 263.02 MHz ( period = 3.802 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 263.02 MHz ( period = 3.802 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 263.64 MHz ( period = 3.793 ns )                    ; VGA640480:u3|l_vgaX[2]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.527 ns                ;
+; N/A                                     ; 263.99 MHz ( period = 3.788 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.524 ns                ;
+; N/A                                     ; 264.34 MHz ( period = 3.783 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.517 ns                ;
+; N/A                                     ; 265.60 MHz ( period = 3.765 ns )                    ; VGA640480:u3|l_vgaY[2]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.501 ns                ;
+; N/A                                     ; 267.17 MHz ( period = 3.743 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.477 ns                ;
+; N/A                                     ; 267.17 MHz ( period = 3.743 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[7]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.574 ns                ;
+; N/A                                     ; 267.24 MHz ( period = 3.742 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.475 ns                ;
+; N/A                                     ; 267.24 MHz ( period = 3.742 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.475 ns                ;
+; N/A                                     ; 267.24 MHz ( period = 3.742 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.475 ns                ;
+; N/A                                     ; 267.24 MHz ( period = 3.742 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.475 ns                ;
+; N/A                                     ; 267.24 MHz ( period = 3.742 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.475 ns                ;
+; N/A                                     ; 267.24 MHz ( period = 3.742 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.475 ns                ;
+; N/A                                     ; 269.18 MHz ( period = 3.715 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.449 ns                ;
+; N/A                                     ; 269.83 MHz ( period = 3.706 ns )                    ; VGA640480:u3|l_vgaY[0]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.442 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.434 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.430 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.430 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.430 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.430 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.430 ns                ;
+; N/A                                     ; 270.49 MHz ( period = 3.697 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.430 ns                ;
+; N/A                                     ; 271.74 MHz ( period = 3.680 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[7]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.517 ns                ;
+; N/A                                     ; 272.18 MHz ( period = 3.674 ns )                    ; VGA640480:u3|l_vgaY[2]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.410 ns                ;
+; N/A                                     ; 273.75 MHz ( period = 3.653 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.389 ns                ;
+; N/A                                     ; 274.05 MHz ( period = 3.649 ns )                    ; MoveController:u2|l_X[8]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.832 ns                ;
+; N/A                                     ; 274.65 MHz ( period = 3.641 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.377 ns                ;
+; N/A                                     ; 275.48 MHz ( period = 3.630 ns )                    ; VGA640480:u3|l_vgaY[3]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.366 ns                ;
+; N/A                                     ; 275.63 MHz ( period = 3.628 ns )                    ; VGA640480:u3|l_vgaX[1]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.362 ns                ;
+; N/A                                     ; 276.01 MHz ( period = 3.623 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.357 ns                ;
+; N/A                                     ; 276.09 MHz ( period = 3.622 ns )                    ; MoveController:u2|l_Y[0]                          ; MoveController:u2|l_Y[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.358 ns                ;
+; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; VGA640480:u3|l_vgaY[1]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.347 ns                ;
+; N/A                                     ; 277.47 MHz ( period = 3.604 ns )                    ; MoveController:u2|l_X[0]                          ; MoveController:u2|l_X[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.340 ns                ;
+; N/A                                     ; 278.01 MHz ( period = 3.597 ns )                    ; VGA640480:u3|l_vgaX[1]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.331 ns                ;
+; N/A                                     ; 279.17 MHz ( period = 3.582 ns )                    ; ClkDivider:u0|l_reCnt[0]                          ; ClkDivider:u0|l_reCnt[17]                         ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.316 ns                ;
+; N/A                                     ; 279.49 MHz ( period = 3.578 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[5]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.552 ns                ;
+; N/A                                     ; 279.96 MHz ( period = 3.572 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.308 ns                ;
+; N/A                                     ; 279.96 MHz ( period = 3.572 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.308 ns                ;
+; N/A                                     ; 279.96 MHz ( period = 3.572 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.308 ns                ;
+; N/A                                     ; 279.96 MHz ( period = 3.572 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.308 ns                ;
+; N/A                                     ; 280.82 MHz ( period = 3.561 ns )                    ; MoveController:u2|l_X[5]                          ; MoveController:u2|l_X[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.297 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; VGA640480:u3|l_vgaY[3]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.289 ns                ;
+; N/A                                     ; 282.09 MHz ( period = 3.545 ns )                    ; WASDDecoder:u1|Keyboard:u0|state.stop             ; WASDDecoder:u1|Keyboard:u0|state.delay            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.281 ns                ;
+; N/A                                     ; 282.65 MHz ( period = 3.538 ns )                    ; VGA640480:u3|l_vgaX[2]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.272 ns                ;
+; N/A                                     ; 283.05 MHz ( period = 3.533 ns )                    ; VGA640480:u3|l_vgaX[5]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.17 MHz ( period = 3.519 ns )                    ; VGA640480:u3|l_vgaY[1]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.256 ns                ;
+; N/A                                     ; 284.17 MHz ( period = 3.519 ns )                    ; MoveController:u2|l_X[7]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.702 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.250 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.250 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.250 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.250 ns                ;
+; N/A                                     ; 284.50 MHz ( period = 3.515 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[5]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.495 ns                ;
+; N/A                                     ; 284.74 MHz ( period = 3.512 ns )                    ; MoveController:u2|l_X[4]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.695 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.247 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.247 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.247 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.247 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.242 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.242 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.242 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.242 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.242 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.242 ns                ;
+; N/A                                     ; 285.39 MHz ( period = 3.504 ns )                    ; VGA640480:u3|l_vgaY[1]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.241 ns                ;
+; N/A                                     ; 286.53 MHz ( period = 3.490 ns )                    ; VGA640480:u3|l_vgaX[6]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.224 ns                ;
+; N/A                                     ; 286.70 MHz ( period = 3.488 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.222 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaY[6]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaY[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaY[1]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaY[7]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaY[4]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaY[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.217 ns                ;
+; N/A                                     ; 287.52 MHz ( period = 3.478 ns )                    ; MoveController:u2|l_Y[2]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.667 ns                ;
+; N/A                                     ; 289.44 MHz ( period = 3.455 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[6]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.499 ns                ;
+; N/A                                     ; 289.52 MHz ( period = 3.454 ns )                    ; MoveController:u2|l_Y[2]                          ; MoveController:u2|l_Y[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.190 ns                ;
+; N/A                                     ; 289.77 MHz ( period = 3.451 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 289.77 MHz ( period = 3.451 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 289.77 MHz ( period = 3.451 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 289.77 MHz ( period = 3.451 ns )                    ; VGA640480:u3|l_vgaX[3]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 290.02 MHz ( period = 3.448 ns )                    ; ClkDivider:u0|l_reCnt[1]                          ; ClkDivider:u0|l_reCnt[17]                         ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.182 ns                ;
+; N/A                                     ; 290.11 MHz ( period = 3.447 ns )                    ; MoveController:u2|l_X[2]                          ; MoveController:u2|l_X[9]                          ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.183 ns                ;
+; N/A                                     ; 290.28 MHz ( period = 3.445 ns )                    ; VGA640480:u3|l_vgaY[8]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.182 ns                ;
+; N/A                                     ; 290.78 MHz ( period = 3.439 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.173 ns                ;
+; N/A                                     ; 291.97 MHz ( period = 3.425 ns )                    ; MoveController:u2|l_X[1]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.608 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[7]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.254 ns                ;
+; N/A                                     ; 292.31 MHz ( period = 3.421 ns )                    ; MoveController:u2|l_Y[4]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.610 ns                ;
+; N/A                                     ; 292.40 MHz ( period = 3.420 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[4]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.394 ns                ;
+; N/A                                     ; 293.60 MHz ( period = 3.406 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.140 ns                ;
+; N/A                                     ; 293.60 MHz ( period = 3.406 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.140 ns                ;
+; N/A                                     ; 293.60 MHz ( period = 3.406 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.140 ns                ;
+; N/A                                     ; 293.60 MHz ( period = 3.406 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.140 ns                ;
+; N/A                                     ; 294.81 MHz ( period = 3.392 ns )                    ; ClkDivider:u0|l_reCnt[0]                          ; ClkDivider:u0|l_reCnt[16]                         ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 294.99 MHz ( period = 3.390 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[6]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.428 ns                ;
+; N/A                                     ; 295.51 MHz ( period = 3.384 ns )                    ; WASDDecoder:u1|Keyboard:u0|code[3]                ; WASDDecoder:u1|Keyboard:u0|state.delay            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.118 ns                ;
+; N/A                                     ; 295.68 MHz ( period = 3.382 ns )                    ; WASDDecoder:u1|Keyboard:u0|code[3]                ; WASDDecoder:u1|Keyboard:u0|state.stop             ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.116 ns                ;
+; N/A                                     ; 295.86 MHz ( period = 3.380 ns )                    ; VGA640480:u3|l_vgaX[7]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.114 ns                ;
+; N/A                                     ; 296.74 MHz ( period = 3.370 ns )                    ; MoveController:u2|l_Y[8]                          ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.559 ns                ;
+; N/A                                     ; 296.82 MHz ( period = 3.369 ns )                    ; WASDDecoder:u1|Keyboard:u0|code[7]                ; WASDDecoder:u1|Keyboard:u0|state.delay            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.103 ns                ;
+; N/A                                     ; 296.91 MHz ( period = 3.368 ns )                    ; VGA640480:u3|l_vgaX[4]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.102 ns                ;
+; N/A                                     ; 297.00 MHz ( period = 3.367 ns )                    ; WASDDecoder:u1|Keyboard:u0|code[7]                ; WASDDecoder:u1|Keyboard:u0|state.stop             ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.101 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[2]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[1] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.333 ns                ;
+; N/A                                     ; 297.89 MHz ( period = 3.357 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[4]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.337 ns                ;
+; N/A                                     ; 298.24 MHz ( period = 3.353 ns )                    ; VGA640480:u3|l_vgaY[9]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.089 ns                ;
+; N/A                                     ; 298.33 MHz ( period = 3.352 ns )                    ; VGA640480:u3|l_vgaY[9]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.088 ns                ;
+; N/A                                     ; 298.33 MHz ( period = 3.352 ns )                    ; VGA640480:u3|l_vgaY[9]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.088 ns                ;
+; N/A                                     ; 298.42 MHz ( period = 3.351 ns )                    ; VGA640480:u3|l_vgaY[9]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.087 ns                ;
+; N/A                                     ; 298.60 MHz ( period = 3.349 ns )                    ; VGA640480:u3|l_vgaY[9]                            ; VGA640480:u3|l_r[2]                               ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 298.86 MHz ( period = 3.346 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaX[8]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.082 ns                ;
+; N/A                                     ; 299.04 MHz ( period = 3.344 ns )                    ; VGA640480:u3|l_vgaX[8]                            ; VGA640480:u3|l_vgaX[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.080 ns                ;
+; N/A                                     ; 299.76 MHz ( period = 3.336 ns )                    ; VGA640480:u3|l_vgaY[1]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.073 ns                ;
+; N/A                                     ; 300.48 MHz ( period = 3.328 ns )                    ; WASDDecoder:u1|Keyboard:u0|code[6]                ; WASDDecoder:u1|Keyboard:u0|state.delay            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.062 ns                ;
+; N/A                                     ; 300.57 MHz ( period = 3.327 ns )                    ; WASDDecoder:u1|Keyboard:u0|scancode[6]            ; WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2] ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.371 ns                ;
+; N/A                                     ; 300.66 MHz ( period = 3.326 ns )                    ; WASDDecoder:u1|Keyboard:u0|code[6]                ; WASDDecoder:u1|Keyboard:u0|state.stop             ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.060 ns                ;
+; N/A                                     ; 301.02 MHz ( period = 3.322 ns )                    ; VGA640480:u3|l_vgaX[0]                            ; VGA640480:u3|l_vgaX[5]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.056 ns                ;
+; N/A                                     ; 301.11 MHz ( period = 3.321 ns )                    ; VGA640480:u3|l_vgaY[6]                            ; VGA640480:u3|l_vgaY[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.058 ns                ;
+; N/A                                     ; 301.20 MHz ( period = 3.320 ns )                    ; VGA640480:u3|l_vgaY[6]                            ; VGA640480:u3|l_vgaY[0]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.057 ns                ;
+; N/A                                     ; 301.20 MHz ( period = 3.320 ns )                    ; VGA640480:u3|l_vgaY[6]                            ; VGA640480:u3|l_vgaY[2]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.057 ns                ;
+; N/A                                     ; 301.30 MHz ( period = 3.319 ns )                    ; VGA640480:u3|l_vgaY[6]                            ; VGA640480:u3|l_vgaY[3]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.056 ns                ;
+; N/A                                     ; 301.57 MHz ( period = 3.316 ns )                    ; VGA640480:u3|l_vgaX[9]                            ; VGA640480:u3|l_vgaX[9]                            ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.052 ns                ;
+; N/A                                     ; 302.30 MHz ( period = 3.308 ns )                    ; ClkDivider:u0|l_reCnt[2]                          ; ClkDivider:u0|l_reCnt[17]                         ; CLK_100MHz ; CLK_100MHz ; None                        ; None                      ; 3.042 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                   ;                                                   ;            ;            ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'CLK_100MHz'                                                                                                                                                                                                              ;
++------------------------------------------+------------------------------------+----------------------------------------+------------+------------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                               ; To                                     ; From Clock ; To Clock   ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------------------+----------------------------------------+------------+------------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[0] ; WASDDecoder:u1|Keyboard:u0|scancode[0] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.072 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[6] ; WASDDecoder:u1|Keyboard:u0|scancode[6] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.070 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[1] ; WASDDecoder:u1|Keyboard:u0|scancode[1] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.120 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[7] ; WASDDecoder:u1|Keyboard:u0|scancode[7] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.361 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[5] ; WASDDecoder:u1|Keyboard:u0|scancode[5] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.409 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[4] ; WASDDecoder:u1|Keyboard:u0|scancode[4] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.422 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[2] ; WASDDecoder:u1|Keyboard:u0|scancode[2] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.422 ns                 ;
+; Not operational: Clock Skew > Data Delay ; WASDDecoder:u1|Keyboard:u0|code[3] ; WASDDecoder:u1|Keyboard:u0|scancode[3] ; CLK_100MHz ; CLK_100MHz ; None                       ; None                       ; 1.447 ns                 ;
++------------------------------------------+------------------------------------+----------------------------------------+------------+------------+----------------------------+----------------------------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; tsu                                                                                           ;
++-------+--------------+------------+------------+---------------------------------+------------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                              ; To Clock   ;
++-------+--------------+------------+------------+---------------------------------+------------+
+; N/A   ; None         ; 6.954 ns   ; ps2_datain ; WASDDecoder:u1|Keyboard:u0|data ; CLK_100MHz ;
+; N/A   ; None         ; 6.856 ns   ; ps2_clk    ; WASDDecoder:u1|Keyboard:u0|clk1 ; CLK_100MHz ;
++-------+--------------+------------+------------+---------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                   ; To        ; From Clock ;
++-------+--------------+------------+------------------------+-----------+------------+
+; N/A   ; None         ; 19.553 ns  ; VGA640480:u3|l_vgaY[8] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.553 ns  ; VGA640480:u3|l_vgaY[8] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.523 ns  ; VGA640480:u3|l_vgaY[8] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.520 ns  ; VGA640480:u3|l_vgaY[8] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.520 ns  ; VGA640480:u3|l_vgaY[8] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.398 ns  ; VGA640480:u3|l_vgaX[9] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.398 ns  ; VGA640480:u3|l_vgaX[9] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.368 ns  ; VGA640480:u3|l_vgaX[9] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.365 ns  ; VGA640480:u3|l_vgaX[9] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.365 ns  ; VGA640480:u3|l_vgaX[9] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.302 ns  ; VGA640480:u3|l_vgaX[8] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.302 ns  ; VGA640480:u3|l_vgaX[8] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.272 ns  ; VGA640480:u3|l_vgaX[8] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.269 ns  ; VGA640480:u3|l_vgaX[8] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.269 ns  ; VGA640480:u3|l_vgaX[8] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.226 ns  ; VGA640480:u3|l_vgaY[7] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.226 ns  ; VGA640480:u3|l_vgaY[7] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.196 ns  ; VGA640480:u3|l_vgaY[7] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.193 ns  ; VGA640480:u3|l_vgaY[7] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.193 ns  ; VGA640480:u3|l_vgaY[7] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.100 ns  ; VGA640480:u3|l_vgaY[8] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.095 ns  ; VGA640480:u3|l_vgaY[8] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.085 ns  ; VGA640480:u3|l_vgaY[8] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.080 ns  ; VGA640480:u3|l_vgaY[8] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.020 ns  ; VGA640480:u3|l_vgaY[6] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 19.020 ns  ; VGA640480:u3|l_vgaY[6] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.990 ns  ; VGA640480:u3|l_vgaY[6] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.987 ns  ; VGA640480:u3|l_vgaY[6] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.987 ns  ; VGA640480:u3|l_vgaY[6] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.945 ns  ; VGA640480:u3|l_vgaX[9] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.940 ns  ; VGA640480:u3|l_vgaX[9] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.930 ns  ; VGA640480:u3|l_vgaX[9] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.925 ns  ; VGA640480:u3|l_vgaX[9] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.849 ns  ; VGA640480:u3|l_vgaX[8] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.846 ns  ; VGA640480:u3|l_vgaX[7] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.846 ns  ; VGA640480:u3|l_vgaX[7] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.844 ns  ; VGA640480:u3|l_vgaX[8] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.834 ns  ; VGA640480:u3|l_vgaX[8] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.829 ns  ; VGA640480:u3|l_vgaX[8] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.826 ns  ; VGA640480:u3|l_vgaY[5] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.826 ns  ; VGA640480:u3|l_vgaY[5] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.816 ns  ; VGA640480:u3|l_vgaX[7] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.813 ns  ; VGA640480:u3|l_vgaX[7] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.813 ns  ; VGA640480:u3|l_vgaX[7] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.796 ns  ; VGA640480:u3|l_vgaY[5] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.793 ns  ; VGA640480:u3|l_vgaY[5] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.793 ns  ; VGA640480:u3|l_vgaY[5] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.773 ns  ; VGA640480:u3|l_vgaY[7] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.768 ns  ; VGA640480:u3|l_vgaY[7] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.758 ns  ; VGA640480:u3|l_vgaY[7] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.753 ns  ; VGA640480:u3|l_vgaY[7] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.567 ns  ; VGA640480:u3|l_vgaY[6] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.562 ns  ; VGA640480:u3|l_vgaY[6] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.552 ns  ; VGA640480:u3|l_vgaY[6] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.547 ns  ; VGA640480:u3|l_vgaY[6] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.393 ns  ; VGA640480:u3|l_vgaX[7] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.388 ns  ; VGA640480:u3|l_vgaX[7] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.378 ns  ; VGA640480:u3|l_vgaX[7] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.373 ns  ; VGA640480:u3|l_vgaX[7] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.373 ns  ; VGA640480:u3|l_vgaY[5] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.368 ns  ; VGA640480:u3|l_vgaY[5] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.358 ns  ; VGA640480:u3|l_vgaY[5] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.353 ns  ; VGA640480:u3|l_vgaY[5] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.125 ns  ; VGA640480:u3|l_r[2]    ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.125 ns  ; VGA640480:u3|l_r[2]    ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.095 ns  ; VGA640480:u3|l_r[2]    ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.092 ns  ; VGA640480:u3|l_r[2]    ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.092 ns  ; VGA640480:u3|l_r[2]    ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.084 ns  ; VGA640480:u3|l_vgaY[9] ; vga_b[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.084 ns  ; VGA640480:u3|l_vgaY[9] ; vga_b[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.054 ns  ; VGA640480:u3|l_vgaY[9] ; vga_b[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.051 ns  ; VGA640480:u3|l_vgaY[9] ; vga_g[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 18.051 ns  ; VGA640480:u3|l_vgaY[9] ; vga_g[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.672 ns  ; VGA640480:u3|l_r[2]    ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.667 ns  ; VGA640480:u3|l_r[2]    ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.657 ns  ; VGA640480:u3|l_r[2]    ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.652 ns  ; VGA640480:u3|l_r[2]    ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.631 ns  ; VGA640480:u3|l_vgaY[9] ; vga_r[2]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.626 ns  ; VGA640480:u3|l_vgaY[9] ; vga_r[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.616 ns  ; VGA640480:u3|l_vgaY[9] ; vga_r[1]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.611 ns  ; VGA640480:u3|l_vgaY[9] ; vga_g[0]  ; CLK_100MHz ;
+; N/A   ; None         ; 17.157 ns  ; VGA640480:u3|VSYNC     ; vga_VSYNC ; CLK_100MHz ;
+; N/A   ; None         ; 16.233 ns  ; VGA640480:u3|HSYNC     ; vga_HSYNC ; CLK_100MHz ;
++-------+--------------+------------+------------------------+-----------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; th                                                                                                  ;
++---------------+-------------+-----------+------------+---------------------------------+------------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                              ; To Clock   ;
++---------------+-------------+-----------+------------+---------------------------------+------------+
+; N/A           ; None        ; -6.590 ns ; ps2_clk    ; WASDDecoder:u1|Keyboard:u0|clk1 ; CLK_100MHz ;
+; N/A           ; None        ; -6.688 ns ; ps2_datain ; WASDDecoder:u1|Keyboard:u0|data ; CLK_100MHz ;
++---------------+-------------+-----------+------------+---------------------------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue May 16 16:43:55 2017
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off MoveOrDie -c MoveOrDie --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[0]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[4]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[1]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[3]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[2]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[6]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[7]" is a latch
+    Warning: Node "WASDDecoder:u1|Keyboard:u0|scancode[5]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK_100MHz" is an undefined clock
+Warning: Found 4 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "WASDDecoder:u1|Keyboard:u0|loe" as buffer
+    Info: Detected ripple clock "ClkDivider:u0|l_clkout" as buffer
+    Info: Detected ripple clock "VGA640480:u3|l_CLK_50MHz" as buffer
+    Info: Detected ripple clock "VGA640480:u3|CLK_25MHz" as buffer
+Info: Clock "CLK_100MHz" has Internal fmax of 113.15 MHz between source register "WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]" and destination register "MoveController:u2|l_X[9]" (period= 8.838 ns)
+    Info: + Longest register to register delay is 4.070 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X61_Y35_N29; Fanout = 2; REG Node = 'WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]'
+        Info: 2: + IC(0.480 ns) + CELL(0.624 ns) = 1.104 ns; Loc. = LCCOMB_X61_Y35_N30; Fanout = 2; COMB Node = 'MoveController:u2|Add3~1'
+        Info: 3: + IC(0.412 ns) + CELL(0.596 ns) = 2.112 ns; Loc. = LCCOMB_X61_Y35_N4; Fanout = 2; COMB Node = 'MoveController:u2|Add3~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.086 ns) = 2.198 ns; Loc. = LCCOMB_X61_Y35_N6; Fanout = 2; COMB Node = 'MoveController:u2|Add3~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.086 ns) = 2.284 ns; Loc. = LCCOMB_X61_Y35_N8; Fanout = 2; COMB Node = 'MoveController:u2|Add3~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.086 ns) = 2.370 ns; Loc. = LCCOMB_X61_Y35_N10; Fanout = 2; COMB Node = 'MoveController:u2|Add3~9'
+        Info: 7: + IC(0.000 ns) + CELL(0.086 ns) = 2.456 ns; Loc. = LCCOMB_X61_Y35_N12; Fanout = 2; COMB Node = 'MoveController:u2|Add3~11'
+        Info: 8: + IC(0.000 ns) + CELL(0.190 ns) = 2.646 ns; Loc. = LCCOMB_X61_Y35_N14; Fanout = 2; COMB Node = 'MoveController:u2|Add3~13'
+        Info: 9: + IC(0.000 ns) + CELL(0.086 ns) = 2.732 ns; Loc. = LCCOMB_X61_Y35_N16; Fanout = 2; COMB Node = 'MoveController:u2|Add3~15'
+        Info: 10: + IC(0.000 ns) + CELL(0.086 ns) = 2.818 ns; Loc. = LCCOMB_X61_Y35_N18; Fanout = 2; COMB Node = 'MoveController:u2|Add3~17'
+        Info: 11: + IC(0.000 ns) + CELL(0.086 ns) = 2.904 ns; Loc. = LCCOMB_X61_Y35_N20; Fanout = 1; COMB Node = 'MoveController:u2|Add3~19'
+        Info: 12: + IC(0.000 ns) + CELL(0.506 ns) = 3.410 ns; Loc. = LCCOMB_X61_Y35_N22; Fanout = 1; COMB Node = 'MoveController:u2|Add3~20'
+        Info: 13: + IC(0.350 ns) + CELL(0.202 ns) = 3.962 ns; Loc. = LCCOMB_X61_Y35_N24; Fanout = 1; COMB Node = 'MoveController:u2|l_X[9]~20'
+        Info: 14: + IC(0.000 ns) + CELL(0.108 ns) = 4.070 ns; Loc. = LCFF_X61_Y35_N25; Fanout = 2; REG Node = 'MoveController:u2|l_X[9]'
+        Info: Total cell delay = 2.828 ns ( 69.48 % )
+        Info: Total interconnect delay = 1.242 ns ( 30.52 % )
+    Info: - Smallest clock skew is -0.085 ns
+        Info: + Shortest clock path from clock "CLK_100MHz" to destination register is 8.556 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+            Info: 2: + IC(0.859 ns) + CELL(0.970 ns) = 2.929 ns; Loc. = LCFF_X2_Y25_N13; Fanout = 2; REG Node = 'ClkDivider:u0|l_clkout'
+            Info: 3: + IC(3.550 ns) + CELL(0.000 ns) = 6.479 ns; Loc. = CLKCTRL_G0; Fanout = 20; COMB Node = 'ClkDivider:u0|l_clkout~clkctrl'
+            Info: 4: + IC(1.411 ns) + CELL(0.666 ns) = 8.556 ns; Loc. = LCFF_X61_Y35_N25; Fanout = 2; REG Node = 'MoveController:u2|l_X[9]'
+            Info: Total cell delay = 2.736 ns ( 31.98 % )
+            Info: Total interconnect delay = 5.820 ns ( 68.02 % )
+        Info: - Longest clock path from clock "CLK_100MHz" to source register is 8.641 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+            Info: 2: + IC(3.416 ns) + CELL(0.970 ns) = 5.486 ns; Loc. = LCFF_X47_Y47_N9; Fanout = 1; REG Node = 'WASDDecoder:u1|Keyboard:u0|loe'
+            Info: 3: + IC(1.093 ns) + CELL(0.000 ns) = 6.579 ns; Loc. = CLKCTRL_G9; Fanout = 13; COMB Node = 'WASDDecoder:u1|Keyboard:u0|loe~clkctrl'
+            Info: 4: + IC(1.396 ns) + CELL(0.666 ns) = 8.641 ns; Loc. = LCFF_X61_Y35_N29; Fanout = 2; REG Node = 'WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]'
+            Info: Total cell delay = 2.736 ns ( 31.66 % )
+            Info: Total interconnect delay = 5.905 ns ( 68.34 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Warning: Circuit may not operate. Detected 8 non-operational path(s) clocked by clock "CLK_100MHz" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "WASDDecoder:u1|Keyboard:u0|code[0]" and destination pin or register "WASDDecoder:u1|Keyboard:u0|scancode[0]" for clock "CLK_100MHz" (Hold time is 3.98 ns)
+    Info: + Largest clock skew is 5.356 ns
+        Info: + Longest clock path from clock "CLK_100MHz" to destination register is 8.650 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+            Info: 2: + IC(3.416 ns) + CELL(0.970 ns) = 5.486 ns; Loc. = LCFF_X47_Y47_N9; Fanout = 1; REG Node = 'WASDDecoder:u1|Keyboard:u0|loe'
+            Info: 3: + IC(1.093 ns) + CELL(0.000 ns) = 6.579 ns; Loc. = CLKCTRL_G9; Fanout = 13; COMB Node = 'WASDDecoder:u1|Keyboard:u0|loe~clkctrl'
+            Info: 4: + IC(1.865 ns) + CELL(0.206 ns) = 8.650 ns; Loc. = LCCOMB_X57_Y36_N24; Fanout = 5; REG Node = 'WASDDecoder:u1|Keyboard:u0|scancode[0]'
+            Info: Total cell delay = 2.276 ns ( 26.31 % )
+            Info: Total interconnect delay = 6.374 ns ( 73.69 % )
+        Info: - Shortest clock path from clock "CLK_100MHz" to source register is 3.294 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+            Info: 2: + IC(0.135 ns) + CELL(0.000 ns) = 1.235 ns; Loc. = CLKCTRL_G2; Fanout = 42; COMB Node = 'CLK_100MHz~clkctrl'
+            Info: 3: + IC(1.393 ns) + CELL(0.666 ns) = 3.294 ns; Loc. = LCFF_X57_Y36_N29; Fanout = 3; REG Node = 'WASDDecoder:u1|Keyboard:u0|code[0]'
+            Info: Total cell delay = 1.766 ns ( 53.61 % )
+            Info: Total interconnect delay = 1.528 ns ( 46.39 % )
+    Info: - Micro clock to output delay of source is 0.304 ns
+    Info: - Shortest register to register delay is 1.072 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X57_Y36_N29; Fanout = 3; REG Node = 'WASDDecoder:u1|Keyboard:u0|code[0]'
+        Info: 2: + IC(0.448 ns) + CELL(0.624 ns) = 1.072 ns; Loc. = LCCOMB_X57_Y36_N24; Fanout = 5; REG Node = 'WASDDecoder:u1|Keyboard:u0|scancode[0]'
+        Info: Total cell delay = 0.624 ns ( 58.21 % )
+        Info: Total interconnect delay = 0.448 ns ( 41.79 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "WASDDecoder:u1|Keyboard:u0|data" (data pin = "ps2_datain", clock pin = "CLK_100MHz") is 6.954 ns
+    Info: + Longest pin to register delay is 10.288 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.924 ns) = 0.924 ns; Loc. = PIN_AD7; Fanout = 1; PIN Node = 'ps2_datain'
+        Info: 2: + IC(8.904 ns) + CELL(0.460 ns) = 10.288 ns; Loc. = LCFF_X57_Y36_N3; Fanout = 12; REG Node = 'WASDDecoder:u1|Keyboard:u0|data'
+        Info: Total cell delay = 1.384 ns ( 13.45 % )
+        Info: Total interconnect delay = 8.904 ns ( 86.55 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "CLK_100MHz" to destination register is 3.294 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+        Info: 2: + IC(0.135 ns) + CELL(0.000 ns) = 1.235 ns; Loc. = CLKCTRL_G2; Fanout = 42; COMB Node = 'CLK_100MHz~clkctrl'
+        Info: 3: + IC(1.393 ns) + CELL(0.666 ns) = 3.294 ns; Loc. = LCFF_X57_Y36_N3; Fanout = 12; REG Node = 'WASDDecoder:u1|Keyboard:u0|data'
+        Info: Total cell delay = 1.766 ns ( 53.61 % )
+        Info: Total interconnect delay = 1.528 ns ( 46.39 % )
+Info: tco from clock "CLK_100MHz" to destination pin "vga_b[2]" through register "VGA640480:u3|l_vgaY[8]" is 19.553 ns
+    Info: + Longest clock path from clock "CLK_100MHz" to source register is 9.002 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+        Info: 2: + IC(0.524 ns) + CELL(0.970 ns) = 2.594 ns; Loc. = LCFF_X1_Y25_N21; Fanout = 2; REG Node = 'VGA640480:u3|l_CLK_50MHz'
+        Info: 3: + IC(0.385 ns) + CELL(0.970 ns) = 3.949 ns; Loc. = LCFF_X1_Y25_N15; Fanout = 2; REG Node = 'VGA640480:u3|CLK_25MHz'
+        Info: 4: + IC(2.980 ns) + CELL(0.000 ns) = 6.929 ns; Loc. = CLKCTRL_G1; Fanout = 25; COMB Node = 'VGA640480:u3|CLK_25MHz~clkctrl'
+        Info: 5: + IC(1.407 ns) + CELL(0.666 ns) = 9.002 ns; Loc. = LCFF_X58_Y35_N29; Fanout = 5; REG Node = 'VGA640480:u3|l_vgaY[8]'
+        Info: Total cell delay = 3.706 ns ( 41.17 % )
+        Info: Total interconnect delay = 5.296 ns ( 58.83 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 10.247 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X58_Y35_N29; Fanout = 5; REG Node = 'VGA640480:u3|l_vgaY[8]'
+        Info: 2: + IC(0.771 ns) + CELL(0.614 ns) = 1.385 ns; Loc. = LCCOMB_X58_Y35_N0; Fanout = 2; COMB Node = 'VGA640480:u3|process_5~1'
+        Info: 3: + IC(0.683 ns) + CELL(0.370 ns) = 2.438 ns; Loc. = LCCOMB_X59_Y35_N26; Fanout = 9; COMB Node = 'VGA640480:u3|r[0]~4'
+        Info: 4: + IC(4.763 ns) + CELL(3.046 ns) = 10.247 ns; Loc. = PIN_U1; Fanout = 0; PIN Node = 'vga_b[2]'
+        Info: Total cell delay = 4.030 ns ( 39.33 % )
+        Info: Total interconnect delay = 6.217 ns ( 60.67 % )
+Info: th for register "WASDDecoder:u1|Keyboard:u0|clk1" (data pin = "ps2_clk", clock pin = "CLK_100MHz") is -6.590 ns
+    Info: + Longest clock path from clock "CLK_100MHz" to destination register is 3.294 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_N2; Fanout = 4; CLK Node = 'CLK_100MHz'
+        Info: 2: + IC(0.135 ns) + CELL(0.000 ns) = 1.235 ns; Loc. = CLKCTRL_G2; Fanout = 42; COMB Node = 'CLK_100MHz~clkctrl'
+        Info: 3: + IC(1.393 ns) + CELL(0.666 ns) = 3.294 ns; Loc. = LCFF_X57_Y36_N5; Fanout = 5; REG Node = 'WASDDecoder:u1|Keyboard:u0|clk1'
+        Info: Total cell delay = 1.766 ns ( 53.61 % )
+        Info: Total interconnect delay = 1.528 ns ( 46.39 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 10.190 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.924 ns) = 0.924 ns; Loc. = PIN_AD6; Fanout = 1; PIN Node = 'ps2_clk'
+        Info: 2: + IC(8.806 ns) + CELL(0.460 ns) = 10.190 ns; Loc. = LCFF_X57_Y36_N5; Fanout = 5; REG Node = 'WASDDecoder:u1|Keyboard:u0|clk1'
+        Info: Total cell delay = 1.384 ns ( 13.58 % )
+        Info: Total interconnect delay = 8.806 ns ( 86.42 % )
+Info: Quartus II 64-Bit Classic Timing Analyzer was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 262 megabytes
+    Info: Processing ended: Tue May 16 16:43:55 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
