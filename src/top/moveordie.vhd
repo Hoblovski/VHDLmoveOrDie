@@ -17,7 +17,7 @@ entity MoveOrDie is
 end MoveOrDie;
 
 architecture behave of MoveOrDie is
-
+-----------------------components----------------------------------------------
     component WASDDecoder is
         port (
             ps2_datain, ps2_clk,                -- PS2 data
@@ -44,6 +44,23 @@ architecture behave of MoveOrDie is
             Y: out std_logic_vector(9 downto 0)
         );
     end component;
+    
+	component ClientLogic is
+		port(
+			clk: in std_logic;
+			keypush: in std_logic_vector(3 downto 0); -- WASD
+			rst: in std_logic;
+			begin_x: in std_logic_vector(9 downto 0);
+			begin_y: in std_logic_vector(9 downto 0);
+			mp:in std_logic_vector(0 downto 0) ;
+			-----------------------------------------
+			position: out std_logic_vector(18 downto 0);
+			pos_x: out std_logic_vector(9 downto 0);
+			pos_y: out std_logic_vector(9 downto 0);
+		life: out std_logic_vector(6 downto 0);
+		alive: out std_logic
+		);
+	end component;
 
     component ClkDivider is
         generic (
@@ -54,10 +71,19 @@ architecture behave of MoveOrDie is
             clkout: out std_logic
         );
     end component;
+-----------------------components----------------------------------------------
 
     signal swp_x, swp_y: std_logic_vector(9 downto 0);
     signal swp_CLK_128MHz: std_logic;   -- not really 128 Hz :)
     signal swp_wasdPressed: std_logic_vector(3 downto 0);
+	--------------used for ClientLogic--------------------
+	signal swp_rst: std_logic;
+	signal swp_begin_x, swp_begin_y: std_logic_vector(9 downto 0);
+	signal swp_map_get: std_logic_vector(0 downto 0);
+	signal swp_position_require: std_logic_vector(18 downto 0);
+	signal swp_life: std_logic_vector(6 downto 0);
+	signal swp_alive: std_logic;
+	--------------used for ClientLogic--------------------
 
 begin
     u0: ClkDivider generic map (
@@ -72,12 +98,26 @@ begin
         filter_clk=> CLK_100MHz,
         wasd=> swp_wasdPressed);
 
-    u2: MoveController port map (
-        CLK=> swp_CLK_128MHz,
-        wasdPressed=> swp_wasdPressed,
-        X=> swp_x,
-        Y=> swp_y);
-
+    --u2: MoveController port map (
+    --    CLK=> swp_CLK_128MHz,
+    --    wasdPressed=> swp_wasdPressed,
+    --    X=> swp_x,
+    --    Y=> swp_y);
+	
+	u2: ClientLogic port map (
+		clk => swp_CLK_128MHz,
+		keypush => swp_wasdPressed,
+		rst => swp_rst,
+		begin_x => swp_begin_x,
+		begin_y => swp_begin_y,
+		mp => swp_map_get,
+		position => swp_position_require,
+		pos_x => swp_x,
+		pos_y => swp_y,
+		life => swp_life,
+		alive => swp_alive
+	);
+	
     u3: VGA640480 port map (
             x=> swp_x,
             y=> swp_y,

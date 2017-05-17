@@ -67,7 +67,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 CHIP  "MoveOrDie"  ASSIGNED TO AN: EP2C70F672C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
