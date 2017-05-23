@@ -1,0 +1,6 @@
+Warning (10540): VHDL Signal Declaration warning at moveordie.vhd(102): used explicit default value for signal "swp_disp1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at moveordie.vhd(103): used explicit default value for signal "swp_disp2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at moveordie.vhd(104): used explicit default value for signal "swp_disp3" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at moveordie.vhd(105): used explicit default value for signal "swp_disp4" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at moveordie.vhd(106): used explicit default value for signal "swp_disp5" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at moveordie.vhd(107): used explicit default value for signal "swp_disp6" because signal was never assigned a value
