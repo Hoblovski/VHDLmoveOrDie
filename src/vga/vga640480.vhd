@@ -16,7 +16,7 @@ use ieee.std_logic_arith.all;
 entity VGA640480 is
     port (
 -- TODO: now only a single black dot at x, y
-        x, y: in std_logic_vector(9 downto 0) := (others => '0');
+        x, y: in std_logic_vector(6 downto 0) := (others => '0');
         CLK_100MHz: in std_logic;
         HSYNC, VSYNC: out std_logic;
         r, g, b: out std_logic_vector(2 downto 0)
@@ -25,13 +25,24 @@ end vga640480;
 
 
 architecture behavior of VGA640480 is
+
+    component MapGraphic is
+        port (
+            x: in std_logic_vector(6 downto 0);
+            y: in std_logic_vector(6 downto 0);
+            gridCode: out std_logic_vector(3 downto 0)
+        );
+    end component;
+
     signal l_r, l_g, l_b : std_logic_vector(2 downto 0);
     signal l_HSYNC, l_VSYNC : std_logic;
     signal l_vgaX : std_logic_vector(9 downto 0); --X×ø±ê
     signal l_vgaY : std_logic_vector(9 downto 0); --Y×ø±ê
     signal l_CLK_50MHz, CLK_25MHz: std_logic := '0';
+    signal l_gridCode: std_logic_vector(3 downto 0);
+
 begin
-    
+
     process (CLK_100MHz) begin
         if rising_edge(CLK_100MHz) then
             l_CLK_50MHz <= not l_CLK_50MHz;
@@ -87,7 +98,7 @@ begin
     -- Generate VSYNC
     process (CLK_25MHz)
     begin
-        if rising_edge(CLK_25MHz) then 
+        if rising_edge(CLK_25MHz) then
             if l_vgaY>=490 and l_vgaY<492 then
                 l_VSYNC <= '0';
             else
@@ -96,18 +107,33 @@ begin
         end if;
     end process;
 
+    u0: MapGraphic port map (
+        x=> l_vgaX(9 downto 3),
+        y=> l_vgaY(9 downto 3),
+        gridCode=> l_gridCode);
+
     -- Generate BGR according to l_vgaX, l_vgaY
     process (CLK_25MHz, l_vgaX, l_vgaY)
     begin
         if rising_edge(CLK_25MHz) then
-            if (l_vgaX = X and l_vgaY = Y) then
-                l_r <= (others => '0');
+            if (l_vgaX(9 downto 3) = x and l_vgaY(9 downto 3) = y) then
+                l_r <= (others => '1');
                 l_g <= (others => '0');
                 l_b <= (others => '0');
             else
-                l_r <= (others => '1');
-                l_g <= (others => '1');
-                l_b <= (others => '1');
+                if l_gridCode = "0000" then
+                    l_r <= (others => '1');
+                    l_g <= (others => '1');
+                    l_b <= (others => '1');
+                elsif l_gridCode = "0001" then
+                    l_r <= (others => '0');
+                    l_g <= (others => '0');
+                    l_b <= (others => '0');
+                else
+                    l_r <= (others => '0');
+                    l_g <= (others => '1');
+                    l_b <= (others => '0');
+                end if;
             end if;
         end if;
     end process;
@@ -143,4 +169,3 @@ begin
     end process;
 
 end behavior;
-

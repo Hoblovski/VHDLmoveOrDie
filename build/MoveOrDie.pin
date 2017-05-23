@@ -67,7 +67,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 CHIP  "MoveOrDie"  ASSIGNED TO AN: EP2C70F672C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -129,19 +129,19 @@ RESERVED_INPUT               : AB4       :        :                   :         
 VCCIO1                       : AB5       : power  :                   : 3.3V    : 1         :                
 VCCIO8                       : AB6       : power  :                   : 3.3V    : 8         :                
 GND                          : AB7       : gnd    :                   :         :           :                
-RESERVED_INPUT               : AB8       :        :                   :         : 8         :                
+disp0[5]                     : AB8       : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : AB9       : power  :                   : 3.3V    : 8         :                
-RESERVED_INPUT               : AB10      :        :                   :         : 8         :                
+disp0[0]                     : AB10      : output : 3.3-V LVTTL       :         : 8         : Y              
 GND                          : AB11      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AB12      :        :                   :         : 8         :                
+disp2[3]                     : AB12      : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : AB13      : power  :                   : 3.3V    : 8         :                
 VCCIO7                       : AB14      : power  :                   : 3.3V    : 7         :                
-RESERVED_INPUT               : AB15      :        :                   :         : 7         :                
+disp4[5]                     : AB15      : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : AB16      : gnd    :                   :         :           :                
 VCCIO7                       : AB17      : power  :                   : 3.3V    : 7         :                
-RESERVED_INPUT               : AB18      :        :                   :         : 7         :                
+disp6[6]                     : AB18      : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : AB19      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AB20      :        :                   :         : 7         :                
+disp6[1]                     : AB20      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AB21      :        :                   :         : 7         :                
 VCCIO7                       : AB22      : power  :                   : 3.3V    : 7         :                
 RESERVED_INPUT               : AB23      :        :                   :         : 6         :                
@@ -154,21 +154,21 @@ RESERVED_INPUT               : AC3       :        :                   :         
 GND                          : AC4       : gnd    :                   :         :           :                
 RESERVED_INPUT               : AC5       :        :                   :         : 8         :                
 RESERVED_INPUT               : AC6       :        :                   :         : 8         :                
-RESERVED_INPUT               : AC7       :        :                   :         : 8         :                
-RESERVED_INPUT               : AC8       :        :                   :         : 8         :                
-RESERVED_INPUT               : AC9       :        :                   :         : 8         :                
-RESERVED_INPUT               : AC10      :        :                   :         : 8         :                
-RESERVED_INPUT               : AC11      :        :                   :         : 8         :                
-RESERVED_INPUT               : AC12      :        :                   :         : 8         :                
+disp0[6]                     : AC7       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp0[4]                     : AC8       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[2]                     : AC9       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[1]                     : AC10      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp2[4]                     : AC11      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp4[4]                     : AC12      : output : 3.3-V LVTTL       :         : 8         : Y              
 GND+                         : AC13      :        :                   :         : 8         :                
 RESERVED_INPUT               : AC14      :        :                   :         : 7         :                
-RESERVED_INPUT               : AC15      :        :                   :         : 7         :                
-RESERVED_INPUT               : AC16      :        :                   :         : 7         :                
-RESERVED_INPUT               : AC17      :        :                   :         : 7         :                
+disp3[5]                     : AC15      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp4[1]                     : AC16      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[5]                     : AC17      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AC18      :        :                   :         : 7         :                
-RESERVED_INPUT               : AC19      :        :                   :         : 7         :                
-RESERVED_INPUT               : AC20      :        :                   :         : 7         :                
-RESERVED_INPUT               : AC21      :        :                   :         : 7         :                
+disp6[4]                     : AC19      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp6[0]                     : AC20      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp7[3]                     : AC21      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AC22      :        :                   :         : 7         :                
 RESERVED_INPUT               : AC23      :        :                   :         : 6         :                
 RESERVED_INPUT               : AC24      :        :                   :         : 6         :                
@@ -181,22 +181,22 @@ RESERVED_INPUT               : AD4       :        :                   :         
 RESERVED_INPUT               : AD5       :        :                   :         : 8         :                
 ps2_clk                      : AD6       : input  : 3.3-V LVTTL       :         : 8         : Y              
 ps2_datain                   : AD7       : input  : 3.3-V LVTTL       :         : 8         : Y              
-RESERVED_INPUT               : AD8       :        :                   :         : 8         :                
+disp0[3]                     : AD8       : output : 3.3-V LVTTL       :         : 8         : Y              
 GND                          : AD9       : gnd    :                   :         :           :                
-RESERVED_INPUT               : AD10      :        :                   :         : 8         :                
-RESERVED_INPUT               : AD11      :        :                   :         : 8         :                
-RESERVED_INPUT               : AD12      :        :                   :         : 8         :                
+disp2[5]                     : AD10      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp4[6]                     : AD11      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp3[4]                     : AD12      : output : 3.3-V LVTTL       :         : 8         : Y              
 GND+                         : AD13      :        :                   :         : 8         :                
 GND                          : AD14      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AD15      :        :                   :         : 7         :                
-RESERVED_INPUT               : AD16      :        :                   :         : 7         :                
-RESERVED_INPUT               : AD17      :        :                   :         : 7         :                
+disp2[0]                     : AD15      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp4[2]                     : AD16      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[4]                     : AD17      : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : AD18      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AD19      :        :                   :         : 7         :                
+disp6[5]                     : AD19      : output : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : AD20      : power  :                   : 3.3V    : 7         :                
-RESERVED_INPUT               : AD21      :        :                   :         : 7         :                
-RESERVED_INPUT               : AD22      :        :                   :         : 7         :                
-RESERVED_INPUT               : AD23      :        :                   :         : 7         :                
+disp7[5]                     : AD21      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp7[1]                     : AD22      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp7[0]                     : AD23      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AD24      :        :                   :         : 6         :                
 RESERVED_INPUT               : AD25      :        :                   :         : 6         :                
 VCCIO6                       : AD26      : power  :                   : 3.3V    : 6         :                
@@ -205,23 +205,23 @@ RESERVED_INPUT               : AE2       :        :                   :         
 RESERVED_INPUT               : AE3       :        :                   :         : 1         :                
 RESERVED_INPUT               : AE4       :        :                   :         : 8         :                
 RESERVED_INPUT               : AE5       :        :                   :         : 8         :                
-RESERVED_INPUT               : AE6       :        :                   :         : 8         :                
-RESERVED_INPUT               : AE7       :        :                   :         : 8         :                
-RESERVED_INPUT               : AE8       :        :                   :         : 8         :                
-RESERVED_INPUT               : AE9       :        :                   :         : 8         :                
-RESERVED_INPUT               : AE10      :        :                   :         : 8         :                
-RESERVED_INPUT               : AE11      :        :                   :         : 8         :                
-RESERVED_INPUT               : AE12      :        :                   :         : 8         :                
-RESERVED_INPUT               : AE13      :        :                   :         : 8         :                
+disp0[2]                     : AE6       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[6]                     : AE7       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[4]                     : AE8       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[0]                     : AE9       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp2[2]                     : AE10      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp3[6]                     : AE11      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp3[3]                     : AE12      : output : 3.3-V LVTTL       :         : 8         : Y              
+disp3[2]                     : AE13      : output : 3.3-V LVTTL       :         : 8         : Y              
 GND+                         : AE14      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE15      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE16      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE17      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE18      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE19      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE20      :        :                   :         : 7         :                
+disp3[0]                     : AE15      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp4[3]                     : AE16      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[6]                     : AE17      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[2]                     : AE18      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[0]                     : AE19      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp6[2]                     : AE20      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AE21      :        :                   :         : 7         :                
-RESERVED_INPUT               : AE22      :        :                   :         : 7         :                
+disp7[2]                     : AE22      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AE23      :        :                   :         : 7         :                
 ~LVDS195p/nCEO~              : AE24      : output : 3.3-V LVTTL       :         : 6         : N              
 RESERVED_INPUT               : AE25      :        :                   :         : 6         :                
@@ -230,23 +230,23 @@ GND                          : AF2       : gnd    :                   :         
 VCCIO8                       : AF3       : power  :                   : 3.3V    : 8         :                
 RESERVED_INPUT               : AF4       :        :                   :         : 8         :                
 RESERVED_INPUT               : AF5       :        :                   :         : 8         :                
-RESERVED_INPUT               : AF6       :        :                   :         : 8         :                
-RESERVED_INPUT               : AF7       :        :                   :         : 8         :                
-RESERVED_INPUT               : AF8       :        :                   :         : 8         :                
-RESERVED_INPUT               : AF9       :        :                   :         : 8         :                
-RESERVED_INPUT               : AF10      :        :                   :         : 8         :                
+disp0[1]                     : AF6       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[5]                     : AF7       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp1[3]                     : AF8       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp2[6]                     : AF9       : output : 3.3-V LVTTL       :         : 8         : Y              
+disp2[1]                     : AF10      : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : AF11      : power  :                   : 3.3V    : 8         :                
 GND                          : AF12      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AF13      :        :                   :         : 8         :                
+disp3[1]                     : AF13      : output : 3.3-V LVTTL       :         : 8         : Y              
 GND+                         : AF14      :        :                   :         : 7         :                
 GND                          : AF15      : gnd    :                   :         :           :                
 VCCIO7                       : AF16      : power  :                   : 3.3V    : 7         :                
-RESERVED_INPUT               : AF17      :        :                   :         : 7         :                
-RESERVED_INPUT               : AF18      :        :                   :         : 7         :                
-RESERVED_INPUT               : AF19      :        :                   :         : 7         :                
-RESERVED_INPUT               : AF20      :        :                   :         : 7         :                
-RESERVED_INPUT               : AF21      :        :                   :         : 7         :                
-RESERVED_INPUT               : AF22      :        :                   :         : 7         :                
+disp4[0]                     : AF17      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[3]                     : AF18      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp5[1]                     : AF19      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp6[3]                     : AF20      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp7[6]                     : AF21      : output : 3.3-V LVTTL       :         : 7         : Y              
+disp7[4]                     : AF22      : output : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT               : AF23      :        :                   :         : 7         :                
 VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                

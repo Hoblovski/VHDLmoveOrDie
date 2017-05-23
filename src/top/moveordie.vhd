@@ -4,14 +4,23 @@ use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
 
 entity MoveOrDie is
-    port ( 
+    port (
         -- ps2 data:
         ps2_datain, ps2_clk: in std_logic;
         -- vga data:
         vga_HSYNC, vga_VSYNC: out std_logic;
         vga_r, vga_g, vga_b: out std_logic_vector(2 downto 0);
         -- clocks:
-        CLK_100MHz: in std_logic
+        CLK_100MHz: in std_logic;
+        -- disp:
+        disp0: out std_logic_vector(6 downto 0) := "0000000";
+        disp1: out std_logic_vector(6 downto 0) := "0000000";
+        disp2: out std_logic_vector(6 downto 0) := "0000000";
+        disp3: out std_logic_vector(6 downto 0) := "0000000";
+        disp4: out std_logic_vector(6 downto 0) := "0000000";
+        disp5: out std_logic_vector(6 downto 0) := "0000000";
+        disp6: out std_logic_vector(6 downto 0) := "0000000";
+        disp7: out std_logic_vector(6 downto 0) := "0000000"
         -- misc:
     );
 end MoveOrDie;
@@ -28,8 +37,7 @@ architecture behave of MoveOrDie is
 
     component VGA640480 is
         port (
-    -- TODO: now only a single black dot at x, y
-            x, y: in std_logic_vector(9 downto 0) := (others => '0');
+            x, y: in std_logic_vector(6 downto 0) := (others => '0');
             CLK_100MHz: in std_logic;
             HSYNC, VSYNC: out std_logic;
             r, g, b: out std_logic_vector(2 downto 0)
@@ -40,27 +48,33 @@ architecture behave of MoveOrDie is
         port (
             CLK: in std_logic;
             wasdPressed: in std_logic_vector(3 downto 0);
-            X: out std_logic_vector(9 downto 0);
-            Y: out std_logic_vector(9 downto 0)
+            X: out std_logic_vector(6 downto 0);
+            Y: out std_logic_vector(6 downto 0)
         );
     end component;
-    
-	component ClientLogic is
-		port(
-			clk: in std_logic;
-			keypush: in std_logic_vector(3 downto 0); -- WASD
-			rst: in std_logic;
-			begin_x: in std_logic_vector(9 downto 0);
-			begin_y: in std_logic_vector(9 downto 0);
-			mp:in std_logic_vector(0 downto 0) ;
-			-----------------------------------------
-			position: out std_logic_vector(18 downto 0);
-			pos_x: out std_logic_vector(9 downto 0);
-			pos_y: out std_logic_vector(9 downto 0);
-		life: out std_logic_vector(6 downto 0);
-		alive: out std_logic
-		);
-	end component;
+
+    component ClientLogic is
+        generic (
+            maxLife: std_logic_vector(7 downto 0) := x"64";
+                -- 100
+            initJumpRemain: std_logic_vector(6 downto 0) := "0000110"
+                -- 6 (out of HEIGHT = 48). Specifies how high you can jump.
+        );
+
+        port(
+            clk: in std_logic;
+            rst: in std_logic;
+            wasdPressed: in std_logic_vector(3 downto 0); -- WASD
+            initX: in std_logic_vector(6 downto 0) := "0101000"; -- 40
+            initY: in std_logic_vector(6 downto 0) := "0011110"; -- 30
+
+            X: out std_logic_vector(6 downto 0);
+            Y: out std_logic_vector(6 downto 0);
+            stateCode: out std_logic_vector(3 downto 0)
+            -- life: out std_logic_vector(6 downto 0);
+            -- alive: out std_logic
+        );
+    end component;
 
     component ClkDivider is
         generic (
@@ -71,53 +85,60 @@ architecture behave of MoveOrDie is
             clkout: out std_logic
         );
     end component;
+
+    component DisplayDecoder is
+        port (
+            code: in std_logic_vector(3 downto 0);
+            seg_out : out std_logic_vector(6 downto 0)
+        );
+    end component;
 -----------------------components----------------------------------------------
 
-    signal swp_x, swp_y: std_logic_vector(9 downto 0);
-    signal swp_CLK_128MHz: std_logic;   -- not really 128 Hz :)
+    signal swp_x, swp_y: std_logic_vector(6 downto 0);
+    signal swp_CLK_100Hz: std_logic;
     signal swp_wasdPressed: std_logic_vector(3 downto 0);
-	--------------used for ClientLogic--------------------
-	signal swp_rst: std_logic;
-	signal swp_begin_x, swp_begin_y: std_logic_vector(9 downto 0);
-	signal swp_map_get: std_logic_vector(0 downto 0);
-	signal swp_position_require: std_logic_vector(18 downto 0);
-	signal swp_life: std_logic_vector(6 downto 0);
-	signal swp_alive: std_logic;
-	--------------used for ClientLogic--------------------
+
+    signal swp_disp0: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp1: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp2: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp3: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp4: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp5: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp6: std_logic_vector(3 downto 0) := "0000";
+    signal swp_disp7: std_logic_vector(3 downto 0) := "0000";
 
 begin
     u0: ClkDivider generic map (
-        n=> 18)
+        n=> 24)
     port map (
         clkin=> CLK_100MHz,
-        clkout=> swp_CLK_128MHz);
+        clkout=> swp_CLK_100Hz);
 
     u1: WASDDecoder port map (
         ps2_datain=> ps2_datain,
         ps2_clk=> ps2_clk,
         filter_clk=> CLK_100MHz,
         wasd=> swp_wasdPressed);
+    swp_disp7 <= swp_wasdPressed;
 
-    --u2: MoveController port map (
-    --    CLK=> swp_CLK_128MHz,
-    --    wasdPressed=> swp_wasdPressed,
-    --    X=> swp_x,
-    --    Y=> swp_y);
-	
 	u2: ClientLogic port map (
-		clk => swp_CLK_128MHz,
-		keypush => swp_wasdPressed,
-		rst => swp_rst,
-		begin_x => swp_begin_x,
-		begin_y => swp_begin_y,
-		mp => swp_map_get,
-		position => swp_position_require,
-		pos_x => swp_x,
-		pos_y => swp_y,
-		life => swp_life,
-		alive => swp_alive
+		clk=> swp_CLK_100Hz,
+		rst=> '0',
+		wasdPressed=> swp_wasdPressed,
+		X => swp_x,
+		Y => swp_y,
+        stateCode=> swp_disp0
 	);
-	
+
+--    swp_disp1 <= swp_x(3 downto 0);
+--    swp_disp2 <= swp_y(3 downto 0);
+
+--    u2: MoveController port map(
+--        CLK=> swp_CLK_100Hz,
+--        wasdPressed=> swp_wasdPressed,
+--        X=> swp_x,
+--        Y=> swp_y);
+
     u3: VGA640480 port map (
             x=> swp_x,
             y=> swp_y,
@@ -127,5 +148,30 @@ begin
             r=> vga_r,
             g=> vga_g,
             b=> vga_b);
+
+    dispu0: DisplayDecoder port map (
+            code=> swp_disp0,
+            seg_out=> disp0);
+    dispu1: DisplayDecoder port map (
+            code=> swp_disp1,
+            seg_out=> disp1);
+    dispu2: DisplayDecoder port map (
+            code=> swp_disp2,
+            seg_out=> disp2);
+    dispu3: DisplayDecoder port map (
+            code=> swp_disp3,
+            seg_out=> disp3);
+    dispu4: DisplayDecoder port map (
+            code=> swp_disp4,
+            seg_out=> disp4);
+    dispu5: DisplayDecoder port map (
+            code=> swp_disp5,
+            seg_out=> disp5);
+    dispu6: DisplayDecoder port map (
+            code=> swp_disp6,
+            seg_out=> disp6);
+    dispu7: DisplayDecoder port map (
+            code=> swp_disp7,
+            seg_out=> disp7);
 end behave;
 
