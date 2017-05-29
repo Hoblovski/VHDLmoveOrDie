@@ -10,18 +10,20 @@ entity MoveOrDie is
         -- vga data:
         vga_HSYNC, vga_VSYNC: out std_logic;
         vga_r, vga_g, vga_b: out std_logic_vector(2 downto 0);
+        -- net data:
+		send: out std_logic;
+		receive: in std_logic;
         -- clocks:
         CLK_100MHz: in std_logic;
+        CLK_25MHz: in std_logic;
         -- disp:
         disp0: out std_logic_vector(6 downto 0) := "0000000";
-        disp1: out std_logic_vector(6 downto 0) := "0000000";
-        disp2: out std_logic_vector(6 downto 0) := "0000000";
-        disp3: out std_logic_vector(6 downto 0) := "0000000";
-        disp4: out std_logic_vector(6 downto 0) := "0000000";
-        disp5: out std_logic_vector(6 downto 0) := "0000000";
-        disp6: out std_logic_vector(6 downto 0) := "0000000";
-        disp7: out std_logic_vector(6 downto 0) := "0000000"
-        -- misc:
+        disp7: out std_logic_vector(6 downto 0) := "0000000";
+        -- button:
+        button3: in std_logic;
+        btview: out std_logic;
+        
+        dataview: out std_logic_vector(6 downto 0)
     );
 end MoveOrDie;
 
@@ -38,6 +40,7 @@ architecture behave of MoveOrDie is
     component VGA640480 is
         port (
             x, y: in std_logic_vector(6 downto 0) := (others => '0');
+            hp: in std_logic_vector(7 downto 0) := (others => '1');
             CLK_100MHz: in std_logic;
             HSYNC, VSYNC: out std_logic;
             r, g, b: out std_logic_vector(2 downto 0)
@@ -55,13 +58,12 @@ architecture behave of MoveOrDie is
 
     component ClientLogic is
         generic (
-            maxLife: std_logic_vector(7 downto 0) := x"64";
-                -- 100
             initJumpRemain: std_logic_vector(6 downto 0) := "0000110"
                 -- 6 (out of HEIGHT = 48). Specifies how high you can jump.
         );
 
         port(
+            clk_rom: in std_logic;
             clk: in std_logic;
             rst: in std_logic;
             wasdPressed: in std_logic_vector(3 downto 0); -- WASD
@@ -70,11 +72,29 @@ architecture behave of MoveOrDie is
 
             X: out std_logic_vector(6 downto 0);
             Y: out std_logic_vector(6 downto 0);
+            hp: out std_logic_vector(7 downto 0);
             stateCode: out std_logic_vector(3 downto 0)
             -- life: out std_logic_vector(6 downto 0);
             -- alive: out std_logic
         );
     end component;
+
+
+	component connector is
+		generic(
+			maxLenth: integer := 3
+		);
+		port(
+			receive: in std_logic;
+			clk: in std_logic;
+			dataToSend: in std_logic_vector(maxLenth-1 downto 0); -- warning: begin with lower bits!!!
+			ESend: in std_logic;
+			send: out std_logic;
+			dataReceive:out std_logic_vector(maxLenth-1 downto 0);
+			EReceive:out std_logic
+		);
+	end component;
+
 
     component ClkDivider is
         generic (
@@ -95,8 +115,13 @@ architecture behave of MoveOrDie is
 -----------------------components----------------------------------------------
 
     signal swp_x, swp_y: std_logic_vector(6 downto 0);
-    signal swp_CLK_100Hz: std_logic;
+    signal swp_hp: std_logic_vector(7 downto 0);
+    signal swp_CLK_100Hz, swp_CLK_div6, swp_CLK_div12: std_logic;
     signal swp_wasdPressed: std_logic_vector(3 downto 0);
+    
+    signal swp_dataReceive: std_logic_vector(22 downto 0);
+    signal swp_EReceive: std_logic;
+    signal swp_data: std_logic_vector(22 downto 0);
 
     signal swp_disp0: std_logic_vector(3 downto 0) := "0000";
     signal swp_disp1: std_logic_vector(3 downto 0) := "0000";
@@ -106,13 +131,27 @@ architecture behave of MoveOrDie is
     signal swp_disp5: std_logic_vector(3 downto 0) := "0000";
     signal swp_disp6: std_logic_vector(3 downto 0) := "0000";
     signal swp_disp7: std_logic_vector(3 downto 0) := "0000";
+    
 
 begin
     u0: ClkDivider generic map (
-        n=> 24)
+        n=> 22)
     port map (
         clkin=> CLK_100MHz,
         clkout=> swp_CLK_100Hz);
+
+    u00: ClkDivider generic map (
+        n=> 6)
+    port map (
+        clkin=> CLK_100MHz,
+        clkout=> swp_CLK_div6);
+        
+    u000: ClkDivider generic map (
+        n=> 22)
+    port map (
+        clkin=> CLK_100MHz,
+        clkout=> swp_CLK_div12);
+
 
     u1: WASDDecoder port map (
         ps2_datain=> ps2_datain,
@@ -122,12 +161,30 @@ begin
     swp_disp7 <= swp_wasdPressed;
 
 	u2: ClientLogic port map (
+        clk_rom=> CLK_100MHz,
 		clk=> swp_CLK_100Hz,
 		rst=> '0',
 		wasdPressed=> swp_wasdPressed,
 		X => swp_x,
 		Y => swp_y,
+        hp=> swp_hp,
         stateCode=> swp_disp0
+	);
+	
+	swp_data <= swp_x & swp_y & swp_hp & "1";
+	dataview <= swp_data(22 downto 16);
+	btview <= not button3;
+	net: connector generic map(
+		maxLenth => 23
+	)
+	port map(
+		receive => receive,
+		clk => swp_CLK_div6,
+		dataToSend => swp_data, -- x,y,life,alive
+		ESend => swp_CLK_div12,
+		send => send,
+		dataReceive => swp_dataReceive,
+		EReceive => swp_EReceive
 	);
 
 --    swp_disp1 <= swp_x(3 downto 0);
@@ -142,6 +199,7 @@ begin
     u3: VGA640480 port map (
             x=> swp_x,
             y=> swp_y,
+            hp=> swp_hp,
             CLK_100MHz=> CLK_100MHz,
             HSYNC=>vga_HSYNC,
             VSYNC=>vga_VSYNC,
@@ -152,24 +210,6 @@ begin
     dispu0: DisplayDecoder port map (
             code=> swp_disp0,
             seg_out=> disp0);
-    dispu1: DisplayDecoder port map (
-            code=> swp_disp1,
-            seg_out=> disp1);
-    dispu2: DisplayDecoder port map (
-            code=> swp_disp2,
-            seg_out=> disp2);
-    dispu3: DisplayDecoder port map (
-            code=> swp_disp3,
-            seg_out=> disp3);
-    dispu4: DisplayDecoder port map (
-            code=> swp_disp4,
-            seg_out=> disp4);
-    dispu5: DisplayDecoder port map (
-            code=> swp_disp5,
-            seg_out=> disp5);
-    dispu6: DisplayDecoder port map (
-            code=> swp_disp6,
-            seg_out=> disp6);
     dispu7: DisplayDecoder port map (
             code=> swp_disp7,
             seg_out=> disp7);

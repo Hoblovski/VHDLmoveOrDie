@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.978 ns
-From           : ps2_datain
-To             : WASDDecoder:u1|Keyboard:u0|data
+Actual Time    : 6.579 ns
+From           : ps2_clk
+To             : WasdDecoder:u1|clk1
 From Clock     : --
 To Clock       : CLK_100MHz
 Failed Paths   : 0
@@ -15,19 +15,29 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 20.775 ns
-From           : VGA640480:u3|l_vgaY[6]
+Actual Time    : 26.049 ns
+From           : VGA640480:u3|l_vgaY[7]
 To             : vga_b[1]
 From Clock     : CLK_100MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.420 ns
+From           : button3
+To             : btview
+From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -6.544 ns
-From           : ps2_clk
-To             : WASDDecoder:u1|Keyboard:u0|clk1
+Actual Time    : -6.237 ns
+From           : ps2_datain
+To             : WasdDecoder:u1|data
 From Clock     : --
 To Clock       : CLK_100MHz
 Failed Paths   : 0
@@ -35,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK_100MHz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 117.26 MHz ( period = 8.528 ns )
-From           : WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]
-To             : ClientLogic:u2|nextX[6]
+Actual Time    : 63.11 MHz ( period = 15.845 ns )
+From           : ClientLogic:u2|lX[0]
+To             : ClientLogic:u2|MapLogic:u0|maplogicrom:u0|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ram_block1a0~porta_address_reg11
 From Clock     : CLK_100MHz
 To Clock       : CLK_100MHz
 Failed Paths   : 0
@@ -46,11 +56,11 @@ Type           : Clock Hold: 'CLK_100MHz'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : WASDDecoder:u1|Keyboard:u0|code[1]
-To             : WASDDecoder:u1|Keyboard:u0|scancode[1]
+From           : WasdDecoder:u1|code[4]
+To             : WasdDecoder:u1|decoder_state~3
 From Clock     : CLK_100MHz
 To Clock       : CLK_100MHz
-Failed Paths   : 8
+Failed Paths   : 64
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 8
+Failed Paths   : 64
 
 --------------------------------------------------------------------------------------
 

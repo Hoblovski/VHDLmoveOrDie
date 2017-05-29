@@ -18,7 +18,15 @@ end sender;
 architecture ses of sender is
 	signal cnt: integer := -2;
 	signal check: std_logic;
+	signal E: std_logic := '0';
+	signal last: std_logic := '1';
 begin
+	process(ESend)
+	begin
+		if rising_edge(ESend) then
+			E <= not E;
+		end if;
+	end process;
 	process(clk)
 	begin
 		if rising_edge(clk) then
@@ -26,10 +34,11 @@ begin
 				output <= '1';
 				cnt <= cnt +1;
 			elsif cnt = 0 then
-				if ESend = '1' then
+				if E = last then
 					cnt <= 1;
 					output <= '0';
 					check <= '0';
+					last <= not E;
 				else
 					output <= '1';
 				end if;

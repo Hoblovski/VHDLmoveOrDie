@@ -17,6 +17,7 @@ entity VGA640480 is
     port (
 -- TODO: now only a single black dot at x, y
         x, y: in std_logic_vector(6 downto 0) := (others => '0');
+        hp: in std_logic_vector(7 downto 0) := (others => '1');
         CLK_100MHz: in std_logic;
         HSYNC, VSYNC: out std_logic;
         r, g, b: out std_logic_vector(2 downto 0)
@@ -28,9 +29,15 @@ architecture behavior of VGA640480 is
 
     component MapGraphic is
         port (
-            x: in std_logic_vector(6 downto 0);
-            y: in std_logic_vector(6 downto 0);
-            gridCode: out std_logic_vector(3 downto 0)
+            rom_clk: in std_logic;
+            x: in std_logic_vector(9 downto 0);
+            y: in std_logic_vector(9 downto 0);
+            p1X: in std_logic_vector(6 downto 0);
+            p1Y: in std_logic_vector(6 downto 0);
+            p1Hp: in std_logic_vector(7 downto 0);
+            R: out std_logic_vector(2 downto 0);
+            G: out std_logic_vector(2 downto 0);
+            B: out std_logic_vector(2 downto 0)
         );
     end component;
 
@@ -108,35 +115,15 @@ begin
     end process;
 
     u0: MapGraphic port map (
-        x=> l_vgaX(9 downto 3),
-        y=> l_vgaY(9 downto 3),
-        gridCode=> l_gridCode);
-
-    -- Generate BGR according to l_vgaX, l_vgaY
-    process (CLK_25MHz, l_vgaX, l_vgaY)
-    begin
-        if rising_edge(CLK_25MHz) then
-            if (l_vgaX(9 downto 3) = x and l_vgaY(9 downto 3) = y) then
-                l_r <= (others => '1');
-                l_g <= (others => '0');
-                l_b <= (others => '0');
-            else
-                if l_gridCode = "0000" then
-                    l_r <= (others => '1');
-                    l_g <= (others => '1');
-                    l_b <= (others => '1');
-                elsif l_gridCode = "0001" then
-                    l_r <= (others => '0');
-                    l_g <= (others => '0');
-                    l_b <= (others => '0');
-                else
-                    l_r <= (others => '0');
-                    l_g <= (others => '1');
-                    l_b <= (others => '0');
-                end if;
-            end if;
-        end if;
-    end process;
+        rom_clk=> CLK_100MHz,
+        x=> l_vgaX,
+        y=> l_vgaY,
+        p1X=> x,
+        p1Y=> y,
+        p1Hp=> hp,
+        R=> l_r,
+        G=> l_g,
+        B=> l_b);
 
     -- Mapping HSYNC
     process (CLK_25MHz)

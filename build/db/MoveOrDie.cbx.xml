@@ -1,5 +1,12 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="MoveOrDie">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_in71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4h71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:u2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8k71.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
