@@ -1,5 +1,5 @@
 Partition Merge report for MoveOrDie
-Mon May 29 15:39:09 2017
+Fri Jun 02 09:32:53 2017
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -39,18 +39,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                       ;
 +------------------------------------+------------------------------------------+
-; Partition Merge Status             ; Successful - Mon May 29 15:39:09 2017    ;
+; Partition Merge Status             ; Successful - Fri Jun 02 09:32:53 2017    ;
 ; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name                      ; MoveOrDie                                ;
 ; Top-level Entity Name              ; MoveOrDie                                ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 497                                      ;
-;     Total combinational functions  ; 469                                      ;
-;     Dedicated logic registers      ; 207                                      ;
-; Total registers                    ; 207                                      ;
-; Total pins                         ; 40                                       ;
+; Total logic elements               ; 1,203                                    ;
+;     Total combinational functions  ; 1,084                                    ;
+;     Dedicated logic registers      ; 394                                      ;
+; Total registers                    ; 394                                      ;
+; Total pins                         ; 74                                       ;
 ; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 119,168                                  ;
+; Total memory bits                  ; 253,952                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                        ;
 ; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
@@ -70,26 +70,26 @@ applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Statistic                                   ; Top    ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 497    ;
+; Estimated Total logic elements              ; 1203   ;
 ;                                             ;        ;
-; Total combinational functions               ; 469    ;
+; Total combinational functions               ; 1084   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 136    ;
-;     -- 3 input functions                    ; 87     ;
-;     -- <=2 input functions                  ; 246    ;
+;     -- 4 input functions                    ; 375    ;
+;     -- 3 input functions                    ; 295    ;
+;     -- <=2 input functions                  ; 414    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 236    ;
-;     -- arithmetic mode                      ; 233    ;
+;     -- normal mode                          ; 594    ;
+;     -- arithmetic mode                      ; 490    ;
 ;                                             ;        ;
-; Total registers                             ; 207    ;
-;     -- Dedicated logic registers            ; 207    ;
+; Total registers                             ; 394    ;
+;     -- Dedicated logic registers            ; 394    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; Virtual pins                                ; 0      ;
-; I/O pins                                    ; 40     ;
+; I/O pins                                    ; 74     ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
-; Total memory bits                           ; 119168 ;
+; Total memory bits                           ; 253952 ;
 ; Total RAM block bits                        ; 0      ;
 ;                                             ;        ;
 ; Connections                                 ;        ;
@@ -99,15 +99,15 @@ applicable agreement for further details.
 ;     -- Registered Output Connections        ; 0      ;
 ;                                             ;        ;
 ; Internal Connections                        ;        ;
-;     -- Total Connections                    ; 2265   ;
-;     -- Registered Connections               ; 952    ;
+;     -- Total Connections                    ; 5370   ;
+;     -- Registered Connections               ; 1713   ;
 ;                                             ;        ;
 ; External Connections                        ;        ;
 ;     -- Top                                  ; 0      ;
 ;                                             ;        ;
 ; Partition Interface                         ;        ;
 ;     -- Input Ports                          ; 6      ;
-;     -- Output Ports                         ; 34     ;
+;     -- Output Ports                         ; 68     ;
 ;     -- Bidir Ports                          ; 0      ;
 ;                                             ;        ;
 ; Registered Ports                            ;        ;
@@ -144,44 +144,59 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 497        ;
+; Estimated Total logic elements              ; 1,203      ;
 ;                                             ;            ;
-; Total combinational functions               ; 469        ;
+; Total combinational functions               ; 1084       ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 136        ;
-;     -- 3 input functions                    ; 87         ;
-;     -- <=2 input functions                  ; 246        ;
+;     -- 4 input functions                    ; 375        ;
+;     -- 3 input functions                    ; 295        ;
+;     -- <=2 input functions                  ; 414        ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 236        ;
-;     -- arithmetic mode                      ; 233        ;
+;     -- normal mode                          ; 594        ;
+;     -- arithmetic mode                      ; 490        ;
 ;                                             ;            ;
-; Total registers                             ; 207        ;
-;     -- Dedicated logic registers            ; 207        ;
+; Total registers                             ; 394        ;
+;     -- Dedicated logic registers            ; 394        ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 40         ;
-; Total memory bits                           ; 119168     ;
-; Maximum fan-out node                        ; CLK_100MHz ;
-; Maximum fan-out                             ; 124        ;
-; Total fan-out                               ; 2265       ;
-; Average fan-out                             ; 3.02       ;
+; I/O pins                                    ; 74         ;
+; Total memory bits                           ; 253952     ;
+; Maximum fan-out node                        ; clkControl ;
+; Maximum fan-out                             ; 244        ;
+; Total fan-out                               ; 5370       ;
+; Average fan-out                             ; 3.27       ;
 +---------------------------------------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Partition Merge RAM Summary                                                                                                                                                                                                 ;
-+---------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------+
-; Name                                                                                                                ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                 ;
-+---------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------+
-; ClientLogic:u2|MapLogic:u0|maplogicrom:u0|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif ;
-; ClientLogic:u2|MapLogic:u0|maplogicrom:u1|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif ;
-; ClientLogic:u2|MapLogic:u0|maplogicrom:u2|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif ;
-; ClientLogic:u2|MapLogic:u0|maplogicrom:u3|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif ;
-; VGA640480:u3|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated|ALTSYNCRAM    ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/block.mif ;
-; VGA640480:u3|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|ALTSYNCRAM      ; AUTO ; ROM  ; 8192         ; 6            ; --           ; --           ; 49152 ; ../../res/map.mif   ;
-; VGA640480:u3|MapGraphic:u0|playerrom:u2|altsyncram:altsyncram_component|altsyncram_8k71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 256          ; 9            ; --           ; --           ; 2304  ; ../res/player.mif   ;
-+---------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                         ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------+
+; Name                                                                                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                  ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------+
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_LD_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM                         ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_LU_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM                         ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_RD_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM                         ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_RU_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM                         ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:0:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:1:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:2:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:0:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:1:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:2:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:0:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:1:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:2:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:0:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM       ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:1:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM       ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:2:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM       ; AUTO ; ROM  ; 8192         ; 1            ; --           ; --           ; 8192  ; ../res/maplogic.mif  ;
+; VGA640480:u3|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated|ALTSYNCRAM                                           ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/block.mif  ;
+; VGA640480:u3|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|ALTSYNCRAM                                             ; AUTO ; ROM  ; 8192         ; 6            ; --           ; --           ; 49152 ; ../../res/map.mif    ;
+; VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM                              ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
+; VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM                              ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
+; VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM                              ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
+; VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM                              ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------+
 
 
 +--------------------------+
@@ -190,23 +205,19 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 Info: *******************************************************************
 Info: Running Quartus II Partition Merge
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Mon May 29 15:39:09 2017
+    Info: Processing started: Fri Jun 02 09:32:52 2017
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off MoveOrDie -c MoveOrDie --merge=on
-Warning: Previously generated Fitter netlist for partition "Top" is older than current Synthesis netlist -- using the current Synthesis netlist instead to ensure that the latest source changes are included
 Info: Using synthesis netlist for partition "Top"
 Info: Resolved and merged 1 partition(s)
-Warning: Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "receive"
-    Warning (15610): No output dependent on input pin "CLK_25MHz"
-Info: Implemented 579 device resources after synthesis - the final resource count might be different
+Info: Implemented 1385 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
-    Info: Implemented 34 output pins
-    Info: Implemented 504 logic cells
-    Info: Implemented 35 RAM segments
-Info: Quartus II Partition Merge was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 274 megabytes
-    Info: Processing ended: Mon May 29 15:39:09 2017
-    Info: Elapsed time: 00:00:00
+    Info: Implemented 68 output pins
+    Info: Implemented 1222 logic cells
+    Info: Implemented 89 RAM segments
+Info: Quartus II Partition Merge was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 275 megabytes
+    Info: Processing ended: Fri Jun 02 09:32:53 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

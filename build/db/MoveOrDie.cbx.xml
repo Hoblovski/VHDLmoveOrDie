@@ -1,12 +1,27 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="MoveOrDie">
-		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:1:U_DOWN_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_in71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:2:U_DOWN_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:0:U_UP_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_RD_BLOCK|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:1:U_LEFT_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:1:U_UP_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4h71.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:u2|MapLogic:u0|maplogicrom:u3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:u2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8k71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_RU_BLOCK|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:0:U_DOWN_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:2:U_LEFT_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:0:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:2:U_UP_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_LD_BLOCK|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:1:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:U_LU_BLOCK|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:0:U_LEFT_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|ClientLogic:U_LOGIC_1|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:2:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2t71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

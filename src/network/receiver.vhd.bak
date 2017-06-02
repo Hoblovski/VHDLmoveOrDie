@@ -26,7 +26,9 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if cnt = 0 then
+			if cnt < 0 then
+				cnt <= cnt + 1;
+			elsif cnt = 0 then
 				if input = '0' then
 					cnt <= 1;
 					Etemp <= '0';
@@ -39,7 +41,7 @@ begin
 			else
 				if check = input then
 					Etemp <= '1';
-					cnt <= 0;
+					cnt <= -1;
 				end if;
 			end if;
 		end if;

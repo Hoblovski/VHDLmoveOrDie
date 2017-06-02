@@ -1,5 +1,5 @@
 
-State Machine - |MoveOrDie|ClientLogic:u2|state
+State Machine - |MoveOrDie|ClientLogic:U_LOGIC_1|state
 Name state.stand state.jump state.move state.fall 
 state.fall 0 0 0 0 
 state.move 0 0 1 1 

@@ -25,3 +25,4 @@ project文件组织
     3. 在src/MODULE_NAME里面写代码
     4. cd src/top
     5. 修改top.vhd, 运行检查你的代码
+

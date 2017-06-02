@@ -20,9 +20,15 @@ iostream
 lodepng.h
 .././lodepng.h
 
-C:/Users/Hob Den/Documents/CppFiles/cg/loadpng/main.cpp
+C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/main.cpp
 lodepng.h
 -
 cstdio
+-
+vector
+-
+string
+-
+cassert
 -
 

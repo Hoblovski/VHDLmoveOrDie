@@ -1,5 +1,5 @@
 Simulator report for MoveOrDie
-Sat May 20 16:24:20 2017
+Mon May 29 21:28:59 2017
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -10,12 +10,34 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
   2. Simulator Summary
   3. Simulator Settings
   4. Simulation Waveforms
-  5. Coverage Summary
-  6. Complete 1/0-Value Coverage
-  7. Missing 1-Value Coverage
-  8. Missing 0-Value Coverage
-  9. Simulator INI Usage
- 10. Simulator Messages
+  5. |MoveOrDie|VGA640480:u3|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated|ALTSYNCRAM
+  6. |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM
+  7. |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM
+  8. |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM
+  9. |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM
+ 10. |MoveOrDie|VGA640480:u3|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|ALTSYNCRAM
+ 11. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:1:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 12. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:0:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 13. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:2:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 14. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:1:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 15. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:0:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 16. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:2:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 17. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:0:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 18. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:2:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 19. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:1:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 20. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:0:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 21. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:2:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 22. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:1:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 23. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_RU_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 24. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_LU_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 25. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_LD_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 26. |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_RD_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM
+ 27. Coverage Summary
+ 28. Complete 1/0-Value Coverage
+ 29. Missing 1-Value Coverage
+ 30. Missing 0-Value Coverage
+ 31. Simulator INI Usage
+ 32. Simulator Messages
 
 
 
@@ -38,20 +60,11 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------+
-; Simulator Summary                          ;
-+-----------------------------+--------------+
-; Type                        ; Value        ;
-+-----------------------------+--------------+
-; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 297 nodes    ;
-; Simulation Coverage         ;       0.00 % ;
-; Total Number of Transitions ; 0            ;
-; Simulation Breakpoints      ; 0            ;
-; Family                      ; Cyclone II   ;
-; Device                      ; EP2C70F672C8 ;
-+-----------------------------+--------------+
++-------------------+
+; Simulator Summary ;
++------+------------+
+; Type ; Value      ;
++------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -90,19 +103,165 @@ Waveform report data cannot be output to ASCII.
 Please use Quartus II 64-Bit to view the waveform report data.
 
 
-+--------------------------------------------------------------------+
-; Coverage Summary                                                   ;
-+-----------------------------------------------------+--------------+
-; Type                                                ; Value        ;
-+-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;       0.00 % ;
-; Total nodes checked                                 ; 297          ;
-; Total output ports checked                          ; 356          ;
-; Total output ports with complete 1/0-value coverage ; 0            ;
-; Total output ports with no 1/0-value coverage       ; 356          ;
-; Total output ports with no 1-value coverage         ; 356          ;
-; Total output ports with no 0-value coverage         ; 356          ;
-+-----------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|VGA640480:u3|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|VGA640480:u3|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|VGA640480:u3|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:1:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:0:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_LEFT_BLOCK:2:U_LEFT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:1:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:0:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_RIGHT_BLOCK:2:U_RIGHT_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:0:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:2:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_DOWN_BLOCK:1:U_DOWN_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:0:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:2:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:\GEN_UP_BLOCK:1:U_UP_BLOCK_I|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_RU_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_LU_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_LD_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; |MoveOrDie|ClientLogic:U_LOGIC_2|MapLogic:u0|maplogicrom:U_RD_BLOCK|altsyncram:altsyncram_component|altsyncram_2t71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the memory report data.
+
+
++------------------+
+; Coverage Summary ;
++------+-----------+
+; Type ; Value     ;
++------+-----------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
@@ -114,733 +273,19 @@ The following table displays output ports that toggle between 1 and 0 during sim
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                                           ;
-+----------------------------------------------------------------+----------------------------------------------------------------+------------------+
-; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
-+----------------------------------------------------------------+----------------------------------------------------------------+------------------+
-; |MoveOrDie|ClientLogic:u2|stateCode[1]                         ; |MoveOrDie|ClientLogic:u2|stateCode[1]                         ; regout           ;
-; |MoveOrDie|VGA640480:u3|Add0~0                                 ; |MoveOrDie|VGA640480:u3|Add0~0                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~0                                 ; |MoveOrDie|VGA640480:u3|Add0~1                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~2                                 ; |MoveOrDie|VGA640480:u3|Add0~2                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~2                                 ; |MoveOrDie|VGA640480:u3|Add0~3                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~4                                 ; |MoveOrDie|VGA640480:u3|Add0~4                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~4                                 ; |MoveOrDie|VGA640480:u3|Add0~5                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~6                                 ; |MoveOrDie|VGA640480:u3|Add0~6                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~6                                 ; |MoveOrDie|VGA640480:u3|Add0~7                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~8                                 ; |MoveOrDie|VGA640480:u3|Add0~8                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~8                                 ; |MoveOrDie|VGA640480:u3|Add0~9                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~10                                ; |MoveOrDie|VGA640480:u3|Add0~10                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~10                                ; |MoveOrDie|VGA640480:u3|Add0~11                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~12                                ; |MoveOrDie|VGA640480:u3|Add0~12                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~12                                ; |MoveOrDie|VGA640480:u3|Add0~13                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~14                                ; |MoveOrDie|VGA640480:u3|Add0~14                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~14                                ; |MoveOrDie|VGA640480:u3|Add0~15                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~16                                ; |MoveOrDie|VGA640480:u3|Add0~16                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~16                                ; |MoveOrDie|VGA640480:u3|Add0~17                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~18                                ; |MoveOrDie|VGA640480:u3|Add0~18                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~0                                 ; |MoveOrDie|VGA640480:u3|Add1~0                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~0                                 ; |MoveOrDie|VGA640480:u3|Add1~1                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~2                                 ; |MoveOrDie|VGA640480:u3|Add1~2                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~2                                 ; |MoveOrDie|VGA640480:u3|Add1~3                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~4                                 ; |MoveOrDie|VGA640480:u3|Add1~4                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~4                                 ; |MoveOrDie|VGA640480:u3|Add1~5                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~6                                 ; |MoveOrDie|VGA640480:u3|Add1~6                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~6                                 ; |MoveOrDie|VGA640480:u3|Add1~7                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~8                                 ; |MoveOrDie|VGA640480:u3|Add1~8                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~8                                 ; |MoveOrDie|VGA640480:u3|Add1~9                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~10                                ; |MoveOrDie|VGA640480:u3|Add1~10                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~10                                ; |MoveOrDie|VGA640480:u3|Add1~11                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~12                                ; |MoveOrDie|VGA640480:u3|Add1~12                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~12                                ; |MoveOrDie|VGA640480:u3|Add1~13                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~14                                ; |MoveOrDie|VGA640480:u3|Add1~14                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~14                                ; |MoveOrDie|VGA640480:u3|Add1~15                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~16                                ; |MoveOrDie|VGA640480:u3|Add1~16                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~16                                ; |MoveOrDie|VGA640480:u3|Add1~17                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~18                                ; |MoveOrDie|VGA640480:u3|Add1~18                                ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]                             ; |MoveOrDie|ClientLogic:u2|nextY[4]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[5]                             ; |MoveOrDie|ClientLogic:u2|nextY[5]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[0]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[0]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[1]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[1]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[2]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[2]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[4]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[4]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[5]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[5]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[6]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[6]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|Add1~0                               ; |MoveOrDie|ClientLogic:u2|Add1~0                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~0                               ; |MoveOrDie|ClientLogic:u2|Add1~1                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~2                               ; |MoveOrDie|ClientLogic:u2|Add1~2                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~2                               ; |MoveOrDie|ClientLogic:u2|Add1~3                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~4                               ; |MoveOrDie|ClientLogic:u2|Add1~4                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~4                               ; |MoveOrDie|ClientLogic:u2|Add1~5                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~6                               ; |MoveOrDie|ClientLogic:u2|Add1~6                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~6                               ; |MoveOrDie|ClientLogic:u2|Add1~7                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~8                               ; |MoveOrDie|ClientLogic:u2|Add1~8                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~8                               ; |MoveOrDie|ClientLogic:u2|Add1~9                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[2]                             ; |MoveOrDie|ClientLogic:u2|nextY[2]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|Add1~12                              ; |MoveOrDie|ClientLogic:u2|Add1~12                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~12                              ; |MoveOrDie|ClientLogic:u2|Add1~13                              ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~14                              ; |MoveOrDie|ClientLogic:u2|Add1~14                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]                             ; |MoveOrDie|ClientLogic:u2|nextY[6]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[1]                             ; |MoveOrDie|ClientLogic:u2|nextY[1]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[0]                             ; |MoveOrDie|ClientLogic:u2|nextY[0]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[3]                             ; |MoveOrDie|ClientLogic:u2|nextY[3]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[0]~65                          ; |MoveOrDie|ClientLogic:u2|nextY[0]~65                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[0]~65                          ; |MoveOrDie|ClientLogic:u2|nextY[0]~66                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[1]~67                          ; |MoveOrDie|ClientLogic:u2|nextY[1]~67                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[1]~67                          ; |MoveOrDie|ClientLogic:u2|nextY[1]~68                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[2]~69                          ; |MoveOrDie|ClientLogic:u2|nextY[2]~69                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[2]~69                          ; |MoveOrDie|ClientLogic:u2|nextY[2]~70                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[3]~71                          ; |MoveOrDie|ClientLogic:u2|nextY[3]~71                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[3]~71                          ; |MoveOrDie|ClientLogic:u2|nextY[3]~72                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]~73                          ; |MoveOrDie|ClientLogic:u2|nextY[4]~73                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]~73                          ; |MoveOrDie|ClientLogic:u2|nextY[4]~74                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[5]~76                          ; |MoveOrDie|ClientLogic:u2|nextY[5]~76                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[5]~76                          ; |MoveOrDie|ClientLogic:u2|nextY[5]~77                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~56                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~56                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~56                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~57                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~59                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~59                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~59                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~60                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~61                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~61                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~61                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~62                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~63                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~63                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~63                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~64                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~65                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~65                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~65                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~66                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~67                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~67                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~67                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~68                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[6]~69                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[6]~69                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]~78                          ; |MoveOrDie|ClientLogic:u2|nextY[6]~78                          ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[23]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[23]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[22]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[22]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[21]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[21]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[20]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[20]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[19]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[19]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[18]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[18]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[17]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[17]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[16]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[16]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[15]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[15]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[14]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[14]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[13]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[13]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[12]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[12]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[11]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[11]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[10]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[10]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[9]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[9]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[8]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[8]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[7]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[7]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[6]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[6]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[5]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[5]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[4]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[4]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[3]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[3]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[2]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[2]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[1]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[1]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[0]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[0]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~50                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~50                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~50                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~51                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~52                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~52                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~52                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~53                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~54                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~54                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~54                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~55                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~56                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~56                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~56                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~57                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~58                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~58                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~58                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~59                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~60                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~60                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~60                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~61                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~62                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~62                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~62                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~63                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~64                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~64                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~64                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~65                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~66                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~66                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~66                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~67                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~68                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~68                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~68                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~69                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~70                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~70                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~70                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~71                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~72                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~72                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~72                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~73                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~74                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~74                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~74                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~75                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~76                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~76                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~76                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~77                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~78                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~78                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~78                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~79                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~80                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~80                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~80                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~81                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~82                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~82                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~82                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~83                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~84                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~84                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~84                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~85                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~86                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~86                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~86                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~87                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~88                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~88                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~88                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~89                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~90                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~90                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~90                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~91                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~92                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~92                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~92                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~93                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~94                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~94                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~94                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~95                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~96                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~96                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~96                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~97                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[24]~98                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[24]~98                        ; combout          ;
-; |MoveOrDie|VGA640480:u3|HSYNC                                  ; |MoveOrDie|VGA640480:u3|HSYNC                                  ; regout           ;
-; |MoveOrDie|VGA640480:u3|VSYNC                                  ; |MoveOrDie|VGA640480:u3|VSYNC                                  ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_r[2]                                 ; |MoveOrDie|VGA640480:u3|l_r[2]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[8]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[8]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[7]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[7]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[9]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[9]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|r[0]~3                                 ; |MoveOrDie|VGA640480:u3|r[0]~3                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[8]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[8]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[7]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[7]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[6]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[6]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[5]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[5]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_5~1                            ; |MoveOrDie|VGA640480:u3|process_5~1                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[9]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[9]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|r[0]~4                                 ; |MoveOrDie|VGA640480:u3|r[0]~4                                 ; combout          ;
-; |MoveOrDie|ClientLogic:u2|stateCode[0]                         ; |MoveOrDie|ClientLogic:u2|stateCode[0]                         ; regout           ;
-; |MoveOrDie|DisplayDecoder:dispu0|Mux0~0                        ; |MoveOrDie|DisplayDecoder:dispu0|Mux0~0                        ; combout          ;
-; |MoveOrDie|DisplayDecoder:dispu0|Mux3~0                        ; |MoveOrDie|DisplayDecoder:dispu0|Mux3~0                        ; combout          ;
-; |MoveOrDie|DisplayDecoder:dispu0|Mux1~0                        ; |MoveOrDie|DisplayDecoder:dispu0|Mux1~0                        ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_HSYNC                                ; |MoveOrDie|VGA640480:u3|l_HSYNC                                ; regout           ;
-; |MoveOrDie|VGA640480:u3|CLK_25MHz                              ; |MoveOrDie|VGA640480:u3|CLK_25MHz                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_VSYNC                                ; |MoveOrDie|VGA640480:u3|l_VSYNC                                ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[4]                                 ; |MoveOrDie|ClientLogic:u2|y[4]                                 ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[2]                                 ; |MoveOrDie|ClientLogic:u2|y[2]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~1                            ; |MoveOrDie|VGA640480:u3|process_6~1                            ; combout          ;
-; |MoveOrDie|ClientLogic:u2|y[6]                                 ; |MoveOrDie|ClientLogic:u2|y[6]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[4]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[4]                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[1]                                 ; |MoveOrDie|ClientLogic:u2|y[1]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~2                            ; |MoveOrDie|VGA640480:u3|process_6~2                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[3]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[3]                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[0]                                 ; |MoveOrDie|ClientLogic:u2|y[0]                                 ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[5]                                 ; |MoveOrDie|ClientLogic:u2|y[5]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~3                            ; |MoveOrDie|VGA640480:u3|process_6~3                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[5]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[5]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~4                            ; |MoveOrDie|VGA640480:u3|process_6~4                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_6~5                            ; |MoveOrDie|VGA640480:u3|process_6~5                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[6]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[6]                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[3]                                 ; |MoveOrDie|ClientLogic:u2|y[3]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[4]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[4]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~6                            ; |MoveOrDie|VGA640480:u3|process_6~6                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[3]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[3]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~0                            ; |MoveOrDie|VGA640480:u3|process_6~0                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[2]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[2]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[1]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[1]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[0]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[0]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|Equal0~0                               ; |MoveOrDie|VGA640480:u3|Equal0~0                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal0~1                               ; |MoveOrDie|VGA640480:u3|Equal0~1                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal0~2                               ; |MoveOrDie|VGA640480:u3|Equal0~2                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX~10                              ; |MoveOrDie|VGA640480:u3|l_vgaX~10                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX~11                              ; |MoveOrDie|VGA640480:u3|l_vgaX~11                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[2]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[2]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[1]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[1]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[0]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[0]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|Equal1~0                               ; |MoveOrDie|VGA640480:u3|Equal1~0                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal1~1                               ; |MoveOrDie|VGA640480:u3|Equal1~1                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal1~2                               ; |MoveOrDie|VGA640480:u3|Equal1~2                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~10                              ; |MoveOrDie|VGA640480:u3|l_vgaY~10                              ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_clkout                              ; |MoveOrDie|ClkDivider:u0|l_clkout                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|MapLogic:u0|mp                       ; |MoveOrDie|ClientLogic:u2|MapLogic:u0|mp                       ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]   ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]   ; regout           ;
-; |MoveOrDie|ClientLogic:u2|state.stand                          ; |MoveOrDie|ClientLogic:u2|state.stand                          ; regout           ;
-; |MoveOrDie|ClientLogic:u2|state~35                             ; |MoveOrDie|ClientLogic:u2|state~35                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|state.jump                           ; |MoveOrDie|ClientLogic:u2|state.jump                           ; regout           ;
-; |MoveOrDie|ClientLogic:u2|Equal0~0                             ; |MoveOrDie|ClientLogic:u2|Equal0~0                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Equal0~1                             ; |MoveOrDie|ClientLogic:u2|Equal0~1                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|state~36                             ; |MoveOrDie|ClientLogic:u2|state~36                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|stateCode~15                         ; |MoveOrDie|ClientLogic:u2|stateCode~15                         ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_4~1                            ; |MoveOrDie|VGA640480:u3|process_4~1                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_4~2                            ; |MoveOrDie|VGA640480:u3|process_4~2                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_CLK_50MHz                            ; |MoveOrDie|VGA640480:u3|l_CLK_50MHz                            ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_5~2                            ; |MoveOrDie|VGA640480:u3|process_5~2                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_5~3                            ; |MoveOrDie|VGA640480:u3|process_5~3                            ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~10                              ; |MoveOrDie|ClientLogic:u2|Add1~10                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|y[0]~49                              ; |MoveOrDie|ClientLogic:u2|y[0]~49                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~11                              ; |MoveOrDie|ClientLogic:u2|Add1~11                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~16                              ; |MoveOrDie|ClientLogic:u2|Add1~16                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~17                              ; |MoveOrDie|ClientLogic:u2|Add1~17                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~11                              ; |MoveOrDie|VGA640480:u3|l_vgaY~11                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~18                              ; |MoveOrDie|ClientLogic:u2|Add1~18                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~19                              ; |MoveOrDie|ClientLogic:u2|Add1~19                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX~12                              ; |MoveOrDie|VGA640480:u3|l_vgaX~12                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~20                              ; |MoveOrDie|ClientLogic:u2|Add1~20                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~12                              ; |MoveOrDie|VGA640480:u3|l_vgaY~12                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~13                              ; |MoveOrDie|VGA640480:u3|l_vgaY~13                              ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_clkout~0                            ; |MoveOrDie|ClkDivider:u0|l_clkout~0                            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]   ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]   ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]   ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]   ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]~63                          ; |MoveOrDie|ClientLogic:u2|nextY[6]~63                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]~64                          ; |MoveOrDie|ClientLogic:u2|nextY[6]~64                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]~75                          ; |MoveOrDie|ClientLogic:u2|nextY[4]~75                          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state             ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state             ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~4 ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~4 ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe                      ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe                      ; regout           ;
-; |MoveOrDie|ClientLogic:u2|state~37                             ; |MoveOrDie|ClientLogic:u2|state~37                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|state~38                             ; |MoveOrDie|ClientLogic:u2|state~38                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~58                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~58                     ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5 ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5 ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]~6 ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]~6 ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~1           ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~1           ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~2            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~2            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~2           ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~2           ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.finish             ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.finish             ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|data                     ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|data                     ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d0                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d0                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk2                     ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk2                     ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk1                     ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk1                     ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk                      ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk                      ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]~8                ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]~8                ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]~9                ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]~9                ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d1                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d1                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]~10               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]~10               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]~11               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]~11               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]~12               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]~12               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d3                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d3                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]~13               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]~13               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d2                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d2                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]~14               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]~14               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]~15               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]~15               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.stop               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.stop               ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector12~11            ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector12~11            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.start              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.start              ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector2~0              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector2~0              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~1              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~1              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~2              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~2              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~3              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~3              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity             ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity             ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector11~0             ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector11~0             ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.delay              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.delay              ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector1~0              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector1~0              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~2              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~2              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~3              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~3              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~4              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~4              ; combout          ;
-; |MoveOrDie|VGA640480:u3|CLK_25MHz~0                            ; |MoveOrDie|VGA640480:u3|CLK_25MHz~0                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_CLK_50MHz~0                          ; |MoveOrDie|VGA640480:u3|l_CLK_50MHz~0                          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[0]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[0]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[4]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[4]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[1]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[1]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[7]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[7]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[6]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[6]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[3]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[3]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[2]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[2]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[5]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[5]              ; combout          ;
-; |MoveOrDie|~GND                                                ; |MoveOrDie|~GND                                                ; combout          ;
-; |MoveOrDie|vga_HSYNC                                           ; |MoveOrDie|vga_HSYNC                                           ; padio            ;
-; |MoveOrDie|vga_VSYNC                                           ; |MoveOrDie|vga_VSYNC                                           ; padio            ;
-; |MoveOrDie|vga_r[0]                                            ; |MoveOrDie|vga_r[0]                                            ; padio            ;
-; |MoveOrDie|vga_r[1]                                            ; |MoveOrDie|vga_r[1]                                            ; padio            ;
-; |MoveOrDie|vga_r[2]                                            ; |MoveOrDie|vga_r[2]                                            ; padio            ;
-; |MoveOrDie|vga_g[0]                                            ; |MoveOrDie|vga_g[0]                                            ; padio            ;
-; |MoveOrDie|vga_g[1]                                            ; |MoveOrDie|vga_g[1]                                            ; padio            ;
-; |MoveOrDie|vga_g[2]                                            ; |MoveOrDie|vga_g[2]                                            ; padio            ;
-; |MoveOrDie|vga_b[0]                                            ; |MoveOrDie|vga_b[0]                                            ; padio            ;
-; |MoveOrDie|vga_b[1]                                            ; |MoveOrDie|vga_b[1]                                            ; padio            ;
-; |MoveOrDie|vga_b[2]                                            ; |MoveOrDie|vga_b[2]                                            ; padio            ;
-; |MoveOrDie|disp0[0]                                            ; |MoveOrDie|disp0[0]                                            ; padio            ;
-; |MoveOrDie|disp0[1]                                            ; |MoveOrDie|disp0[1]                                            ; padio            ;
-; |MoveOrDie|disp0[2]                                            ; |MoveOrDie|disp0[2]                                            ; padio            ;
-; |MoveOrDie|disp0[3]                                            ; |MoveOrDie|disp0[3]                                            ; padio            ;
-; |MoveOrDie|disp0[4]                                            ; |MoveOrDie|disp0[4]                                            ; padio            ;
-; |MoveOrDie|disp0[5]                                            ; |MoveOrDie|disp0[5]                                            ; padio            ;
-; |MoveOrDie|disp0[6]                                            ; |MoveOrDie|disp0[6]                                            ; padio            ;
-; |MoveOrDie|CLK_100MHz                                          ; |MoveOrDie|CLK_100MHz~corein                                   ; combout          ;
-; |MoveOrDie|ps2_datain                                          ; |MoveOrDie|ps2_datain~corein                                   ; combout          ;
-; |MoveOrDie|ps2_clk                                             ; |MoveOrDie|ps2_clk~corein                                      ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe~clkctrl              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe~clkctrl              ; outclk           ;
-; |MoveOrDie|VGA640480:u3|CLK_25MHz~clkctrl                      ; |MoveOrDie|VGA640480:u3|CLK_25MHz~clkctrl                      ; outclk           ;
-; |MoveOrDie|ClkDivider:u0|l_clkout~clkctrl                      ; |MoveOrDie|ClkDivider:u0|l_clkout~clkctrl                      ; outclk           ;
-; |MoveOrDie|CLK_100MHz~clkctrl                                  ; |MoveOrDie|CLK_100MHz~clkctrl                                  ; outclk           ;
-; |MoveOrDie|VGA640480:u3|HSYNC~feeder                           ; |MoveOrDie|VGA640480:u3|HSYNC~feeder                           ; combout          ;
-; |MoveOrDie|VGA640480:u3|VSYNC~feeder                           ; |MoveOrDie|VGA640480:u3|VSYNC~feeder                           ; combout          ;
-; |MoveOrDie|ClientLogic:u2|stateCode[1]~feeder                  ; |MoveOrDie|ClientLogic:u2|stateCode[1]~feeder                  ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5~feeder          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity~feeder      ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity~feeder      ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7~feeder          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4~feeder          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6~feeder          ; combout          ;
-+----------------------------------------------------------------+----------------------------------------------------------------+------------------+
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                           ;
-+----------------------------------------------------------------+----------------------------------------------------------------+------------------+
-; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
-+----------------------------------------------------------------+----------------------------------------------------------------+------------------+
-; |MoveOrDie|ClientLogic:u2|stateCode[1]                         ; |MoveOrDie|ClientLogic:u2|stateCode[1]                         ; regout           ;
-; |MoveOrDie|VGA640480:u3|Add0~0                                 ; |MoveOrDie|VGA640480:u3|Add0~0                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~0                                 ; |MoveOrDie|VGA640480:u3|Add0~1                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~2                                 ; |MoveOrDie|VGA640480:u3|Add0~2                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~2                                 ; |MoveOrDie|VGA640480:u3|Add0~3                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~4                                 ; |MoveOrDie|VGA640480:u3|Add0~4                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~4                                 ; |MoveOrDie|VGA640480:u3|Add0~5                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~6                                 ; |MoveOrDie|VGA640480:u3|Add0~6                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~6                                 ; |MoveOrDie|VGA640480:u3|Add0~7                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~8                                 ; |MoveOrDie|VGA640480:u3|Add0~8                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~8                                 ; |MoveOrDie|VGA640480:u3|Add0~9                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~10                                ; |MoveOrDie|VGA640480:u3|Add0~10                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~10                                ; |MoveOrDie|VGA640480:u3|Add0~11                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~12                                ; |MoveOrDie|VGA640480:u3|Add0~12                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~12                                ; |MoveOrDie|VGA640480:u3|Add0~13                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~14                                ; |MoveOrDie|VGA640480:u3|Add0~14                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~14                                ; |MoveOrDie|VGA640480:u3|Add0~15                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~16                                ; |MoveOrDie|VGA640480:u3|Add0~16                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add0~16                                ; |MoveOrDie|VGA640480:u3|Add0~17                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add0~18                                ; |MoveOrDie|VGA640480:u3|Add0~18                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~0                                 ; |MoveOrDie|VGA640480:u3|Add1~0                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~0                                 ; |MoveOrDie|VGA640480:u3|Add1~1                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~2                                 ; |MoveOrDie|VGA640480:u3|Add1~2                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~2                                 ; |MoveOrDie|VGA640480:u3|Add1~3                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~4                                 ; |MoveOrDie|VGA640480:u3|Add1~4                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~4                                 ; |MoveOrDie|VGA640480:u3|Add1~5                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~6                                 ; |MoveOrDie|VGA640480:u3|Add1~6                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~6                                 ; |MoveOrDie|VGA640480:u3|Add1~7                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~8                                 ; |MoveOrDie|VGA640480:u3|Add1~8                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~8                                 ; |MoveOrDie|VGA640480:u3|Add1~9                                 ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~10                                ; |MoveOrDie|VGA640480:u3|Add1~10                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~10                                ; |MoveOrDie|VGA640480:u3|Add1~11                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~12                                ; |MoveOrDie|VGA640480:u3|Add1~12                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~12                                ; |MoveOrDie|VGA640480:u3|Add1~13                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~14                                ; |MoveOrDie|VGA640480:u3|Add1~14                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~14                                ; |MoveOrDie|VGA640480:u3|Add1~15                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~16                                ; |MoveOrDie|VGA640480:u3|Add1~16                                ; combout          ;
-; |MoveOrDie|VGA640480:u3|Add1~16                                ; |MoveOrDie|VGA640480:u3|Add1~17                                ; cout             ;
-; |MoveOrDie|VGA640480:u3|Add1~18                                ; |MoveOrDie|VGA640480:u3|Add1~18                                ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]                             ; |MoveOrDie|ClientLogic:u2|nextY[4]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[5]                             ; |MoveOrDie|ClientLogic:u2|nextY[5]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[0]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[0]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[1]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[1]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[2]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[2]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[4]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[4]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[5]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[5]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[6]                        ; |MoveOrDie|ClientLogic:u2|jumpRemain[6]                        ; regout           ;
-; |MoveOrDie|ClientLogic:u2|Add1~0                               ; |MoveOrDie|ClientLogic:u2|Add1~0                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~0                               ; |MoveOrDie|ClientLogic:u2|Add1~1                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~2                               ; |MoveOrDie|ClientLogic:u2|Add1~2                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~2                               ; |MoveOrDie|ClientLogic:u2|Add1~3                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~4                               ; |MoveOrDie|ClientLogic:u2|Add1~4                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~4                               ; |MoveOrDie|ClientLogic:u2|Add1~5                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~6                               ; |MoveOrDie|ClientLogic:u2|Add1~6                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~6                               ; |MoveOrDie|ClientLogic:u2|Add1~7                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~8                               ; |MoveOrDie|ClientLogic:u2|Add1~8                               ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~8                               ; |MoveOrDie|ClientLogic:u2|Add1~9                               ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[2]                             ; |MoveOrDie|ClientLogic:u2|nextY[2]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|Add1~12                              ; |MoveOrDie|ClientLogic:u2|Add1~12                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~12                              ; |MoveOrDie|ClientLogic:u2|Add1~13                              ; cout             ;
-; |MoveOrDie|ClientLogic:u2|Add1~14                              ; |MoveOrDie|ClientLogic:u2|Add1~14                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]                             ; |MoveOrDie|ClientLogic:u2|nextY[6]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[1]                             ; |MoveOrDie|ClientLogic:u2|nextY[1]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[0]                             ; |MoveOrDie|ClientLogic:u2|nextY[0]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[3]                             ; |MoveOrDie|ClientLogic:u2|nextY[3]                             ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[0]~65                          ; |MoveOrDie|ClientLogic:u2|nextY[0]~65                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[0]~65                          ; |MoveOrDie|ClientLogic:u2|nextY[0]~66                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[1]~67                          ; |MoveOrDie|ClientLogic:u2|nextY[1]~67                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[1]~67                          ; |MoveOrDie|ClientLogic:u2|nextY[1]~68                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[2]~69                          ; |MoveOrDie|ClientLogic:u2|nextY[2]~69                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[2]~69                          ; |MoveOrDie|ClientLogic:u2|nextY[2]~70                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[3]~71                          ; |MoveOrDie|ClientLogic:u2|nextY[3]~71                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[3]~71                          ; |MoveOrDie|ClientLogic:u2|nextY[3]~72                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]~73                          ; |MoveOrDie|ClientLogic:u2|nextY[4]~73                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]~73                          ; |MoveOrDie|ClientLogic:u2|nextY[4]~74                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|nextY[5]~76                          ; |MoveOrDie|ClientLogic:u2|nextY[5]~76                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[5]~76                          ; |MoveOrDie|ClientLogic:u2|nextY[5]~77                          ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~56                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~56                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~56                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[0]~57                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~59                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~59                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~59                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[1]~60                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~61                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~61                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~61                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[2]~62                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~63                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~63                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~63                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~64                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~65                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~65                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~65                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[4]~66                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~67                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~67                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~67                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[5]~68                     ; cout             ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[6]~69                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[6]~69                     ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]~78                          ; |MoveOrDie|ClientLogic:u2|nextY[6]~78                          ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[23]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[23]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[22]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[22]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[21]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[21]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[20]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[20]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[19]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[19]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[18]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[18]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[17]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[17]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[16]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[16]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[15]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[15]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[14]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[14]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[13]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[13]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[12]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[12]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[11]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[11]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[10]                           ; |MoveOrDie|ClkDivider:u0|l_reCnt[10]                           ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[9]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[9]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[8]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[8]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[7]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[7]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[6]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[6]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[5]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[5]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[4]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[4]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[3]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[3]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[2]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[2]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[1]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[1]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[0]                            ; |MoveOrDie|ClkDivider:u0|l_reCnt[0]                            ; regout           ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~50                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~50                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~50                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[0]~51                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~52                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~52                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~52                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[1]~53                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~54                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~54                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~54                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[2]~55                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~56                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~56                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~56                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[3]~57                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~58                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~58                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~58                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[4]~59                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~60                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~60                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~60                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[5]~61                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~62                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~62                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~62                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[6]~63                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~64                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~64                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~64                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[7]~65                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~66                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~66                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~66                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[8]~67                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~68                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~68                         ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~68                         ; |MoveOrDie|ClkDivider:u0|l_reCnt[9]~69                         ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~70                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~70                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~70                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[10]~71                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~72                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~72                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~72                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[11]~73                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~74                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~74                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~74                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[12]~75                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~76                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~76                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~76                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[13]~77                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~78                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~78                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~78                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[14]~79                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~80                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~80                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~80                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[15]~81                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~82                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~82                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~82                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[16]~83                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~84                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~84                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~84                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[17]~85                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~86                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~86                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~86                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[18]~87                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~88                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~88                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~88                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[19]~89                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~90                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~90                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~90                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[20]~91                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~92                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~92                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~92                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[21]~93                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~94                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~94                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~94                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[22]~95                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~96                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~96                        ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~96                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[23]~97                        ; cout             ;
-; |MoveOrDie|ClkDivider:u0|l_reCnt[24]~98                        ; |MoveOrDie|ClkDivider:u0|l_reCnt[24]~98                        ; combout          ;
-; |MoveOrDie|VGA640480:u3|HSYNC                                  ; |MoveOrDie|VGA640480:u3|HSYNC                                  ; regout           ;
-; |MoveOrDie|VGA640480:u3|VSYNC                                  ; |MoveOrDie|VGA640480:u3|VSYNC                                  ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_r[2]                                 ; |MoveOrDie|VGA640480:u3|l_r[2]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[8]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[8]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[7]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[7]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[9]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[9]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|r[0]~3                                 ; |MoveOrDie|VGA640480:u3|r[0]~3                                 ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[8]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[8]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[7]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[7]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[6]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[6]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[5]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[5]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_5~1                            ; |MoveOrDie|VGA640480:u3|process_5~1                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[9]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[9]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|r[0]~4                                 ; |MoveOrDie|VGA640480:u3|r[0]~4                                 ; combout          ;
-; |MoveOrDie|ClientLogic:u2|stateCode[0]                         ; |MoveOrDie|ClientLogic:u2|stateCode[0]                         ; regout           ;
-; |MoveOrDie|DisplayDecoder:dispu0|Mux0~0                        ; |MoveOrDie|DisplayDecoder:dispu0|Mux0~0                        ; combout          ;
-; |MoveOrDie|DisplayDecoder:dispu0|Mux3~0                        ; |MoveOrDie|DisplayDecoder:dispu0|Mux3~0                        ; combout          ;
-; |MoveOrDie|DisplayDecoder:dispu0|Mux1~0                        ; |MoveOrDie|DisplayDecoder:dispu0|Mux1~0                        ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_HSYNC                                ; |MoveOrDie|VGA640480:u3|l_HSYNC                                ; regout           ;
-; |MoveOrDie|VGA640480:u3|CLK_25MHz                              ; |MoveOrDie|VGA640480:u3|CLK_25MHz                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_VSYNC                                ; |MoveOrDie|VGA640480:u3|l_VSYNC                                ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[4]                                 ; |MoveOrDie|ClientLogic:u2|y[4]                                 ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[2]                                 ; |MoveOrDie|ClientLogic:u2|y[2]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~1                            ; |MoveOrDie|VGA640480:u3|process_6~1                            ; combout          ;
-; |MoveOrDie|ClientLogic:u2|y[6]                                 ; |MoveOrDie|ClientLogic:u2|y[6]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[4]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[4]                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[1]                                 ; |MoveOrDie|ClientLogic:u2|y[1]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~2                            ; |MoveOrDie|VGA640480:u3|process_6~2                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[3]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[3]                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[0]                                 ; |MoveOrDie|ClientLogic:u2|y[0]                                 ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[5]                                 ; |MoveOrDie|ClientLogic:u2|y[5]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~3                            ; |MoveOrDie|VGA640480:u3|process_6~3                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[5]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[5]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~4                            ; |MoveOrDie|VGA640480:u3|process_6~4                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_6~5                            ; |MoveOrDie|VGA640480:u3|process_6~5                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[6]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[6]                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|y[3]                                 ; |MoveOrDie|ClientLogic:u2|y[3]                                 ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[4]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[4]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~6                            ; |MoveOrDie|VGA640480:u3|process_6~6                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[3]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[3]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_6~0                            ; |MoveOrDie|VGA640480:u3|process_6~0                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[2]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[2]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[1]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[1]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaX[0]                              ; |MoveOrDie|VGA640480:u3|l_vgaX[0]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|Equal0~0                               ; |MoveOrDie|VGA640480:u3|Equal0~0                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal0~1                               ; |MoveOrDie|VGA640480:u3|Equal0~1                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal0~2                               ; |MoveOrDie|VGA640480:u3|Equal0~2                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX~10                              ; |MoveOrDie|VGA640480:u3|l_vgaX~10                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX~11                              ; |MoveOrDie|VGA640480:u3|l_vgaX~11                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[2]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[2]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[1]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[1]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|l_vgaY[0]                              ; |MoveOrDie|VGA640480:u3|l_vgaY[0]                              ; regout           ;
-; |MoveOrDie|VGA640480:u3|Equal1~0                               ; |MoveOrDie|VGA640480:u3|Equal1~0                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal1~1                               ; |MoveOrDie|VGA640480:u3|Equal1~1                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|Equal1~2                               ; |MoveOrDie|VGA640480:u3|Equal1~2                               ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~10                              ; |MoveOrDie|VGA640480:u3|l_vgaY~10                              ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_clkout                              ; |MoveOrDie|ClkDivider:u0|l_clkout                              ; regout           ;
-; |MoveOrDie|ClientLogic:u2|MapLogic:u0|mp                       ; |MoveOrDie|ClientLogic:u2|MapLogic:u0|mp                       ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]   ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]   ; regout           ;
-; |MoveOrDie|ClientLogic:u2|state.stand                          ; |MoveOrDie|ClientLogic:u2|state.stand                          ; regout           ;
-; |MoveOrDie|ClientLogic:u2|state~35                             ; |MoveOrDie|ClientLogic:u2|state~35                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|state.jump                           ; |MoveOrDie|ClientLogic:u2|state.jump                           ; regout           ;
-; |MoveOrDie|ClientLogic:u2|Equal0~0                             ; |MoveOrDie|ClientLogic:u2|Equal0~0                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Equal0~1                             ; |MoveOrDie|ClientLogic:u2|Equal0~1                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|state~36                             ; |MoveOrDie|ClientLogic:u2|state~36                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|stateCode~15                         ; |MoveOrDie|ClientLogic:u2|stateCode~15                         ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_4~1                            ; |MoveOrDie|VGA640480:u3|process_4~1                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_4~2                            ; |MoveOrDie|VGA640480:u3|process_4~2                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_CLK_50MHz                            ; |MoveOrDie|VGA640480:u3|l_CLK_50MHz                            ; regout           ;
-; |MoveOrDie|VGA640480:u3|process_5~2                            ; |MoveOrDie|VGA640480:u3|process_5~2                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|process_5~3                            ; |MoveOrDie|VGA640480:u3|process_5~3                            ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~10                              ; |MoveOrDie|ClientLogic:u2|Add1~10                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|y[0]~49                              ; |MoveOrDie|ClientLogic:u2|y[0]~49                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~11                              ; |MoveOrDie|ClientLogic:u2|Add1~11                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~16                              ; |MoveOrDie|ClientLogic:u2|Add1~16                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~17                              ; |MoveOrDie|ClientLogic:u2|Add1~17                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~11                              ; |MoveOrDie|VGA640480:u3|l_vgaY~11                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~18                              ; |MoveOrDie|ClientLogic:u2|Add1~18                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~19                              ; |MoveOrDie|ClientLogic:u2|Add1~19                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaX~12                              ; |MoveOrDie|VGA640480:u3|l_vgaX~12                              ; combout          ;
-; |MoveOrDie|ClientLogic:u2|Add1~20                              ; |MoveOrDie|ClientLogic:u2|Add1~20                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~12                              ; |MoveOrDie|VGA640480:u3|l_vgaY~12                              ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_vgaY~13                              ; |MoveOrDie|VGA640480:u3|l_vgaY~13                              ; combout          ;
-; |MoveOrDie|ClkDivider:u0|l_clkout~0                            ; |MoveOrDie|ClkDivider:u0|l_clkout~0                            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]   ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]   ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]   ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]   ; regout           ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]~63                          ; |MoveOrDie|ClientLogic:u2|nextY[6]~63                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[6]~64                          ; |MoveOrDie|ClientLogic:u2|nextY[6]~64                          ; combout          ;
-; |MoveOrDie|ClientLogic:u2|nextY[4]~75                          ; |MoveOrDie|ClientLogic:u2|nextY[4]~75                          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~0            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux6~1            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state             ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state             ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~4 ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[3]~4 ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe                      ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe                      ; regout           ;
-; |MoveOrDie|ClientLogic:u2|state~37                             ; |MoveOrDie|ClientLogic:u2|state~37                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|state~38                             ; |MoveOrDie|ClientLogic:u2|state~38                             ; combout          ;
-; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~58                     ; |MoveOrDie|ClientLogic:u2|jumpRemain[3]~58                     ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~0            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~1            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5 ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[0]~5 ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]~6 ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|lwasdPressed[2]~6 ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]                  ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]                  ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~1           ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~1           ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~2            ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|Mux8~2            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~2           ; |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state~2           ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.finish             ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.finish             ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|data                     ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|data                     ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d0                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d0                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk2                     ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk2                     ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk1                     ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk1                     ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk                      ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|clk                      ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]~8                ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[0]~8                ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]~9                ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[4]~9                ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d1                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d1                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]~10               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[1]~10               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]~11               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[7]~11               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]~12               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[6]~12               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d3                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d3                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]~13               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[3]~13               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d2                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d2                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]~14               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[2]~14               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5                 ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5                 ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]~15               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|code[5]~15               ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.stop               ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.stop               ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector12~11            ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector12~11            ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.start              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.start              ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector2~0              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector2~0              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~1              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~1              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~2              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~2              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~3              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|process_0~3              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity             ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity             ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector11~0             ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector11~0             ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.delay              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.delay              ; regout           ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector1~0              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector1~0              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~2              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~2              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~3              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~3              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~4              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|Selector0~4              ; combout          ;
-; |MoveOrDie|VGA640480:u3|CLK_25MHz~0                            ; |MoveOrDie|VGA640480:u3|CLK_25MHz~0                            ; combout          ;
-; |MoveOrDie|VGA640480:u3|l_CLK_50MHz~0                          ; |MoveOrDie|VGA640480:u3|l_CLK_50MHz~0                          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[0]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[0]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[4]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[4]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[1]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[1]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[7]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[7]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[6]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[6]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[3]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[3]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[2]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[2]              ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[5]              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|scancode[5]              ; combout          ;
-; |MoveOrDie|~GND                                                ; |MoveOrDie|~GND                                                ; combout          ;
-; |MoveOrDie|vga_HSYNC                                           ; |MoveOrDie|vga_HSYNC                                           ; padio            ;
-; |MoveOrDie|vga_VSYNC                                           ; |MoveOrDie|vga_VSYNC                                           ; padio            ;
-; |MoveOrDie|vga_r[0]                                            ; |MoveOrDie|vga_r[0]                                            ; padio            ;
-; |MoveOrDie|vga_r[1]                                            ; |MoveOrDie|vga_r[1]                                            ; padio            ;
-; |MoveOrDie|vga_r[2]                                            ; |MoveOrDie|vga_r[2]                                            ; padio            ;
-; |MoveOrDie|vga_g[0]                                            ; |MoveOrDie|vga_g[0]                                            ; padio            ;
-; |MoveOrDie|vga_g[1]                                            ; |MoveOrDie|vga_g[1]                                            ; padio            ;
-; |MoveOrDie|vga_g[2]                                            ; |MoveOrDie|vga_g[2]                                            ; padio            ;
-; |MoveOrDie|vga_b[0]                                            ; |MoveOrDie|vga_b[0]                                            ; padio            ;
-; |MoveOrDie|vga_b[1]                                            ; |MoveOrDie|vga_b[1]                                            ; padio            ;
-; |MoveOrDie|vga_b[2]                                            ; |MoveOrDie|vga_b[2]                                            ; padio            ;
-; |MoveOrDie|disp0[0]                                            ; |MoveOrDie|disp0[0]                                            ; padio            ;
-; |MoveOrDie|disp0[1]                                            ; |MoveOrDie|disp0[1]                                            ; padio            ;
-; |MoveOrDie|disp0[2]                                            ; |MoveOrDie|disp0[2]                                            ; padio            ;
-; |MoveOrDie|disp0[3]                                            ; |MoveOrDie|disp0[3]                                            ; padio            ;
-; |MoveOrDie|disp0[4]                                            ; |MoveOrDie|disp0[4]                                            ; padio            ;
-; |MoveOrDie|disp0[5]                                            ; |MoveOrDie|disp0[5]                                            ; padio            ;
-; |MoveOrDie|disp0[6]                                            ; |MoveOrDie|disp0[6]                                            ; padio            ;
-; |MoveOrDie|CLK_100MHz                                          ; |MoveOrDie|CLK_100MHz~corein                                   ; combout          ;
-; |MoveOrDie|ps2_datain                                          ; |MoveOrDie|ps2_datain~corein                                   ; combout          ;
-; |MoveOrDie|ps2_clk                                             ; |MoveOrDie|ps2_clk~corein                                      ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe~clkctrl              ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|loe~clkctrl              ; outclk           ;
-; |MoveOrDie|VGA640480:u3|CLK_25MHz~clkctrl                      ; |MoveOrDie|VGA640480:u3|CLK_25MHz~clkctrl                      ; outclk           ;
-; |MoveOrDie|ClkDivider:u0|l_clkout~clkctrl                      ; |MoveOrDie|ClkDivider:u0|l_clkout~clkctrl                      ; outclk           ;
-; |MoveOrDie|CLK_100MHz~clkctrl                                  ; |MoveOrDie|CLK_100MHz~clkctrl                                  ; outclk           ;
-; |MoveOrDie|VGA640480:u3|HSYNC~feeder                           ; |MoveOrDie|VGA640480:u3|HSYNC~feeder                           ; combout          ;
-; |MoveOrDie|VGA640480:u3|VSYNC~feeder                           ; |MoveOrDie|VGA640480:u3|VSYNC~feeder                           ; combout          ;
-; |MoveOrDie|ClientLogic:u2|stateCode[1]~feeder                  ; |MoveOrDie|ClientLogic:u2|stateCode[1]~feeder                  ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d5~feeder          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity~feeder      ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.parity~feeder      ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d7~feeder          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d4~feeder          ; combout          ;
-; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6~feeder          ; |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state.d6~feeder          ; combout          ;
-+----------------------------------------------------------------+----------------------------------------------------------------+------------------+
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 +---------------------+
@@ -856,36 +301,14 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sat May 20 16:24:20 2017
+    Info: Processing started: Mon May 29 21:28:59 2017
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off MoveOrDie -c MoveOrDie
-Info: Using vector source file "../src/logic/MoveOrDie.vwf"
-Warning: Can't display state machine states -- register holding state machine bit "|MoveOrDie|ClientLogic:u2|state.fall" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|MoveOrDie|ClientLogic:u2|state.move" was synthesized away
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "ClientLogic:u2|MapLogic:u0|x[0]" in design.
-Warning: Can't find signal in vector source file for input pin "|MoveOrDie|CLK_100MHz"
-Warning: Can't find signal in vector source file for input pin "|MoveOrDie|ps2_datain"
-Warning: Can't find signal in vector source file for input pin "|MoveOrDie|ps2_clk"
-Info: Inverted registers were found during simulation
-    Info: Register: |MoveOrDie|ClientLogic:u2|y[4]
-    Info: Register: |MoveOrDie|ClientLogic:u2|y[2]
-    Info: Register: |MoveOrDie|ClientLogic:u2|y[1]
-    Info: Register: |MoveOrDie|ClientLogic:u2|y[3]
-    Info: Register: |MoveOrDie|WASDDecoder:u1|KeyboardDecoder:u1|state
-Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
-    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
-Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is       0.00 %
-Info: Number of transitions in simulation is 0
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 214 megabytes
-    Info: Processing ended: Sat May 20 16:24:20 2017
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Info: Can't find specified vector source file "../src/logic/MoveOrDie.vwf"
+Error: No valid vector source file specified and default file "C:/Users/Hob Den/Documents/VHDLFiles/moveordie/build/MoveOrDie.cvwf" does not exist
+Error: Quartus II 64-Bit Simulator was unsuccessful. 1 error, 0 warnings
+    Error: Peak virtual memory: 247 megabytes
+    Error: Processing ended: Mon May 29 21:28:59 2017
+    Error: Elapsed time: 00:00:00
+    Error: Total CPU time (on all processors): 00:00:00
 
 

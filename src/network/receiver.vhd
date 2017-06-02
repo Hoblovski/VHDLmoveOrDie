@@ -21,7 +21,6 @@ architecture ses of receiver is
 	signal datatemp: std_logic_vector(maxLenth-1 downto 0);
 	signal Etemp: std_logic;
 begin
-	data <= datatemp when Etemp = '1';
 	Eout <= Etemp;
 	process(clk)
 	begin
@@ -42,6 +41,7 @@ begin
 				if check = input then
 					Etemp <= '1';
 					cnt <= -1;
+					data <= datatemp;
 				end if;
 			end if;
 		end if;

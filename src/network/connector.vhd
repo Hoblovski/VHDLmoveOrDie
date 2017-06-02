@@ -5,15 +5,16 @@ use ieee.std_logic_arith.all;
 
 entity connector is
 	generic(
-		maxLenth: integer := 3
+		receiveLenth: integer := 3;
+		sendLenth: integer := 3
 	);
 	port(
 		receive: in std_logic;
 		clk: in std_logic;
-		dataToSend: in std_logic_vector(maxLenth-1 downto 0); -- warning: begin with lower bits!!!
+		dataToSend: in std_logic_vector(sendLenth-1 downto 0); -- warning: begin with lower bits!!!
 		ESend: in std_logic;
 		send: out std_logic;
-		dataReceive:out std_logic_vector(maxLenth-1 downto 0);
+		dataReceive:out std_logic_vector(receiveLenth-1 downto 0);
 		EReceive:out std_logic
 	);
 end connector;
@@ -46,7 +47,7 @@ end component;
 
 begin
 	u0: receiver generic map(
-		maxLenth => maxLenth
+		maxLenth => receiveLenth
 	)
 	port map(
 		clk=>clk,
@@ -56,7 +57,7 @@ begin
 	);
 	
 	u1: sender generic map(
-		maxLenth => maxLenth
+		maxLenth => sendLenth
 	)
 	port map(
 		clk=>clk,
