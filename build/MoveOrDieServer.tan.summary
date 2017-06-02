@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.248 ns
+From           : receive_1
+To             : connector:net_1|receiver:u0|check
+From Clock     : --
+To Clock       : clk100M
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 33.270 ns
+From           : VGA640480:visual|l_vgaX[7]
+To             : vga_b[2]
+From Clock     : clk100M
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.489 ns
+From           : rst
+To             : rst_2
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.137 ns
+From           : receive_3
+To             : connector:net_3|receiver:u0|datatemp[1]
+From Clock     : --
+To Clock       : clk100M
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk100M'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 70.81 MHz ( period = 14.123 ns )
+From           : VGA640480:visual|l_vgaX[7]
+To             : VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|ram_block1a3~porta_address_reg11
+From Clock     : clk100M
+To Clock       : clk100M
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

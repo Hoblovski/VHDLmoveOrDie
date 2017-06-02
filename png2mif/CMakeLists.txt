@@ -6,5 +6,8 @@ SET (CMAKE_CXX_STANDARD 11)
 INCLUDE_DIRECTORIES (.)
 LINK_DIRECTORIES (./lib)
 
-ADD_EXECUTABLE (main main.cpp)
-TARGET_LINK_LIBRARIES (main lodepng)
+ADD_EXECUTABLE (block block.cpp)
+TARGET_LINK_LIBRARIES (block lodepng)
+
+ADD_EXECUTABLE (player player.cpp)
+TARGET_LINK_LIBRARIES (player lodepng)

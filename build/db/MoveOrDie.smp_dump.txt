@@ -1,19 +1,12 @@
 
-State Machine - |MoveOrDie|ClientLogic:u2|state
-Name state.fall state.jump state.move state.stand 
-state.stand 0 0 0 0 
+State Machine - |MoveOrDie|ClientLogic:U_LOGIC_1|state
+Name state.stand state.jump state.move state.fall 
+state.fall 0 0 0 0 
 state.move 0 0 1 1 
 state.jump 0 1 0 1 
-state.fall 1 0 0 1 
+state.stand 1 0 0 1 
 
-State Machine - |MoveOrDie|ClientLogic:u2|nextState
-Name nextState.stand nextState.jump nextState.move nextState.fall 
-nextState.fall 0 0 0 0 
-nextState.move 0 0 1 1 
-nextState.jump 0 1 0 1 
-nextState.stand 1 0 0 1 
-
-State Machine - |MoveOrDie|WASDDecoder:u1|Keyboard:u0|state
+State Machine - |MoveOrDie|WasdDecoder:u1|state
 Name state.finish state.stop state.parity state.d7 state.d6 state.d5 state.d4 state.d3 state.d2 state.d1 state.d0 state.start state.delay 
 state.delay 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.start 0 0 0 0 0 0 0 0 0 0 0 1 1 

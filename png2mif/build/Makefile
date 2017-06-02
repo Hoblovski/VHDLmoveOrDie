@@ -47,24 +47,13 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Hob Den\Documents\CppFiles\cg\loadpng"
+CMAKE_SOURCE_DIR = "C:\Users\Hob Den\Documents\VHDLFiles\moveordie\png2mif"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Hob Den\Documents\CppFiles\cg\loadpng\build"
+CMAKE_BINARY_DIR = "C:\Users\Hob Den\Documents\VHDLFiles\moveordie\png2mif\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	"C:\Program Files\CMake\bin\cmake-gui.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,11 +66,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	"C:\Program Files\CMake\bin\cmake-gui.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Hob Den\Documents\CppFiles\cg\loadpng\build\CMakeFiles" "C:\Users\Hob Den\Documents\CppFiles\cg\loadpng\build\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Hob Den\Documents\VHDLFiles\moveordie\png2mif\build\CMakeFiles" "C:\Users\Hob Den\Documents\VHDLFiles\moveordie\png2mif\build\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Hob Den\Documents\CppFiles\cg\loadpng\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Hob Den\Documents\VHDLFiles\moveordie\png2mif\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -110,44 +110,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named block
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 main
-.PHONY : main
+block: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 block
+.PHONY : block
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+block/fast:
+	$(MAKE) -f CMakeFiles\block.dir\build.make CMakeFiles/block.dir/build
+.PHONY : block/fast
 
-main.obj: main.cpp.obj
+#=============================================================================
+# Target rules for targets named player
 
-.PHONY : main.obj
+# Build rule for target.
+player: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 player
+.PHONY : player
+
+# fast build rule for target.
+player/fast:
+	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/build
+.PHONY : player/fast
+
+block.obj: block.cpp.obj
+
+.PHONY : block.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+block.cpp.obj:
+	$(MAKE) -f CMakeFiles\block.dir\build.make CMakeFiles/block.dir/block.cpp.obj
+.PHONY : block.cpp.obj
 
-main.i: main.cpp.i
+block.i: block.cpp.i
 
-.PHONY : main.i
+.PHONY : block.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+block.cpp.i:
+	$(MAKE) -f CMakeFiles\block.dir\build.make CMakeFiles/block.dir/block.cpp.i
+.PHONY : block.cpp.i
 
-main.s: main.cpp.s
+block.s: block.cpp.s
 
-.PHONY : main.s
+.PHONY : block.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+block.cpp.s:
+	$(MAKE) -f CMakeFiles\block.dir\build.make CMakeFiles/block.dir/block.cpp.s
+.PHONY : block.cpp.s
+
+player.obj: player.cpp.obj
+
+.PHONY : player.obj
+
+# target to build an object file
+player.cpp.obj:
+	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/player.cpp.obj
+.PHONY : player.cpp.obj
+
+player.i: player.cpp.i
+
+.PHONY : player.i
+
+# target to preprocess a source file
+player.cpp.i:
+	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/player.cpp.i
+.PHONY : player.cpp.i
+
+player.s: player.cpp.s
+
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.cpp.s:
+	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/player.cpp.s
+.PHONY : player.cpp.s
 
 # Help Target
 help:
@@ -155,12 +195,16 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... main
-	@echo ... edit_cache
+	@echo ... block
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... player
+	@echo ... edit_cache
+	@echo ... block.obj
+	@echo ... block.i
+	@echo ... block.s
+	@echo ... player.obj
+	@echo ... player.i
+	@echo ... player.s
 .PHONY : help
 
 

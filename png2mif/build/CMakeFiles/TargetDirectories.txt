@@ -1,3 +1,4 @@
-C:/Users/Hob Den/Documents/CppFiles/cg/loadpng/build/CMakeFiles/main.dir
-C:/Users/Hob Den/Documents/CppFiles/cg/loadpng/build/CMakeFiles/edit_cache.dir
-C:/Users/Hob Den/Documents/CppFiles/cg/loadpng/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/build/CMakeFiles/block.dir
+C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/build/CMakeFiles/player.dir
+C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/build/CMakeFiles/edit_cache.dir

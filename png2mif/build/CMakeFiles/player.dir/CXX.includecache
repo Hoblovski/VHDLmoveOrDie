@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././lodepng.h
+string.h
+-
+vector
+-
+string
+-
+lodepng.h
+.././lodepng.h
+iostream
+-
+lodepng.h
+.././lodepng.h
+
+C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/player.cpp
+lodepng.h
+-
+cstdio
+-
+vector
+-
+string
+-
+cassert
+-
+

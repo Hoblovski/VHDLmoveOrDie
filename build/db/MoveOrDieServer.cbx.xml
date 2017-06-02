@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MoveOrDieServer">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDieServer|VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_in71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDieServer|VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4h71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9i81.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -4,19 +4,29 @@ use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
 
 --  The screen:
---     +------------> x / 640
+--     +------------> p1X / 640
 --     |
 --     |
 --     |
 --     |
 --     |
 --     |
---     V  y / 480
+--     V  p1Y / 480
 
 entity VGA640480 is
     port (
--- TODO: now only a single black dot at x, y
-        x, y: in std_logic_vector(6 downto 0) := (others => '0');
+        p1X, p1Y: in std_logic_vector(6 downto 0);
+        p1Hp: in std_logic_vector(7 downto 0);
+
+        p2X, p2Y: in std_logic_vector(6 downto 0);
+        p2Hp: in std_logic_vector(7 downto 0);
+
+        p3X, p3Y: in std_logic_vector(6 downto 0);
+        p3Hp: in std_logic_vector(7 downto 0);
+
+        p4X, p4Y: in std_logic_vector(6 downto 0);
+        p4Hp: in std_logic_vector(7 downto 0);
+
         CLK_100MHz: in std_logic;
         HSYNC, VSYNC: out std_logic;
         r, g, b: out std_logic_vector(2 downto 0)
@@ -27,10 +37,29 @@ end vga640480;
 architecture behavior of VGA640480 is
 
     component MapGraphic is
+        generic (
+            ps: integer := 3 -- player size; FIXED DON'T TOUCH
+        );
         port (
-            x: in std_logic_vector(6 downto 0);
-            y: in std_logic_vector(6 downto 0);
-            gridCode: out std_logic_vector(3 downto 0)
+            rom_clk: in std_logic;
+            vga_x: in std_logic_vector(9 downto 0);
+            vga_y: in std_logic_vector(9 downto 0);
+
+            p1X, p1Y: in std_logic_vector(6 downto 0) := (others => '0');
+            p1Hp: in std_logic_vector(7 downto 0) := (others => '1');
+
+            p2X, p2Y: in std_logic_vector(6 downto 0) := (others => '0');
+            p2Hp: in std_logic_vector(7 downto 0) := (others => '1');
+
+            p3X, p3Y: in std_logic_vector(6 downto 0) := (others => '0');
+            p3Hp: in std_logic_vector(7 downto 0) := (others => '1');
+
+            p4X, p4Y: in std_logic_vector(6 downto 0) := (others => '0');
+            p4Hp: in std_logic_vector(7 downto 0) := (others => '1');
+
+            R: out std_logic_vector(2 downto 0);
+            G: out std_logic_vector(2 downto 0);
+            B: out std_logic_vector(2 downto 0)
         );
     end component;
 
@@ -108,35 +137,18 @@ begin
     end process;
 
     u0: MapGraphic port map (
-        x=> l_vgaX(9 downto 3),
-        y=> l_vgaY(9 downto 3),
-        gridCode=> l_gridCode);
+        rom_clk=> CLK_100MHz,
+        vga_x=> l_vgaX,
+        vga_y=> l_vgaY,
 
-    -- Generate BGR according to l_vgaX, l_vgaY
-    process (CLK_25MHz, l_vgaX, l_vgaY)
-    begin
-        if rising_edge(CLK_25MHz) then
-            if (l_vgaX(9 downto 3) = x and l_vgaY(9 downto 3) = y) then
-                l_r <= (others => '1');
-                l_g <= (others => '0');
-                l_b <= (others => '0');
-            else
-                if l_gridCode = "0000" then
-                    l_r <= (others => '1');
-                    l_g <= (others => '1');
-                    l_b <= (others => '1');
-                elsif l_gridCode = "0001" then
-                    l_r <= (others => '0');
-                    l_g <= (others => '0');
-                    l_b <= (others => '0');
-                else
-                    l_r <= (others => '0');
-                    l_g <= (others => '1');
-                    l_b <= (others => '0');
-                end if;
-            end if;
-        end if;
-    end process;
+        p1X=> p1X, p1Y=> p1Y, p1Hp=> p1Hp,
+        p2X=> p2X, p2Y=> p2Y, p2Hp=> p2Hp,
+        p3X=> p3X, p3Y=> p3Y, p3Hp=> p3Hp,
+        p4X=> p4X, p4Y=> p4Y, p4Hp=> p4Hp,
+
+        R=> l_r,
+        G=> l_g,
+        B=> l_b);
 
     -- Mapping HSYNC
     process (CLK_25MHz)

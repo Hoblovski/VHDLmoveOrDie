@@ -1,0 +1,1321 @@
+Analysis & Synthesis report for MoveOrDieServer
+Fri Jun 02 09:28:56 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated
+ 13. Source assignments for VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated
+ 14. Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated
+ 15. Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated
+ 16. Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated
+ 17. Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated
+ 18. Parameter Settings for User Entity Instance: ClkDivider:u00
+ 19. Parameter Settings for User Entity Instance: ClkDivider:u000
+ 20. Parameter Settings for User Entity Instance: connector:net_1
+ 21. Parameter Settings for User Entity Instance: connector:net_1|receiver:u0
+ 22. Parameter Settings for User Entity Instance: connector:net_1|sender:u1
+ 23. Parameter Settings for User Entity Instance: connector:net_2
+ 24. Parameter Settings for User Entity Instance: connector:net_2|receiver:u0
+ 25. Parameter Settings for User Entity Instance: connector:net_2|sender:u1
+ 26. Parameter Settings for User Entity Instance: connector:net_3
+ 27. Parameter Settings for User Entity Instance: connector:net_3|receiver:u0
+ 28. Parameter Settings for User Entity Instance: connector:net_3|sender:u1
+ 29. Parameter Settings for User Entity Instance: connector:net_4
+ 30. Parameter Settings for User Entity Instance: connector:net_4|receiver:u0
+ 31. Parameter Settings for User Entity Instance: connector:net_4|sender:u1
+ 32. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0
+ 33. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component
+ 34. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component
+ 35. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component
+ 36. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component
+ 38. Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component
+ 39. altsyncram Parameter Settings by Entity Instance
+ 40. Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4"
+ 41. Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3"
+ 42. Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2"
+ 43. Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1"
+ 44. Port Connectivity Checks: "connector:net_4"
+ 45. Port Connectivity Checks: "connector:net_3"
+ 46. Port Connectivity Checks: "connector:net_2"
+ 47. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 09:28:56 2017    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; MoveOrDieServer                          ;
+; Top-level Entity Name              ; MoveOrDieServer                          ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 1,074                                    ;
+;     Total combinational functions  ; 981                                      ;
+;     Dedicated logic registers      ; 406                                      ;
+; Total registers                    ; 406                                      ;
+; Total pins                         ; 39                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 122,880                                  ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP2C70F672C8       ;                    ;
+; Top-level entity name                                          ; MoveOrDieServer    ; MoveOrDieServer    ;
+; Family name                                                    ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
+; ../src/rom/blockrom.vhd          ; yes             ; User Wizard-Generated File   ; C:/Users/Keavil/Documents/GitHub/moveordie/src/rom/blockrom.vhd         ;
+; ../src/rom/maprom.vhd            ; yes             ; User Wizard-Generated File   ; C:/Users/Keavil/Documents/GitHub/moveordie/src/rom/maprom.vhd           ;
+; ../src/rom/playerrom.vhd         ; yes             ; User Wizard-Generated File   ; C:/Users/Keavil/Documents/GitHub/moveordie/src/rom/playerrom.vhd        ;
+; ../src/utils/clkdivider.vhd      ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/utils/clkdivider.vhd     ;
+; ../src/map/mapgraphic.vhd        ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/map/mapgraphic.vhd       ;
+; ../src/vga/vga640480.vhd         ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/vga/vga640480.vhd        ;
+; ../src/network/connector.vhd     ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/network/connector.vhd    ;
+; ../src/network/receiver.vhd      ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/network/receiver.vhd     ;
+; ../src/network/sender.vhd        ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/network/sender.vhd       ;
+; ../src/top/moveordieserver.vhd   ; yes             ; User VHDL File               ; C:/Users/Keavil/Documents/GitHub/moveordie/src/top/moveordieserver.vhd  ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf               ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc        ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                  ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc               ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/aglobal90.inc                ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                   ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altram.inc                   ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                 ;
+; altqpram.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altqpram.inc                 ;
+; db/altsyncram_4h71.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Keavil/Documents/GitHub/moveordie/build/db/altsyncram_4h71.tdf ;
+; db/decode_1oa.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Keavil/Documents/GitHub/moveordie/build/db/decode_1oa.tdf      ;
+; db/mux_fib.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Keavil/Documents/GitHub/moveordie/build/db/mux_fib.tdf         ;
+; db/altsyncram_in71.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Keavil/Documents/GitHub/moveordie/build/db/altsyncram_in71.tdf ;
+; db/altsyncram_9i81.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Keavil/Documents/GitHub/moveordie/build/db/altsyncram_9i81.tdf ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 1,074                   ;
+;                                             ;                         ;
+; Total combinational functions               ; 981                     ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 372                     ;
+;     -- 3 input functions                    ; 312                     ;
+;     -- <=2 input functions                  ; 297                     ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 659                     ;
+;     -- arithmetic mode                      ; 322                     ;
+;                                             ;                         ;
+; Total registers                             ; 406                     ;
+;     -- Dedicated logic registers            ; 406                     ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 39                      ;
+; Total memory bits                           ; 122880                  ;
+; Maximum fan-out node                        ; ClkDivider:u00|l_clkout ;
+; Maximum fan-out                             ; 353                     ;
+; Total fan-out                               ; 4886                    ;
+; Average fan-out                             ; 3.29                    ;
++---------------------------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |MoveOrDieServer                                ; 981 (0)           ; 406 (0)      ; 122880      ; 0            ; 0       ; 0         ; 39   ; 0            ; |MoveOrDieServer                                                                                                                        ; work         ;
+;    |ClkDivider:u000|                            ; 23 (23)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|ClkDivider:u000                                                                                                        ; work         ;
+;    |ClkDivider:u00|                             ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|ClkDivider:u00                                                                                                         ; work         ;
+;    |VGA640480:visual|                           ; 307 (109)         ; 28 (26)      ; 122880      ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual                                                                                                       ; work         ;
+;       |MapGraphic:u0|                           ; 198 (192)         ; 2 (0)        ; 122880      ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0                                                                                         ; work         ;
+;          |blockrom:u1|                          ; 0 (0)             ; 0 (0)        ; 36864       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|blockrom:u1                                                                             ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 36864       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component                                             ; work         ;
+;                |altsyncram_in71:auto_generated| ; 0 (0)             ; 0 (0)        ; 36864       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated              ; work         ;
+;          |maprom:u0|                            ; 6 (0)             ; 2 (0)        ; 49152       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|maprom:u0                                                                               ; work         ;
+;             |altsyncram:altsyncram_component|   ; 6 (0)             ; 2 (0)        ; 49152       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component                                               ; work         ;
+;                |altsyncram_4h71:auto_generated| ; 6 (0)             ; 2 (2)        ; 49152       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated                ; work         ;
+;                   |mux_fib:mux2|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|mux_fib:mux2   ; work         ;
+;          |playerrom:U_PLAYERROM_P1|             ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1                                                                ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component                                ; work         ;
+;                |altsyncram_9i81:auto_generated| ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ; work         ;
+;          |playerrom:U_PLAYERROM_P2|             ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2                                                                ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component                                ; work         ;
+;                |altsyncram_9i81:auto_generated| ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ; work         ;
+;          |playerrom:U_PLAYERROM_P3|             ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3                                                                ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component                                ; work         ;
+;                |altsyncram_9i81:auto_generated| ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ; work         ;
+;          |playerrom:U_PLAYERROM_P4|             ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4                                                                ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component                                ; work         ;
+;                |altsyncram_9i81:auto_generated| ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ; work         ;
+;    |connector:net_1|                            ; 246 (0)           ; 79 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_1                                                                                                        ; work         ;
+;       |receiver:u0|                             ; 126 (126)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_1|receiver:u0                                                                                            ; work         ;
+;       |sender:u1|                               ; 120 (120)         ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_1|sender:u1                                                                                              ; work         ;
+;    |connector:net_2|                            ; 120 (0)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_2                                                                                                        ; work         ;
+;       |receiver:u0|                             ; 120 (120)         ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_2|receiver:u0                                                                                            ; work         ;
+;       |sender:u1|                               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_2|sender:u1                                                                                              ; work         ;
+;    |connector:net_3|                            ; 120 (0)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_3                                                                                                        ; work         ;
+;       |receiver:u0|                             ; 120 (120)         ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_3|receiver:u0                                                                                            ; work         ;
+;       |sender:u1|                               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_3|sender:u1                                                                                              ; work         ;
+;    |connector:net_4|                            ; 158 (0)           ; 113 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_4                                                                                                        ; work         ;
+;       |receiver:u0|                             ; 117 (117)         ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_4|receiver:u0                                                                                            ; work         ;
+;       |sender:u1|                               ; 41 (41)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MoveOrDieServer|connector:net_4|sender:u1                                                                                              ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------+
+; Name                                                                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                  ;
++-----------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------+
+; VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated|ALTSYNCRAM              ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/block.mif  ;
+; VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|ALTSYNCRAM                ; AUTO ; ROM  ; 8192         ; 6            ; --           ; --           ; 49152 ; ../../res/map.mif    ;
+; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
+; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
+; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
+; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4096         ; 9            ; --           ; --           ; 36864 ; ../../res/player.mif ;
++-----------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++-----------------------------------------+-----------------------------------------------+
+; Register name                           ; Reason for Removal                            ;
++-----------------------------------------+-----------------------------------------------+
+; connector:net_3|sender:u1|E             ; Merged with connector:net_4|sender:u1|E       ;
+; connector:net_2|sender:u1|E             ; Merged with connector:net_4|sender:u1|E       ;
+; connector:net_1|sender:u1|E             ; Merged with connector:net_4|sender:u1|E       ;
+; connector:net_1|sender:u1|last          ; Merged with connector:net_4|sender:u1|last    ;
+; connector:net_2|sender:u1|last          ; Merged with connector:net_4|sender:u1|last    ;
+; connector:net_3|sender:u1|last          ; Merged with connector:net_4|sender:u1|last    ;
+; connector:net_1|sender:u1|cnt[0]        ; Merged with connector:net_4|sender:u1|cnt[0]  ;
+; connector:net_2|sender:u1|cnt[0]        ; Merged with connector:net_4|sender:u1|cnt[0]  ;
+; connector:net_3|sender:u1|cnt[0]        ; Merged with connector:net_4|sender:u1|cnt[0]  ;
+; connector:net_1|sender:u1|cnt[1]        ; Merged with connector:net_4|sender:u1|cnt[1]  ;
+; connector:net_2|sender:u1|cnt[1]        ; Merged with connector:net_4|sender:u1|cnt[1]  ;
+; connector:net_3|sender:u1|cnt[1]        ; Merged with connector:net_4|sender:u1|cnt[1]  ;
+; connector:net_1|sender:u1|cnt[2]        ; Merged with connector:net_4|sender:u1|cnt[2]  ;
+; connector:net_2|sender:u1|cnt[2]        ; Merged with connector:net_4|sender:u1|cnt[2]  ;
+; connector:net_3|sender:u1|cnt[2]        ; Merged with connector:net_4|sender:u1|cnt[2]  ;
+; connector:net_1|sender:u1|cnt[3]        ; Merged with connector:net_4|sender:u1|cnt[3]  ;
+; connector:net_2|sender:u1|cnt[3]        ; Merged with connector:net_4|sender:u1|cnt[3]  ;
+; connector:net_3|sender:u1|cnt[3]        ; Merged with connector:net_4|sender:u1|cnt[3]  ;
+; connector:net_1|sender:u1|cnt[4]        ; Merged with connector:net_4|sender:u1|cnt[4]  ;
+; connector:net_2|sender:u1|cnt[4]        ; Merged with connector:net_4|sender:u1|cnt[4]  ;
+; connector:net_3|sender:u1|cnt[4]        ; Merged with connector:net_4|sender:u1|cnt[4]  ;
+; connector:net_1|sender:u1|cnt[5]        ; Merged with connector:net_4|sender:u1|cnt[5]  ;
+; connector:net_2|sender:u1|cnt[5]        ; Merged with connector:net_4|sender:u1|cnt[5]  ;
+; connector:net_3|sender:u1|cnt[5]        ; Merged with connector:net_4|sender:u1|cnt[5]  ;
+; connector:net_1|sender:u1|cnt[6]        ; Merged with connector:net_4|sender:u1|cnt[6]  ;
+; connector:net_2|sender:u1|cnt[6]        ; Merged with connector:net_4|sender:u1|cnt[6]  ;
+; connector:net_3|sender:u1|cnt[6]        ; Merged with connector:net_4|sender:u1|cnt[6]  ;
+; connector:net_1|sender:u1|cnt[7]        ; Merged with connector:net_4|sender:u1|cnt[7]  ;
+; connector:net_2|sender:u1|cnt[7]        ; Merged with connector:net_4|sender:u1|cnt[7]  ;
+; connector:net_3|sender:u1|cnt[7]        ; Merged with connector:net_4|sender:u1|cnt[7]  ;
+; connector:net_1|sender:u1|cnt[8]        ; Merged with connector:net_4|sender:u1|cnt[8]  ;
+; connector:net_2|sender:u1|cnt[8]        ; Merged with connector:net_4|sender:u1|cnt[8]  ;
+; connector:net_3|sender:u1|cnt[8]        ; Merged with connector:net_4|sender:u1|cnt[8]  ;
+; connector:net_1|sender:u1|cnt[9]        ; Merged with connector:net_4|sender:u1|cnt[9]  ;
+; connector:net_2|sender:u1|cnt[9]        ; Merged with connector:net_4|sender:u1|cnt[9]  ;
+; connector:net_3|sender:u1|cnt[9]        ; Merged with connector:net_4|sender:u1|cnt[9]  ;
+; connector:net_1|sender:u1|cnt[10]       ; Merged with connector:net_4|sender:u1|cnt[10] ;
+; connector:net_2|sender:u1|cnt[10]       ; Merged with connector:net_4|sender:u1|cnt[10] ;
+; connector:net_3|sender:u1|cnt[10]       ; Merged with connector:net_4|sender:u1|cnt[10] ;
+; connector:net_1|sender:u1|cnt[11]       ; Merged with connector:net_4|sender:u1|cnt[11] ;
+; connector:net_2|sender:u1|cnt[11]       ; Merged with connector:net_4|sender:u1|cnt[11] ;
+; connector:net_3|sender:u1|cnt[11]       ; Merged with connector:net_4|sender:u1|cnt[11] ;
+; connector:net_1|sender:u1|cnt[12]       ; Merged with connector:net_4|sender:u1|cnt[12] ;
+; connector:net_2|sender:u1|cnt[12]       ; Merged with connector:net_4|sender:u1|cnt[12] ;
+; connector:net_3|sender:u1|cnt[12]       ; Merged with connector:net_4|sender:u1|cnt[12] ;
+; connector:net_1|sender:u1|cnt[13]       ; Merged with connector:net_4|sender:u1|cnt[13] ;
+; connector:net_2|sender:u1|cnt[13]       ; Merged with connector:net_4|sender:u1|cnt[13] ;
+; connector:net_3|sender:u1|cnt[13]       ; Merged with connector:net_4|sender:u1|cnt[13] ;
+; connector:net_1|sender:u1|cnt[14]       ; Merged with connector:net_4|sender:u1|cnt[14] ;
+; connector:net_2|sender:u1|cnt[14]       ; Merged with connector:net_4|sender:u1|cnt[14] ;
+; connector:net_3|sender:u1|cnt[14]       ; Merged with connector:net_4|sender:u1|cnt[14] ;
+; connector:net_1|sender:u1|cnt[15]       ; Merged with connector:net_4|sender:u1|cnt[15] ;
+; connector:net_2|sender:u1|cnt[15]       ; Merged with connector:net_4|sender:u1|cnt[15] ;
+; connector:net_3|sender:u1|cnt[15]       ; Merged with connector:net_4|sender:u1|cnt[15] ;
+; connector:net_1|sender:u1|cnt[16]       ; Merged with connector:net_4|sender:u1|cnt[16] ;
+; connector:net_2|sender:u1|cnt[16]       ; Merged with connector:net_4|sender:u1|cnt[16] ;
+; connector:net_3|sender:u1|cnt[16]       ; Merged with connector:net_4|sender:u1|cnt[16] ;
+; connector:net_1|sender:u1|cnt[17]       ; Merged with connector:net_4|sender:u1|cnt[17] ;
+; connector:net_2|sender:u1|cnt[17]       ; Merged with connector:net_4|sender:u1|cnt[17] ;
+; connector:net_3|sender:u1|cnt[17]       ; Merged with connector:net_4|sender:u1|cnt[17] ;
+; connector:net_1|sender:u1|cnt[18]       ; Merged with connector:net_4|sender:u1|cnt[18] ;
+; connector:net_2|sender:u1|cnt[18]       ; Merged with connector:net_4|sender:u1|cnt[18] ;
+; connector:net_3|sender:u1|cnt[18]       ; Merged with connector:net_4|sender:u1|cnt[18] ;
+; connector:net_1|sender:u1|cnt[19]       ; Merged with connector:net_4|sender:u1|cnt[19] ;
+; connector:net_2|sender:u1|cnt[19]       ; Merged with connector:net_4|sender:u1|cnt[19] ;
+; connector:net_3|sender:u1|cnt[19]       ; Merged with connector:net_4|sender:u1|cnt[19] ;
+; connector:net_1|sender:u1|cnt[20]       ; Merged with connector:net_4|sender:u1|cnt[20] ;
+; connector:net_2|sender:u1|cnt[20]       ; Merged with connector:net_4|sender:u1|cnt[20] ;
+; connector:net_3|sender:u1|cnt[20]       ; Merged with connector:net_4|sender:u1|cnt[20] ;
+; connector:net_1|sender:u1|cnt[21]       ; Merged with connector:net_4|sender:u1|cnt[21] ;
+; connector:net_2|sender:u1|cnt[21]       ; Merged with connector:net_4|sender:u1|cnt[21] ;
+; connector:net_3|sender:u1|cnt[21]       ; Merged with connector:net_4|sender:u1|cnt[21] ;
+; connector:net_1|sender:u1|cnt[22]       ; Merged with connector:net_4|sender:u1|cnt[22] ;
+; connector:net_2|sender:u1|cnt[22]       ; Merged with connector:net_4|sender:u1|cnt[22] ;
+; connector:net_3|sender:u1|cnt[22]       ; Merged with connector:net_4|sender:u1|cnt[22] ;
+; connector:net_1|sender:u1|cnt[23]       ; Merged with connector:net_4|sender:u1|cnt[23] ;
+; connector:net_2|sender:u1|cnt[23]       ; Merged with connector:net_4|sender:u1|cnt[23] ;
+; connector:net_3|sender:u1|cnt[23]       ; Merged with connector:net_4|sender:u1|cnt[23] ;
+; connector:net_1|sender:u1|cnt[24]       ; Merged with connector:net_4|sender:u1|cnt[24] ;
+; connector:net_2|sender:u1|cnt[24]       ; Merged with connector:net_4|sender:u1|cnt[24] ;
+; connector:net_3|sender:u1|cnt[24]       ; Merged with connector:net_4|sender:u1|cnt[24] ;
+; connector:net_1|sender:u1|cnt[25]       ; Merged with connector:net_4|sender:u1|cnt[25] ;
+; connector:net_2|sender:u1|cnt[25]       ; Merged with connector:net_4|sender:u1|cnt[25] ;
+; connector:net_3|sender:u1|cnt[25]       ; Merged with connector:net_4|sender:u1|cnt[25] ;
+; connector:net_1|sender:u1|cnt[26]       ; Merged with connector:net_4|sender:u1|cnt[26] ;
+; connector:net_2|sender:u1|cnt[26]       ; Merged with connector:net_4|sender:u1|cnt[26] ;
+; connector:net_3|sender:u1|cnt[26]       ; Merged with connector:net_4|sender:u1|cnt[26] ;
+; connector:net_1|sender:u1|cnt[27]       ; Merged with connector:net_4|sender:u1|cnt[27] ;
+; connector:net_2|sender:u1|cnt[27]       ; Merged with connector:net_4|sender:u1|cnt[27] ;
+; connector:net_3|sender:u1|cnt[27]       ; Merged with connector:net_4|sender:u1|cnt[27] ;
+; connector:net_1|sender:u1|cnt[28]       ; Merged with connector:net_4|sender:u1|cnt[28] ;
+; connector:net_2|sender:u1|cnt[28]       ; Merged with connector:net_4|sender:u1|cnt[28] ;
+; connector:net_3|sender:u1|cnt[28]       ; Merged with connector:net_4|sender:u1|cnt[28] ;
+; connector:net_1|sender:u1|cnt[29]       ; Merged with connector:net_4|sender:u1|cnt[29] ;
+; connector:net_2|sender:u1|cnt[29]       ; Merged with connector:net_4|sender:u1|cnt[29] ;
+; connector:net_3|sender:u1|cnt[29]       ; Merged with connector:net_4|sender:u1|cnt[29] ;
+; connector:net_1|sender:u1|cnt[30]       ; Merged with connector:net_4|sender:u1|cnt[30] ;
+; connector:net_2|sender:u1|cnt[30]       ; Merged with connector:net_4|sender:u1|cnt[30] ;
+; connector:net_3|sender:u1|cnt[30]       ; Merged with connector:net_4|sender:u1|cnt[30] ;
+; connector:net_1|sender:u1|cnt[31]       ; Merged with connector:net_4|sender:u1|cnt[31] ;
+; Total Number of Removed Registers = 105 ;                                               ;
++-----------------------------------------+-----------------------------------------------+
+* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 406   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 121   ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; connector:net_4|sender:u1|last          ; 2       ;
+; connector:net_4|sender:u1|cnt[2]        ; 27      ;
+; connector:net_4|sender:u1|cnt[1]        ; 27      ;
+; connector:net_4|sender:u1|cnt[4]        ; 25      ;
+; connector:net_4|sender:u1|cnt[6]        ; 10      ;
+; connector:net_4|sender:u1|cnt[3]        ; 8       ;
+; connector:net_4|sender:u1|cnt[5]        ; 9       ;
+; connector:net_4|sender:u1|cnt[31]       ; 39      ;
+; connector:net_4|sender:u1|cnt[30]       ; 2       ;
+; connector:net_4|sender:u1|cnt[29]       ; 2       ;
+; connector:net_4|sender:u1|cnt[28]       ; 2       ;
+; connector:net_4|sender:u1|cnt[27]       ; 2       ;
+; connector:net_4|sender:u1|cnt[26]       ; 2       ;
+; connector:net_4|sender:u1|cnt[25]       ; 2       ;
+; connector:net_4|sender:u1|cnt[24]       ; 2       ;
+; connector:net_4|sender:u1|cnt[23]       ; 2       ;
+; connector:net_4|sender:u1|cnt[22]       ; 2       ;
+; connector:net_4|sender:u1|cnt[21]       ; 2       ;
+; connector:net_4|sender:u1|cnt[20]       ; 2       ;
+; connector:net_4|sender:u1|cnt[19]       ; 2       ;
+; connector:net_4|sender:u1|cnt[18]       ; 2       ;
+; connector:net_4|sender:u1|cnt[17]       ; 2       ;
+; connector:net_4|sender:u1|cnt[16]       ; 2       ;
+; connector:net_4|sender:u1|cnt[15]       ; 2       ;
+; connector:net_4|sender:u1|cnt[14]       ; 2       ;
+; connector:net_4|sender:u1|cnt[13]       ; 2       ;
+; connector:net_4|sender:u1|cnt[12]       ; 2       ;
+; connector:net_4|sender:u1|cnt[11]       ; 2       ;
+; connector:net_4|sender:u1|cnt[10]       ; 2       ;
+; connector:net_4|sender:u1|cnt[9]        ; 2       ;
+; connector:net_4|sender:u1|cnt[8]        ; 2       ;
+; connector:net_4|sender:u1|cnt[7]        ; 2       ;
+; Total number of inverted registers = 32 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |MoveOrDieServer|connector:net_4|receiver:u0|cnt[18] ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |MoveOrDieServer|connector:net_3|receiver:u0|cnt[19] ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |MoveOrDieServer|connector:net_2|receiver:u0|cnt[5]  ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |MoveOrDieServer|connector:net_1|receiver:u0|cnt[5]  ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |MoveOrDieServer|connector:net_1|sender:u1|output    ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; Yes        ; |MoveOrDieServer|connector:net_4|sender:u1|cnt[24]   ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MoveOrDieServer|connector:net_1|sender:u1|Mux0      ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |MoveOrDieServer|VGA640480:visual|r[1]               ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |MoveOrDieServer|VGA640480:visual|b[1]               ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |MoveOrDieServer|connector:net_1|sender:u1|Mux0      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                               ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                  ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                              ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                               ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                              ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                               ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                              ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                               ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                              ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                               ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClkDivider:u00 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; n              ; 6     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClkDivider:u000 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 22    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; receivelenth   ; 22    ; Signed Integer                      ;
+; sendlenth      ; 88    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_1|receiver:u0 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; maxlenth       ; 22    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_1|sender:u1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; maxlenth       ; 88    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_2 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; receivelenth   ; 22    ; Signed Integer                      ;
+; sendlenth      ; 88    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_2|receiver:u0 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; maxlenth       ; 22    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_2|sender:u1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; maxlenth       ; 88    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_3 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; receivelenth   ; 22    ; Signed Integer                      ;
+; sendlenth      ; 88    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_3|receiver:u0 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; maxlenth       ; 22    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_3|sender:u1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; maxlenth       ; 88    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_4 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; receivelenth   ; 22    ; Signed Integer                      ;
+; sendlenth      ; 88    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_4|receiver:u0 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; maxlenth       ; 22    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connector:net_4|sender:u1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; maxlenth       ; 88    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; ps             ; 3     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                      ;
++------------------------------------+----------------------+-----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                   ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                   ;
+; WIDTH_A                            ; 6                    ; Signed Integer                                            ;
+; WIDTHAD_A                          ; 13                   ; Signed Integer                                            ;
+; NUMWORDS_A                         ; 8192                 ; Signed Integer                                            ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                   ;
+; WIDTH_B                            ; 1                    ; Untyped                                                   ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                   ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                   ;
+; INIT_FILE                          ; ../../res/map.mif    ; Untyped                                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                   ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                   ;
+; CBXI_PARAMETER                     ; altsyncram_4h71      ; Untyped                                                   ;
++------------------------------------+----------------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                        ;
++------------------------------------+----------------------+-------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                     ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                     ;
+; WIDTH_A                            ; 9                    ; Signed Integer                                              ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                              ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                              ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                     ;
+; WIDTH_B                            ; 1                    ; Untyped                                                     ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                     ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                     ;
+; INIT_FILE                          ; ../../res/block.mif  ; Untyped                                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                     ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                     ;
+; CBXI_PARAMETER                     ; altsyncram_in71      ; Untyped                                                     ;
++------------------------------------+----------------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                     ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                                  ;
+; WIDTH_A                            ; 9                    ; Signed Integer                                                           ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                                           ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; INIT_FILE                          ; ../../res/player.mif ; Untyped                                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_9i81      ; Untyped                                                                  ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                     ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                                  ;
+; WIDTH_A                            ; 9                    ; Signed Integer                                                           ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                                           ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; INIT_FILE                          ; ../../res/player.mif ; Untyped                                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_9i81      ; Untyped                                                                  ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                     ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                                  ;
+; WIDTH_A                            ; 9                    ; Signed Integer                                                           ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                                           ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; INIT_FILE                          ; ../../res/player.mif ; Untyped                                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_9i81      ; Untyped                                                                  ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                     ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                                  ;
+; WIDTH_A                            ; 9                    ; Signed Integer                                                           ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                                           ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
+; INIT_FILE                          ; ../../res/player.mif ; Untyped                                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_9i81      ; Untyped                                                                  ;
++------------------------------------+----------------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                    ;
++-------------------------------------------+-----------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                   ;
++-------------------------------------------+-----------------------------------------------------------------------------------------+
+; Number of entity instances                ; 6                                                                                       ;
+; Entity Instance                           ; VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component                ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 6                                                                                       ;
+;     -- NUMWORDS_A                         ; 8192                                                                                    ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
+; Entity Instance                           ; VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component              ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 9                                                                                       ;
+;     -- NUMWORDS_A                         ; 4096                                                                                    ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
+; Entity Instance                           ; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 9                                                                                       ;
+;     -- NUMWORDS_A                         ; 4096                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                            ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
+; Entity Instance                           ; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 9                                                                                       ;
+;     -- NUMWORDS_A                         ; 4096                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                            ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
+; Entity Instance                           ; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 9                                                                                       ;
+;     -- NUMWORDS_A                         ; 4096                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                            ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
+; Entity Instance                           ; VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 9                                                                                       ;
+;     -- NUMWORDS_A                         ; 4096                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                            ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
++-------------------------------------------+-----------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4" ;
++-----------------+-------+----------+------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                        ;
++-----------------+-------+----------+------------------------------------------------+
+; address[11..10] ; Input ; Info     ; Stuck at VCC                                   ;
++-----------------+-------+----------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3" ;
++-------------+-------+----------+----------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                            ;
++-------------+-------+----------+----------------------------------------------------+
+; address[11] ; Input ; Info     ; Stuck at VCC                                       ;
+; address[10] ; Input ; Info     ; Stuck at GND                                       ;
++-------------+-------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2" ;
++-------------+-------+----------+----------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                            ;
++-------------+-------+----------+----------------------------------------------------+
+; address[11] ; Input ; Info     ; Stuck at GND                                       ;
+; address[10] ; Input ; Info     ; Stuck at VCC                                       ;
++-------------+-------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1" ;
++-----------------+-------+----------+------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                        ;
++-----------------+-------+----------+------------------------------------------------+
+; address[11..10] ; Input ; Info     ; Stuck at GND                                   ;
++-----------------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "connector:net_4"                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; ereceive ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "connector:net_3"                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; ereceive ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "connector:net_2"                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; ereceive ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Fri Jun 02 09:28:51 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MoveOrDieServer -c MoveOrDieServer
+Info: Found 2 design units, including 1 entities, in source file ../src/rom/blockrom.vhd
+    Info: Found design unit 1: blockrom-SYN
+    Info: Found entity 1: blockrom
+Info: Found 2 design units, including 1 entities, in source file ../src/rom/maprom.vhd
+    Info: Found design unit 1: maprom-SYN
+    Info: Found entity 1: maprom
+Info: Found 2 design units, including 1 entities, in source file ../src/rom/playerrom.vhd
+    Info: Found design unit 1: playerrom-SYN
+    Info: Found entity 1: playerrom
+Info: Found 2 design units, including 1 entities, in source file ../src/utils/displaydecoder.vhd
+    Info: Found design unit 1: DisplayDecoder-behave
+    Info: Found entity 1: DisplayDecoder
+Info: Found 2 design units, including 1 entities, in source file ../src/utils/clkdivider.vhd
+    Info: Found design unit 1: ClkDivider-behave
+    Info: Found entity 1: ClkDivider
+Info: Found 2 design units, including 1 entities, in source file ../src/map/mapgraphic.vhd
+    Info: Found design unit 1: MapGraphic-RomBehave
+    Info: Found entity 1: MapGraphic
+Info: Found 2 design units, including 1 entities, in source file ../src/map/maplogic.vhd
+    Info: Found design unit 1: MapLogic-RomBehave
+    Info: Found entity 1: MapLogic
+Warning: Can't analyze file -- file C:/Users/Keavil/Documents/GitHub/moveordie/src/vga/digital_rom.vhd is missing
+Warning: Can't analyze file -- file C:/Users/Keavil/Documents/GitHub/moveordie/src/vga/vga_rom.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file ../src/vga/vga640480.vhd
+    Info: Found design unit 1: VGA640480-behavior
+    Info: Found entity 1: VGA640480
+Info: Found 2 design units, including 1 entities, in source file ../src/network/connector.vhd
+    Info: Found design unit 1: connector-sess
+    Info: Found entity 1: connector
+Info: Found 2 design units, including 1 entities, in source file ../src/network/receiver.vhd
+    Info: Found design unit 1: receiver-ses
+    Info: Found entity 1: receiver
+Info: Found 2 design units, including 1 entities, in source file ../src/network/sender.vhd
+    Info: Found design unit 1: sender-ses
+    Info: Found entity 1: sender
+Info: Found 2 design units, including 1 entities, in source file ../src/top/moveordieserver.vhd
+    Info: Found design unit 1: MoveOrDieServer-sss
+    Info: Found entity 1: MoveOrDieServer
+Info: Elaborating entity "MoveOrDieServer" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at moveordieserver.vhd(97): object "EReceive_2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at moveordieserver.vhd(97): object "EReceive_3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at moveordieserver.vhd(97): object "EReceive_4" assigned a value but never read
+Info: Elaborating entity "ClkDivider" for hierarchy "ClkDivider:u00"
+Info: Elaborating entity "ClkDivider" for hierarchy "ClkDivider:u000"
+Info: Elaborating entity "connector" for hierarchy "connector:net_1"
+Info: Elaborating entity "receiver" for hierarchy "connector:net_1|receiver:u0"
+Info: Elaborating entity "sender" for hierarchy "connector:net_1|sender:u1"
+Info: Elaborating entity "VGA640480" for hierarchy "VGA640480:visual"
+Info: Elaborating entity "MapGraphic" for hierarchy "VGA640480:visual|MapGraphic:u0"
+Info: Elaborating entity "maprom" for hierarchy "VGA640480:visual|MapGraphic:u0|maprom:u0"
+Info: Elaborating entity "altsyncram" for hierarchy "VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "../../res/map.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "8192"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "CLOCK0"
+    Info: Parameter "widthad_a" = "13"
+    Info: Parameter "width_a" = "6"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_4h71.tdf
+    Info: Found entity 1: altsyncram_4h71
+Info: Elaborating entity "altsyncram_4h71" for hierarchy "VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/decode_1oa.tdf
+    Info: Found entity 1: decode_1oa
+Info: Elaborating entity "decode_1oa" for hierarchy "VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|decode_1oa:deep_decode"
+Info: Found 1 design units, including 1 entities, in source file db/mux_fib.tdf
+    Info: Found entity 1: mux_fib
+Info: Elaborating entity "mux_fib" for hierarchy "VGA640480:visual|MapGraphic:u0|maprom:u0|altsyncram:altsyncram_component|altsyncram_4h71:auto_generated|mux_fib:mux2"
+Info: Elaborating entity "blockrom" for hierarchy "VGA640480:visual|MapGraphic:u0|blockrom:u1"
+Info: Elaborating entity "altsyncram" for hierarchy "VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "../../res/block.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "4096"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "CLOCK0"
+    Info: Parameter "widthad_a" = "12"
+    Info: Parameter "width_a" = "9"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_in71.tdf
+    Info: Found entity 1: altsyncram_in71
+Info: Elaborating entity "altsyncram_in71" for hierarchy "VGA640480:visual|MapGraphic:u0|blockrom:u1|altsyncram:altsyncram_component|altsyncram_in71:auto_generated"
+Info: Elaborating entity "playerrom" for hierarchy "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1"
+Info: Elaborating entity "altsyncram" for hierarchy "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "../../res/player.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "4096"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "widthad_a" = "12"
+    Info: Parameter "width_a" = "9"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_9i81.tdf
+    Info: Found entity 1: altsyncram_9i81
+Info: Elaborating entity "altsyncram_9i81" for hierarchy "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated"
+Info: Removed 2 MSB VCC or GND address nodes from RAM block "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P1|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM"
+Info: Removed 2 MSB VCC or GND address nodes from RAM block "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P4|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM"
+Info: Removed 2 MSB VCC or GND address nodes from RAM block "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P3|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM"
+Info: Removed 2 MSB VCC or GND address nodes from RAM block "VGA640480:visual|MapGraphic:u0|playerrom:U_PLAYERROM_P2|altsyncram:altsyncram_component|altsyncram_9i81:auto_generated|ALTSYNCRAM"
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk25M"
+Info: Implemented 1172 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 32 output pins
+    Info: Implemented 1076 logic cells
+    Info: Implemented 57 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 275 megabytes
+    Info: Processing ended: Fri Jun 02 09:28:56 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

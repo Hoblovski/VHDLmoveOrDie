@@ -10,6 +10,11 @@ entity MoveOrDie is
         -- vga data:
         vga_HSYNC, vga_VSYNC: out std_logic;
         vga_r, vga_g, vga_b: out std_logic_vector(2 downto 0);
+        -- net data:
+        clkControl: in std_logic;
+		send: out std_logic;
+		receive: in std_logic;
+		rst: in std_logic;
         -- clocks:
         CLK_100MHz: in std_logic;
         -- disp:
@@ -37,45 +42,70 @@ architecture behave of MoveOrDie is
 
     component VGA640480 is
         port (
-            x, y: in std_logic_vector(6 downto 0) := (others => '0');
+            p1X, p1Y: in std_logic_vector(6 downto 0);
+            p1Hp: in std_logic_vector(7 downto 0);
+
+            p2X, p2Y: in std_logic_vector(6 downto 0);
+            p2Hp: in std_logic_vector(7 downto 0);
+
+            p3X, p3Y: in std_logic_vector(6 downto 0);
+            p3Hp: in std_logic_vector(7 downto 0);
+
+            p4X, p4Y: in std_logic_vector(6 downto 0);
+            p4Hp: in std_logic_vector(7 downto 0);
+
             CLK_100MHz: in std_logic;
             HSYNC, VSYNC: out std_logic;
             r, g, b: out std_logic_vector(2 downto 0)
         );
     end component;
 
-    component MoveController is
-        port (
-            CLK: in std_logic;
-            wasdPressed: in std_logic_vector(3 downto 0);
-            X: out std_logic_vector(6 downto 0);
-            Y: out std_logic_vector(6 downto 0)
-        );
-    end component;
-
     component ClientLogic is
         generic (
-            maxLife: std_logic_vector(7 downto 0) := x"64";
-                -- 100
-            initJumpRemain: std_logic_vector(6 downto 0) := "0000110"
-                -- 6 (out of HEIGHT = 48). Specifies how high you can jump.
+            initJumpRemain: std_logic_vector(6 downto 0) := "0000110";
+            initHp: std_logic_vector(7 downto 0) := x"FF";
+                -- 6 (out of HEIGHT = 60). Specifies how high you can jump.
+            pc: integer range 1 to 4 := 1 -- player code
         );
 
         port(
+            clk_rom: in std_logic;
             clk: in std_logic;
             rst: in std_logic;
             wasdPressed: in std_logic_vector(3 downto 0); -- WASD
-            initX: in std_logic_vector(6 downto 0) := "0101000"; -- 40
-            initY: in std_logic_vector(6 downto 0) := "0011110"; -- 30
+            initX: in std_logic_vector(6 downto 0);
+            initY: in std_logic_vector(6 downto 0);
 
-            X: out std_logic_vector(6 downto 0);
-            Y: out std_logic_vector(6 downto 0);
-            stateCode: out std_logic_vector(3 downto 0)
-            -- life: out std_logic_vector(6 downto 0);
-            -- alive: out std_logic
+            p1X, p1Y: inout std_logic_vector(6 downto 0) := (others => '0');
+            p1Hp: inout std_logic_vector(7 downto 0) := (others=> '0');
+            p2X, p2Y: inout std_logic_vector(6 downto 0) := (others => '0');
+            p2Hp: inout std_logic_vector(7 downto 0) := (others=> '0');
+            p3X, p3Y: inout std_logic_vector(6 downto 0) := (others => '0');
+            p3Hp: inout std_logic_vector(7 downto 0) := (others=> '0');
+            p4X, p4Y: inout std_logic_vector(6 downto 0) := (others => '0');
+            p4Hp: inout std_logic_vector(7 downto 0) := (others=> '0')
+
+            -- deprecated
+            -- stateCode: out std_logic_vector(3 downto 0) := "0000"
         );
     end component;
 
+	component connector is
+		generic(
+			receiveLenth: integer := 3;
+			sendLenth: integer := 3
+		);
+		port(
+			receive: in std_logic;
+			clk: in std_logic;
+			dataToSend: in std_logic_vector(sendLenth-1 downto 0); -- warning: begin with lower bits!!!
+			ESend: in std_logic;
+			send: out std_logic;
+			dataReceive:out std_logic_vector(receiveLenth-1 downto 0);
+			EReceive:out std_logic
+		);
+	end component;
+	
     component ClkDivider is
         generic (
             n: integer := 1 -- clkin: f0 -> clkout: f0 / (2^n)
@@ -94,9 +124,11 @@ architecture behave of MoveOrDie is
     end component;
 -----------------------components----------------------------------------------
 
-    signal swp_x, swp_y: std_logic_vector(6 downto 0);
-    signal swp_CLK_100Hz: std_logic;
+    signal CLK_100Hz, swp_CLK_div18: std_logic;
     signal swp_wasdPressed: std_logic_vector(3 downto 0);
+
+    signal x1, y1: std_logic_vector(6 downto 0) := (others=> '0');
+    signal hp1: std_logic_vector(7 downto 0) := (others=> '0');
 
     signal swp_disp0: std_logic_vector(3 downto 0) := "0000";
     signal swp_disp1: std_logic_vector(3 downto 0) := "0000";
@@ -106,42 +138,71 @@ architecture behave of MoveOrDie is
     signal swp_disp5: std_logic_vector(3 downto 0) := "0000";
     signal swp_disp6: std_logic_vector(3 downto 0) := "0000";
     signal swp_disp7: std_logic_vector(3 downto 0) := "0000";
-
+	
+	-- net work--
+    signal swp_dataReceive: std_logic_vector(87 downto 0);
+    signal swp_EReceive: std_logic;
+    signal swp_data: std_logic_vector(21 downto 0);
+	
 begin
     u0: ClkDivider generic map (
-        n=> 24)
+        n=> 22)
     port map (
         clkin=> CLK_100MHz,
-        clkout=> swp_CLK_100Hz);
+        clkout=> CLK_100Hz);
+
+    u000: ClkDivider generic map (
+        n=> 22)
+    port map (
+        clkin=> CLK_100MHz,
+        clkout=> swp_CLK_div18);
 
     u1: WASDDecoder port map (
         ps2_datain=> ps2_datain,
         ps2_clk=> ps2_clk,
         filter_clk=> CLK_100MHz,
         wasd=> swp_wasdPressed);
+
     swp_disp7 <= swp_wasdPressed;
 
-	u2: ClientLogic port map (
-		clk=> swp_CLK_100Hz,
-		rst=> '0',
-		wasdPressed=> swp_wasdPressed,
-		X => swp_x,
-		Y => swp_y,
-        stateCode=> swp_disp0
+	net: connector generic map(
+		receiveLenth => 88,
+		sendLenth => 22
+	)
+	port map(
+		receive => receive,
+		clk => clkControl,
+		dataToSend => x1 & y1 & hp1, -- x,y,life
+		ESend => swp_CLK_div18,
+		send => send,
+		dataReceive => swp_dataReceive,
+		EReceive => swp_EReceive
 	);
 
---    swp_disp1 <= swp_x(3 downto 0);
---    swp_disp2 <= swp_y(3 downto 0);
-
---    u2: MoveController port map(
---        CLK=> swp_CLK_100Hz,
---        wasdPressed=> swp_wasdPressed,
---        X=> swp_x,
---        Y=> swp_y);
+	U_LOGIC_1: ClientLogic generic map (
+        pc=> 3)
+    port map (
+        clk_rom=> CLK_100MHz,
+		clk=> CLK_100Hz,
+		rst=> rst,
+		wasdPressed=> swp_wasdPressed,
+        initX=> "0000011",
+        initY=> "0000011",
+        --p1X=> X1, p1Y=> Y1, p1Hp=> hp1,
+        p1X=> swp_dataReceive(87 downto 81), p1Y=> swp_dataReceive(80 downto 74), p1Hp=> swp_dataReceive(73 downto 66),
+        --p2X=> X1, P2Y=> Y1, p2Hp=> hp1,
+        p2X=> swp_dataReceive(65 downto 59), p2Y=> swp_dataReceive(58 downto 52), p2Hp=> swp_dataReceive(51 downto 44),
+        p3X=> X1, P3Y=> Y1, p3Hp=> hp1,
+        --p3X=> swp_dataReceive(43 downto 37), p3Y=> swp_dataReceive(36 downto 30), p3Hp=> swp_dataReceive(29 downto 22),
+        p4X=> swp_dataReceive(21 downto 15), p4Y=> swp_dataReceive(14 downto 8) , p4Hp=> swp_dataReceive(7 downto 0)
+	);
 
     u3: VGA640480 port map (
-            x=> swp_x,
-            y=> swp_y,
+            p1X=> swp_dataReceive(87 downto 81), p1Y=> swp_dataReceive(80 downto 74), p1Hp=> swp_dataReceive(73 downto 66),
+            p2X=> swp_dataReceive(65 downto 59), p2Y=> swp_dataReceive(58 downto 52), p2Hp=> swp_dataReceive(51 downto 44), 
+            p3X=> swp_dataReceive(43 downto 37), p3Y=> swp_dataReceive(36 downto 30), p3Hp=> swp_dataReceive(29 downto 22), 
+            p4X=> swp_dataReceive(21 downto 15), p4Y=> swp_dataReceive(14 downto 8) , p4Hp=> swp_dataReceive(7 downto 0), 
+
             CLK_100MHz=> CLK_100MHz,
             HSYNC=>vga_HSYNC,
             VSYNC=>vga_VSYNC,

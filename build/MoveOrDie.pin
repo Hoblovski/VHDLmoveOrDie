@@ -67,7 +67,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 CHIP  "MoveOrDie"  ASSIGNED TO AN: EP2C70F672C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -90,7 +90,7 @@ VCCIO4                       : A16       : power  :                   : 3.3V    
 RESERVED_INPUT               : A17       :        :                   :         : 4         :                
 RESERVED_INPUT               : A18       :        :                   :         : 4         :                
 RESERVED_INPUT               : A19       :        :                   :         : 4         :                
-RESERVED_INPUT               : A20       :        :                   :         : 4         :                
+rst                          : A20       : input  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT               : A21       :        :                   :         : 4         :                
 RESERVED_INPUT               : A22       :        :                   :         : 4         :                
 RESERVED_INPUT               : A23       :        :                   :         : 4         :                
@@ -292,9 +292,9 @@ GND+                         : C13       :        :                   :         
 GND                          : C14       : gnd    :                   :         :           :                
 RESERVED_INPUT               : C15       :        :                   :         : 4         :                
 RESERVED_INPUT               : C16       :        :                   :         : 4         :                
-RESERVED_INPUT               : C17       :        :                   :         : 4         :                
+send                         : C17       : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : C18       : gnd    :                   :         :           :                
-RESERVED_INPUT               : C19       :        :                   :         : 4         :                
+receive                      : C19       : input  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT               : C21       :        :                   :         : 4         :                
 RESERVED_INPUT               : C22       :        :                   :         : 4         :                
@@ -316,7 +316,7 @@ RESERVED_INPUT               : D11       :        :                   :         
 RESERVED_INPUT               : D12       :        :                   :         : 3         :                
 GND+                         : D13       :        :                   :         : 3         :                
 RESERVED_INPUT               : D14       :        :                   :         : 4         :                
-RESERVED_INPUT               : D15       :        :                   :         : 4         :                
+clkControl                   : D15       : input  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT               : D16       :        :                   :         : 4         :                
 RESERVED_INPUT               : D17       :        :                   :         : 4         :                
 RESERVED_INPUT               : D18       :        :                   :         : 4         :                

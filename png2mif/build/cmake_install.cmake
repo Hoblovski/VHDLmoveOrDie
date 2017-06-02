@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Hob Den/Documents/CppFiles/cg/loadpng
+# Install script for directory: C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/png")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/png")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Hob Den/Documents/CppFiles/cg/loadpng/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Hob Den/Documents/VHDLFiles/moveordie/png2mif/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
